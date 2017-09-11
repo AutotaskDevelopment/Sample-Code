@@ -1,0 +1,2765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://autotask.net/ATWS/v1_5/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://autotask.net/ATWS/v1_5/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://autotask.net/ATWS/v1_5/">
+      <s:element name="GetAttachment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="attachmentId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttachmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAttachmentResult" type="tns:Attachment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Attachment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Info" type="tns:AttachmentInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AttachmentInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ParentID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ParentType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Type" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+              <s:element minOccurs="0" maxOccurs="1" name="FullPath" />
+              <s:element minOccurs="0" maxOccurs="1" name="AttachDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="FileSize" />
+              <s:element minOccurs="0" maxOccurs="1" name="AttachedByResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AttachedByContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Publish" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContentType" />
+              <s:element minOccurs="0" maxOccurs="1" name="OpportunityID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CreateAttachment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="attachment" type="tns:Attachment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAttachmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateAttachmentResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAttachment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="attachmentId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAttachmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteAttachmentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QuoteLocation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Address1" />
+              <s:element minOccurs="0" maxOccurs="1" name="Address2" />
+              <s:element minOccurs="0" maxOccurs="1" name="City" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostalCode" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Entity" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Fields" type="tns:ArrayOfField" />
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserDefinedFields" type="tns:ArrayOfUserDefinedField" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Field" nillable="true" type="tns:Field" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Field">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Label" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Length" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsRequired" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsReadOnly" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsQueryable" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsReference" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceEntityType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPickList" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="PicklistValues" type="tns:ArrayOfPickListValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="PicklistParentValueField" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPickListValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PickListValue" nillable="true" type="tns:PickListValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PickListValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Label" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDefaultValue" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SortOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="parentValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsSystem" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUserDefinedField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserDefinedField" nillable="true" type="tns:UserDefinedField" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserDefinedField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClassificationIcon">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="RelativeUrl" />
+              <s:element minOccurs="0" maxOccurs="1" name="System" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Tax">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TaxRegionID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxCategoryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxName" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsCompounded" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TaxCategory">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TaxRegion">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AccountLocation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="LocationName" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ResourceSkill">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="SkillDescription" />
+              <s:element minOccurs="0" maxOccurs="1" name="SkillID" />
+              <s:element minOccurs="0" maxOccurs="1" name="SkillLevel" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Service">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="PeriodType" />
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsActive" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UpdateResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="VendorAccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="MarkupRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceDescription" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceLevelAgreementID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceBundle">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceDescription" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsActive" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="PercentageDiscount" />
+              <s:element minOccurs="0" maxOccurs="1" name="PeriodType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceLevelAgreementID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitDiscount" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="UpdateResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="old_selected_service_sum" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ShippingType">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsActive" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Skill">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Quote">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToLocationID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="EffectiveDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="eQuoteActive" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpirationDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExternalQuoteNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="GroupByID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedBy" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="OpportunityID" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentTerm" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentType" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrimaryQuote" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProposalProjectID" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteTemplateID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShippingType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToLocationID" />
+              <s:element minOccurs="0" maxOccurs="1" name="SoldToLocationID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowEachTaxInGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowTaxCategory" />
+              <s:element minOccurs="0" maxOccurs="1" name="CalculateTaxSeparately" />
+              <s:element minOccurs="0" maxOccurs="1" name="GroupByProductCategory" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="QuoteTemplate">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="CalculateTaxSeparately" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="DateFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayCurrencySymbol" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayTaxCategorySuperscripts" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityBy" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="NumberFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="PageLayout" />
+              <s:element minOccurs="0" maxOccurs="1" name="PageNumberFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowEachTaxInGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowGridHeader" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowTaxCategory" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowVerticalGridLines" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyPositiveFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyNegativeFormat" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SalesOrder">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="Contact" />
+              <s:element minOccurs="0" maxOccurs="1" name="OwnerResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="SalesOrderDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="PromisedDueDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToAddress1" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToAddress2" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToCity" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToState" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToPostalCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToCountry" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToAddress1" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToAddress2" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToCity" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToState" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToPostalCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToCountry" />
+              <s:element minOccurs="0" maxOccurs="1" name="OpportunityID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdditionalBillToAddressInformation" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdditionalShipToAddressInformation" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToCountryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToCountryID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Country">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AddressFormatID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayName" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceTemplateID" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsDefaultCountry" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteTemplateID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="QuoteItem">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AverageCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="CostID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpenseID" />
+              <s:element minOccurs="0" maxOccurs="1" name="HighestCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsTaxable" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsOptional" />
+              <s:element minOccurs="0" maxOccurs="1" name="LaborID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LineDiscount" />
+              <s:element minOccurs="0" maxOccurs="1" name="MarkupRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="PercentageDiscount" />
+              <s:element minOccurs="0" maxOccurs="1" name="PeriodType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Quantity" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShippingID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxCategoryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TotalEffectiveTax" />
+              <s:element minOccurs="0" maxOccurs="1" name="Type" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitDiscount" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyUnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyUnitDiscount" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyLineDiscount" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PurchaseOrderItem">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="OrderID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InventoryLocationID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Quantity" />
+              <s:element minOccurs="0" maxOccurs="1" name="Memo" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstimatedArrivalDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="SalesOrderID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CostID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PurchaseOrder">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="VendorID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubmitDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CancelDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToName" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToAddress1" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToAddress2" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToCity" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToState" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShipToPostalCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="GeneralMemo" />
+              <s:element minOccurs="0" maxOccurs="1" name="Phone" />
+              <s:element minOccurs="0" maxOccurs="1" name="Fax" />
+              <s:element minOccurs="0" maxOccurs="1" name="VendorInvoiceNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExternalPONumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseForAccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShippingType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShippingDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Freight" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentTerm" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowTaxCategory" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowEachTaxInGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="LatestEstimatedArrivalDate" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PurchaseOrderReceive">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderItemID" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuantityPreviouslyReceived" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuantityNowReceiving" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReceiveDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuantityBackOrdered" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReceivedByResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InventoryTransfer">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="FromLocationID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ToLocationID" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuantityTransferred" />
+              <s:element minOccurs="0" maxOccurs="1" name="TransferByResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TransferDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Notes" />
+              <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="UpdateNote" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InventoryItemSerialNumber">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="InventoryItemID" />
+              <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InventoryItem">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InventoryLocationID" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuantityOnHand" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuantityMinimum" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuantityMaximum" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReferenceNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="Bin" />
+              <s:element minOccurs="0" maxOccurs="1" name="OnOrder" />
+              <s:element minOccurs="0" maxOccurs="1" name="BackOrder" />
+              <s:element minOccurs="0" maxOccurs="1" name="Reserved" />
+              <s:element minOccurs="0" maxOccurs="1" name="Picked" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InventoryLocation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="LocationName" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsDefault" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Opportunity">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvancedField1" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvancedField2" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvancedField3" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvancedField4" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvancedField5" />
+              <s:element minOccurs="0" maxOccurs="1" name="Amount" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssessmentScore" />
+              <s:element minOccurs="0" maxOccurs="1" name="Barriers" />
+              <s:element minOccurs="0" maxOccurs="1" name="ClosedDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Cost" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="DateStamp" />
+              <s:element minOccurs="0" maxOccurs="1" name="HelpNeeded" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivity" />
+              <s:element minOccurs="0" maxOccurs="1" name="LeadReferral" />
+              <s:element minOccurs="0" maxOccurs="1" name="LossReason" />
+              <s:element minOccurs="0" maxOccurs="1" name="LossReasonDetail" />
+              <s:element minOccurs="0" maxOccurs="1" name="Market" />
+              <s:element minOccurs="0" maxOccurs="1" name="NextStep" />
+              <s:element minOccurs="0" maxOccurs="1" name="OwnerResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrimaryCompetitor" />
+              <s:element minOccurs="0" maxOccurs="1" name="Probability" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectedCloseDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectedLiveDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="PromotionName" />
+              <s:element minOccurs="0" maxOccurs="1" name="Rating" />
+              <s:element minOccurs="0" maxOccurs="1" name="RelationshipAssessmentScore" />
+              <s:element minOccurs="0" maxOccurs="1" name="RevenueSpread" />
+              <s:element minOccurs="0" maxOccurs="1" name="RevenueSpreadUnit" />
+              <s:element minOccurs="0" maxOccurs="1" name="SalesOrderID" />
+              <s:element minOccurs="0" maxOccurs="1" name="SalesProcessPercentComplete" />
+              <s:element minOccurs="0" maxOccurs="1" name="Stage" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="TechnicalAssessmentScore" />
+              <s:element minOccurs="0" maxOccurs="1" name="ThroughDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+              <s:element minOccurs="0" maxOccurs="1" name="TotalAmountMonths" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseQuoteTotals" />
+              <s:element minOccurs="0" maxOccurs="1" name="WinReason" />
+              <s:element minOccurs="0" maxOccurs="1" name="WinReasonDetail" />
+              <s:element minOccurs="0" maxOccurs="1" name="OnetimeCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="OnetimeRevenue" />
+              <s:element minOccurs="0" maxOccurs="1" name="MonthlyCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="MonthlyRevenue" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuarterlyCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuarterlyRevenue" />
+              <s:element minOccurs="0" maxOccurs="1" name="YearlyCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="YearlyRevenue" />
+              <s:element minOccurs="0" maxOccurs="1" name="SemiannualCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="SemiannualRevenue" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractServiceBundleUnit">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Units" />
+              <s:element minOccurs="0" maxOccurs="1" name="Price" />
+              <s:element minOccurs="0" maxOccurs="1" name="Cost" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApproveAndPostDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyPrice" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractServiceUnit">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Units" />
+              <s:element minOccurs="0" maxOccurs="1" name="Price" />
+              <s:element minOccurs="0" maxOccurs="1" name="Cost" />
+              <s:element minOccurs="0" maxOccurs="1" name="VendorAccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApproveAndPostDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyPrice" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractServiceAdjustment">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="EffectiveDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitChange" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdjustedUnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdjustedUnitCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteItemID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AllowRepeatService" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractServiceBundleAdjustment">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="EffectiveDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitChange" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdjustedUnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteItemID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AllowRepeatServiceBundle" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractRetainer">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsPaid" />
+              <s:element minOccurs="0" maxOccurs="1" name="DatePurchased" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Amount" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="paymentID" />
+              <s:element minOccurs="0" maxOccurs="1" name="OverrideHourlyRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="AmountApproved" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyAmount" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyAmountApproved" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractBlock">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsPaid" />
+              <s:element minOccurs="0" maxOccurs="1" name="DatePurchased" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Hours" />
+              <s:element minOccurs="0" maxOccurs="1" name="HourlyRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentType" />
+              <s:element minOccurs="0" maxOccurs="1" name="HoursApproved" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractTicketPurchase">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="DatePurchased" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsPaid" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentType" />
+              <s:element minOccurs="0" maxOccurs="1" name="PerTicketRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketsPurchased" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketsUsed" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractFactor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="RoleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BlockHourFactor" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractRate">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="RoleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractHourlyRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyContractHourlyRate" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractRoleCost">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Rate" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractMilestone">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="DateDue" />
+              <s:element minOccurs="0" maxOccurs="1" name="Amount" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsInitialPayment" />
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyAmount" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractNote">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractServiceBundle">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdjustedPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceDescription" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteItemID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyUnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyAdjustedPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalDescription" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractService">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdjustedPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceDescription" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteItemID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyUnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyAdjustedPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalDescription" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeEntry">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TaskID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalAllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Type" />
+              <s:element minOccurs="0" maxOccurs="1" name="DateWorked" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="HoursWorked" />
+              <s:element minOccurs="0" maxOccurs="1" name="HoursToBill" />
+              <s:element minOccurs="0" maxOccurs="1" name="OffsetHours" />
+              <s:element minOccurs="0" maxOccurs="1" name="SummaryNotes" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalNotes" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorUserID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedUserID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowOnInvoice" />
+              <s:element minOccurs="0" maxOccurs="1" name="NonBillable" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillingApprovalLevelMostRecent" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillingApprovalResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillingApprovalDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceBundleID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Appointment">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="UpdateDateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceCallTask">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceCallID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaskID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceCallTicket">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceCallID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceCall">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="Complete" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Duration" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceCallTaskResource">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceCallTaskID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceCallTicketResource">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceCallTicketID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Task">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssignedResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssignedResourceRoleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CanClientPortalUserCompleteTask" />
+              <s:element minOccurs="0" maxOccurs="1" name="CompletedDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="DepartmentID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstimatedHours" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExternalID" />
+              <s:element minOccurs="0" maxOccurs="1" name="HoursToBeScheduled" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsVisibleInClientPortal" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="PhaseID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Priority" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectID" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="RemainingHours" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaskIsBillable" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaskNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaskType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Product">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="SKU" />
+              <s:element minOccurs="0" maxOccurs="1" name="Link" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductCategory" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExternalProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="MarkupRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="MSRP" />
+              <s:element minOccurs="0" maxOccurs="1" name="DefaultVendorID" />
+              <s:element minOccurs="0" maxOccurs="1" name="VendorProductNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ManufacturerName" />
+              <s:element minOccurs="0" maxOccurs="1" name="ManufacturerProductName" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="PeriodType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductAllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Serialized" />
+              <s:element minOccurs="0" maxOccurs="1" name="CostAllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="DoesNotRequireProcurement" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalProductID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ProductVendor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="VendorID" />
+              <s:element minOccurs="0" maxOccurs="1" name="VendorCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="VendorPartNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsDefault" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Project">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectName" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Type" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExtProjectType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExtPNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Duration" />
+              <s:element minOccurs="0" maxOccurs="1" name="ActualHours" />
+              <s:element minOccurs="0" maxOccurs="1" name="ActualBilledHours" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstimatedTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="LaborEstimatedRevenue" />
+              <s:element minOccurs="0" maxOccurs="1" name="LaborEstimatedCosts" />
+              <s:element minOccurs="0" maxOccurs="1" name="LaborEstimatedMarginPercentage" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectCostsRevenue" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectCostsBudget" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectCostEstimatedMarginPercentage" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeOrdersRevenue" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeOrdersBudget" />
+              <s:element minOccurs="0" maxOccurs="1" name="SGDA" />
+              <s:element minOccurs="0" maxOccurs="1" name="OriginalEstimatedRevenue" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstimatedSalesCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectLeadResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CompanyOwnerResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CompletedPercentage" />
+              <s:element minOccurs="0" maxOccurs="1" name="CompletedDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatusDetail" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatusDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Department" />
+              <s:element minOccurs="0" maxOccurs="1" name="LineOfBusiness" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Phase">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="DueDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstimatedHours" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExternalID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ParentPhaseID" />
+              <s:element minOccurs="0" maxOccurs="1" name="PhaseNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Scheduled" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Role">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="SystemRole" />
+              <s:element minOccurs="0" maxOccurs="1" name="HourlyFactor" />
+              <s:element minOccurs="0" maxOccurs="1" name="HourlyRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteItemDefaultTaxCategoryId" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsExcludedFromNewContracts" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoleType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Invoice">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comments" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceTotal" />
+              <s:element minOccurs="0" maxOccurs="1" name="TotalTaxValue" />
+              <s:element minOccurs="0" maxOccurs="1" name="FromDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="ToDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="OrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentTerm" />
+              <s:element minOccurs="0" maxOccurs="1" name="WebServiceDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsVoided" />
+              <s:element minOccurs="0" maxOccurs="1" name="VoidedDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="VoidedByResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaidDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxRegionName" />
+              <s:element minOccurs="0" maxOccurs="1" name="DueDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="BatchID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceEditorTemplateID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AllocationCode">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GeneralLedgerCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="Department" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Type" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Taxable" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExternalNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxCategoryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="MarkupRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsExcludedFromNewContracts" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Ticket">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CompletedDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="DueDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstimatedHours" />
+              <s:element minOccurs="0" maxOccurs="1" name="InstalledProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="IssueType" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Priority" />
+              <s:element minOccurs="0" maxOccurs="1" name="QueueID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssignedResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssignedResourceRoleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Source" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubIssueType" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstResponseDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResolutionPlanDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResolvedDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstResponseDueDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResolutionPlanDueDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResolvedDueDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceLevelAgreementID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceLevelAgreementHasBeenMet" />
+              <s:element minOccurs="0" maxOccurs="1" name="Resolution" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProblemTicketId" />
+              <s:element minOccurs="0" maxOccurs="1" name="OpportunityId" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeApprovalBoard" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeApprovalType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeApprovalStatus" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeInfoField1" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeInfoField2" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeInfoField3" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeInfoField4" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeInfoField5" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastCustomerNotificationDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastCustomerVisibleActivityDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="HoursToBeScheduled" />
+              <s:element minOccurs="0" maxOccurs="1" name="MonitorTypeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="MonitorID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AEMAlertID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Contact">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="AddressLine" />
+              <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" />
+              <s:element minOccurs="0" maxOccurs="1" name="AlternatePhone" />
+              <s:element minOccurs="0" maxOccurs="1" name="City" />
+              <s:element minOccurs="0" maxOccurs="1" name="Country" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="EMailAddress" />
+              <s:element minOccurs="0" maxOccurs="1" name="EMailAddress2" />
+              <s:element minOccurs="0" maxOccurs="1" name="EMailAddress3" />
+              <s:element minOccurs="0" maxOccurs="1" name="Extension" />
+              <s:element minOccurs="0" maxOccurs="1" name="FaxNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstName" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastName" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="MiddleInitial" />
+              <s:element minOccurs="0" maxOccurs="1" name="MobilePhone" />
+              <s:element minOccurs="0" maxOccurs="1" name="Note" />
+              <s:element minOccurs="0" maxOccurs="1" name="Notification" />
+              <s:element minOccurs="0" maxOccurs="1" name="Phone" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoomNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+              <s:element minOccurs="0" maxOccurs="1" name="ZipCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdditionalAddressInformation" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExternalID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BulkEmailOptOut" />
+              <s:element minOccurs="0" maxOccurs="1" name="BulkEmailOptOutTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="SurveyOptOut" />
+              <s:element minOccurs="0" maxOccurs="1" name="NamePrefix" />
+              <s:element minOccurs="0" maxOccurs="1" name="NameSuffix" />
+              <s:element minOccurs="0" maxOccurs="1" name="FacebookUrl" />
+              <s:element minOccurs="0" maxOccurs="1" name="TwitterUrl" />
+              <s:element minOccurs="0" maxOccurs="1" name="LinkedInUrl" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrimaryContact" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TicketNote">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="NoteType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Publish" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AccountNote">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="OpportunityID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssignedResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ActionType" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CompletedDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Note" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedDate" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AccountToDo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="OpportunityID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssignedToResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ActionType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ActivityDescription" />
+              <s:element minOccurs="0" maxOccurs="1" name="CompletedDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedDate" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ActionType">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="View" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="SystemActionType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Account">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Address1" />
+              <s:element minOccurs="0" maxOccurs="1" name="Address2" />
+              <s:element minOccurs="0" maxOccurs="1" name="AlternatePhone1" />
+              <s:element minOccurs="0" maxOccurs="1" name="AlternatePhone2" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssetValue" />
+              <s:element minOccurs="0" maxOccurs="1" name="City" />
+              <s:element minOccurs="0" maxOccurs="1" name="CompetitorID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Country" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Fax" />
+              <s:element minOccurs="0" maxOccurs="1" name="KeyAccountIcon" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="MarketSegmentID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountName" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="OwnerResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ParentAccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Phone" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostalCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="SICCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" />
+              <s:element minOccurs="0" maxOccurs="1" name="StockMarket" />
+              <s:element minOccurs="0" maxOccurs="1" name="StockSymbol" />
+              <s:element minOccurs="0" maxOccurs="1" name="TerritoryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountType" />
+              <s:element minOccurs="0" maxOccurs="1" name="WebAddress" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="ClientPortalActive" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaskFireActive" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxExempt" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxRegionID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdditionalAddressInformation" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToAddressToUse" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToAttention" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToAddress1" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToAddress2" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToCity" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToState" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToZipCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToCountryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillToAdditionalAddressInformation" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceMethod" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceNonContractItemsToParentAccount" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteTemplateID" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteEmailMessageID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceTemplateID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceEmailMessageID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AccountTeam">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Contract">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillingPreference" />
+              <s:element minOccurs="0" maxOccurs="1" name="Compliance" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactName" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractCategory" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractName" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractPeriodType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractType" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsDefaultContract" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstimatedCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstimatedHours" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstimatedRevenue" />
+              <s:element minOccurs="0" maxOccurs="1" name="OverageBillingRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="SetupFee" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="TimeReportingRequiresStartAndStopTimes" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceLevelAgreementID" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="OpportunityID" />
+              <s:element minOccurs="0" maxOccurs="1" name="RenewedContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="SetupFeeAllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExclusionContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyOverageBillingRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencySetupFee" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractExclusionAllocationCode">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractExclusionRole">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoleID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InstalledProduct">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="DailyCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="HourlyCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="InstallDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="MonthlyCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="Notes" />
+              <s:element minOccurs="0" maxOccurs="1" name="NumberOfUsers" />
+              <s:element minOccurs="0" maxOccurs="1" name="PerUseCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReferenceNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReferenceTitle" />
+              <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="SetupFee" />
+              <s:element minOccurs="0" maxOccurs="1" name="WarrantyExpirationDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Type" />
+              <s:element minOccurs="0" maxOccurs="1" name="Location" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="VendorID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InstalledByID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InstalledByContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ParentInstalledProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceBundleID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InstalledProductType">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InstalledProductTypeUdfAssociation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="InstalledProductTypeId" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserDefinedFieldDefinitionId" />
+              <s:element minOccurs="0" maxOccurs="1" name="Required" />
+              <s:element minOccurs="0" maxOccurs="1" name="SortOrder" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Resource">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email2" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email3" />
+              <s:element minOccurs="0" maxOccurs="1" name="EmailTypeCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="EmailTypeCode2" />
+              <s:element minOccurs="0" maxOccurs="1" name="EmailTypeCode3" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstName" />
+              <s:element minOccurs="0" maxOccurs="1" name="Gender" />
+              <s:element minOccurs="0" maxOccurs="1" name="Greeting" />
+              <s:element minOccurs="0" maxOccurs="1" name="HomePhone" />
+              <s:element minOccurs="0" maxOccurs="1" name="Initials" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastName" />
+              <s:element minOccurs="0" maxOccurs="1" name="LocationID" />
+              <s:element minOccurs="0" maxOccurs="1" name="MiddleName" />
+              <s:element minOccurs="0" maxOccurs="1" name="MobilePhone" />
+              <s:element minOccurs="0" maxOccurs="1" name="OfficeExtension" />
+              <s:element minOccurs="0" maxOccurs="1" name="OfficePhone" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Suffix" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+              <s:element minOccurs="0" maxOccurs="1" name="TravelAvailabilityPct" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserName" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserType" />
+              <s:element minOccurs="0" maxOccurs="1" name="DefaultServiceDeskRoleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="DateFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="TimeFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" />
+              <s:element minOccurs="0" maxOccurs="1" name="PayrollType" />
+              <s:element minOccurs="0" maxOccurs="1" name="NumberFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountingReferenceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="HireDate" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BillingItem">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountManagerWhenApprovedID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Type" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemName" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="Quantity" />
+              <s:element minOccurs="0" maxOccurs="1" name="Rate" />
+              <s:element minOccurs="0" maxOccurs="1" name="TotalAmount" />
+              <s:element minOccurs="0" maxOccurs="1" name="OurCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApprovedTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemApproverID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaskID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TimeEntryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+              <s:element minOccurs="0" maxOccurs="1" name="WebServiceDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="NonBillable" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxDollars" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExtendedPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpenseItemID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractCostID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectCostID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketCostID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LineItemID" />
+              <s:element minOccurs="0" maxOccurs="1" name="MilestoneID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="VendorID" />
+              <s:element minOccurs="0" maxOccurs="1" name="LineItemFullDescription" />
+              <s:element minOccurs="0" maxOccurs="1" name="LineItemGroupDescription" />
+              <s:element minOccurs="0" maxOccurs="1" name="InstalledProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyExtendedPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyTaxDollars" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyTotalAmount" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ClientPortalUser">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SecurityLevel" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="DateFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="TimeFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="NumberFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserName" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" />
+              <s:element minOccurs="0" maxOccurs="1" name="ClientPortalActive" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ExpenseReport">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="Submit" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubmitDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubmitterID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApproverID" />
+              <s:element minOccurs="0" maxOccurs="1" name="WeekEnding" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpenseTotal" />
+              <s:element minOccurs="0" maxOccurs="1" name="CashAdvanceAmount" />
+              <s:element minOccurs="0" maxOccurs="1" name="RejectionReason" />
+              <s:element minOccurs="0" maxOccurs="1" name="AmountDue" />
+              <s:element minOccurs="0" maxOccurs="1" name="DepartmentNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuickBooksReferenceNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApprovedDate" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ExpenseItem">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ExpenseReportID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpenseDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpenseCategory" />
+              <s:element minOccurs="0" maxOccurs="1" name="GLCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="WorkType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpenseAmount" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Reimbursable" />
+              <s:element minOccurs="0" maxOccurs="1" name="HaveReceipt" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillableToAccount" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaskID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntertainmentLocation" />
+              <s:element minOccurs="0" maxOccurs="1" name="Miles" />
+              <s:element minOccurs="0" maxOccurs="1" name="Origin" />
+              <s:element minOccurs="0" maxOccurs="1" name="Destination" />
+              <s:element minOccurs="0" maxOccurs="1" name="Rejected" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="OdometerStart" />
+              <s:element minOccurs="0" maxOccurs="1" name="OdometerEnd" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpenseCurrencyID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReceiptAmount" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TaskNote">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="NoteType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Publish" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaskID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ProjectNote">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastActivityDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="NoteType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Publish" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" />
+              <s:element minOccurs="0" maxOccurs="1" name="Announce" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BillingItemApprovalLevel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TimeEntryID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApprovalResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApprovalDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApprovalLevel" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContractCost">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillableAmount" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillableToAccount" />
+              <s:element minOccurs="0" maxOccurs="1" name="Billed" />
+              <s:element minOccurs="0" maxOccurs="1" name="CostType" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="DatePurchased" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExtendedCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalPurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatusLastModifiedBy" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatusLastModifiedDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitQuantity" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyBillableAmount" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyUnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ProjectCost">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillableAmount" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillableToAccount" />
+              <s:element minOccurs="0" maxOccurs="1" name="Billed" />
+              <s:element minOccurs="0" maxOccurs="1" name="CostType" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="DatePurchased" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExtendedCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalPurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatusLastModifiedBy" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatusLastModifiedDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitQuantity" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyBillableAmount" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyUnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectID" />
+              <s:element minOccurs="0" maxOccurs="1" name="EstimatedCost" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ChangeRequestLink">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ChangeRequestTicketID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProblemOrIncidentTicketID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TicketChangeRequestApproval">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApproveRejectDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ApproveRejectNote" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsApproved" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TicketCost">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillableAmount" />
+              <s:element minOccurs="0" maxOccurs="1" name="BillableToAccount" />
+              <s:element minOccurs="0" maxOccurs="1" name="Billed" />
+              <s:element minOccurs="0" maxOccurs="1" name="CostType" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="DatePurchased" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExtendedCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalPurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatusLastModifiedBy" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatusLastModifiedDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitCost" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitQuantity" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyBillableAmount" />
+              <s:element minOccurs="0" maxOccurs="1" name="InternalCurrencyUnitPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InternalLocation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Address1" />
+              <s:element minOccurs="0" maxOccurs="1" name="Address2" />
+              <s:element minOccurs="0" maxOccurs="1" name="City" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostalCode" />
+              <s:element minOccurs="0" maxOccurs="1" name="Country" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdditionalAddressInfo" />
+              <s:element minOccurs="0" maxOccurs="1" name="TimeZone" />
+              <s:element minOccurs="0" maxOccurs="1" name="HolidaySetId" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsDefault" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UserDefinedFieldDefinition">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="UdfType" />
+              <s:element minOccurs="0" maxOccurs="1" name="DataType" />
+              <s:element minOccurs="0" maxOccurs="1" name="DefaultValue" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsFieldMapping" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsProtected" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsEncrypted" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsRequired" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsActive" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+              <s:element minOccurs="0" maxOccurs="1" name="MergeVariableName" />
+              <s:element minOccurs="0" maxOccurs="1" name="CrmToProjectUdfId" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="SortOrder" />
+              <s:element minOccurs="0" maxOccurs="1" name="NumberOfDecimalPlaces" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsVisibleToClientPortal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UserDefinedFieldListItem">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="UdfFieldId" />
+              <s:element minOccurs="0" maxOccurs="1" name="ValueForExport" />
+              <s:element minOccurs="0" maxOccurs="1" name="ValueForDisplay" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreateDate" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AdditionalInvoiceFieldValue">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdditionalInvoiceFieldID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InvoiceBatchID" />
+              <s:element minOccurs="0" maxOccurs="1" name="FieldValue" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="InvoiceTemplate">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayTaxCategory" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayTaxCategorySuperscripts" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplaySeparateLineItemForEachTax" />
+              <s:element minOccurs="0" maxOccurs="1" name="GroupBy" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemizeItemsInEachGroup" />
+              <s:element minOccurs="0" maxOccurs="1" name="SortBy" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemizeServicesAndBundles" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayZeroAmountRecurringServicesAndBundles" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayRecurringServiceContractLabor" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayFixedPriceContractLabor" />
+              <s:element minOccurs="0" maxOccurs="1" name="RateCostExpression" />
+              <s:element minOccurs="0" maxOccurs="1" name="CoveredByRecurringServiceFixedPricePerTicketContractLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="CoveredByBlockRetainerContractLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="NonBillableLaborLabel" />
+              <s:element minOccurs="0" maxOccurs="1" name="PageLayout" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentTerms" />
+              <s:element minOccurs="0" maxOccurs="1" name="PageNumberFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="DateFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="NumberFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="TimeFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowGridHeader" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShowVerticalGridLines" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyPositiveFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyNegativeFormat" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PaymentTerm">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="PaymentDueInDays" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Department">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="PrimaryLocationID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Number" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TaskPredecessor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="LagDays" />
+              <s:element minOccurs="0" maxOccurs="1" name="PredecessorTaskID" />
+              <s:element minOccurs="0" maxOccurs="1" name="SuccessorTaskID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TaskSecondaryResource">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaskID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoleID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TicketSecondaryResource">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoleID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ResourceRole">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="DepartmentID" />
+              <s:element minOccurs="0" maxOccurs="1" name="QueueID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceBundleService">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AccountAlert">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AlertTypeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="AlertText" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="NotificationHistory">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" />
+              <s:element minOccurs="0" maxOccurs="1" name="NotificationSentTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemplateName" />
+              <s:element minOccurs="0" maxOccurs="1" name="NotificationHistoryTypeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityTitle" />
+              <s:element minOccurs="0" maxOccurs="1" name="EntityNumber" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsTemplateJob" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="InitiatingResourceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="InitiatingContactID" />
+              <s:element minOccurs="0" maxOccurs="1" name="RecipientEmailAddress" />
+              <s:element minOccurs="0" maxOccurs="1" name="RecipientDisplayName" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountID" />
+              <s:element minOccurs="0" maxOccurs="1" name="QuoteID" />
+              <s:element minOccurs="0" maxOccurs="1" name="OpportunityID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProjectID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaskID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TicketID" />
+              <s:element minOccurs="0" maxOccurs="1" name="TimeEntryID" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="WorkTypeModifier">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ModifierValue" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModifierType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Currency">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplaySymbol" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExchangeRate" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastModifiedDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="UpdateResourceId" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsInternalCurrency" />
+              <s:element minOccurs="0" maxOccurs="1" name="Active" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyPositiveFormat" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyNegativeFormat" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PriceListService">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UsesInternalCurrencyPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PriceListProduct">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ProductID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UsesInternalCurrencyPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PriceListMaterialCode">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AllocationCodeID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UsesInternalCurrencyPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PriceListRole">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="RoleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UsesInternalCurrencyPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="HourlyRate" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PriceListServiceBundle">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceBundleID" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UsesInternalCurrencyPrice" />
+              <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PriceListWorkTypeModifier">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="WorkTypeModifierID" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModifierValue" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModifierType" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyID" />
+              <s:element minOccurs="0" maxOccurs="1" name="UsesInternalCurrencyPrice" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetEntityInfo">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="EntityInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanUpdate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanDelete" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanCreate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanQuery" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasUserDefinedFields" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntityInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntityInfo" nillable="true" type="tns:EntityInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEntityInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEntityInfoResult" type="tns:ArrayOfEntityInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFieldInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psObjectType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFieldInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFieldInfoResult" type="tns:ArrayOfField" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUDFInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psTable" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUDFInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getUDFInfoResult" type="tns:ArrayOfField" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="query">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ATWSResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntityResults" type="tns:ArrayOfEntity" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntityResultType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfATWSError" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntityReturnInfoResults" type="tns:ArrayOfEntityReturnInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Entity" nillable="true" type="tns:Entity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfATWSError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ATWSError" nillable="true" type="tns:ATWSError" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ATWSError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntityReturnInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntityReturnInfo" nillable="true" type="tns:EntityReturnInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntityReturnInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EntityId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatabaseAction" type="tns:EntityReturnInfoDatabaseAction" />
+          <s:element minOccurs="1" maxOccurs="1" name="DuplicateStatus" type="tns:EntityDuplicateStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EntityReturnInfoDatabaseAction">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Created" />
+          <s:enumeration value="Updated" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="EntityDuplicateStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Found" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="MatchInfo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ignored" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="queryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryResult" type="tns:ATWSResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutotaskIntegrations" type="tns:AutotaskIntegrations" />
+      <s:complexType name="AutotaskIntegrations">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PartnerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IntegrationCode" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="create">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Entities" type="tns:ArrayOfEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="createResult" type="tns:ATWSResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Entities" type="tns:ArrayOfEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateResult" type="tns:ATWSResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Entities" type="tns:ArrayOfEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteResult" type="tns:ATWSResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getZoneInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ATWSZoneInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataBaseType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CI" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebUrl" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getZoneInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getZoneInfoResult" type="tns:ATWSZoneInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getThresholdAndUsageInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="getThresholdAndUsageInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getThresholdAndUsageInfoResult" type="tns:ATWSResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWsdlVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWsdlVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWsdlVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceMarkup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InvoiceId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Format" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceMarkupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInvoiceMarkupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAttachmentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAttachment" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachmentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachmentAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="CreateAttachmentSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAttachment" />
+  </wsdl:message>
+  <wsdl:message name="CreateAttachmentSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAttachmentAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAttachmentSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAttachment" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAttachmentSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAttachmentAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="GetEntityInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEntityInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetEntityInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEntityInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEntityInfoAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="GetFieldInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFieldInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetFieldInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFieldInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFieldInfoAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="getUDFInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getUDFInfo" />
+  </wsdl:message>
+  <wsdl:message name="getUDFInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getUDFInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUDFInfoAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="querySoapIn">
+    <wsdl:part name="parameters" element="tns:query" />
+  </wsdl:message>
+  <wsdl:message name="querySoapOut">
+    <wsdl:part name="parameters" element="tns:queryResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="createSoapIn">
+    <wsdl:part name="parameters" element="tns:create" />
+  </wsdl:message>
+  <wsdl:message name="createSoapOut">
+    <wsdl:part name="parameters" element="tns:createResponse" />
+  </wsdl:message>
+  <wsdl:message name="createAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="updateSoapIn">
+    <wsdl:part name="parameters" element="tns:update" />
+  </wsdl:message>
+  <wsdl:message name="updateSoapOut">
+    <wsdl:part name="parameters" element="tns:updateResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="getZoneInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getZoneInfo" />
+  </wsdl:message>
+  <wsdl:message name="getZoneInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getZoneInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getThresholdAndUsageInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getThresholdAndUsageInfo" />
+  </wsdl:message>
+  <wsdl:message name="getThresholdAndUsageInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getThresholdAndUsageInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getThresholdAndUsageInfoAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="deleteSoapIn">
+    <wsdl:part name="parameters" element="tns:delete" />
+  </wsdl:message>
+  <wsdl:message name="deleteSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="GetWsdlVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWsdlVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetWsdlVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWsdlVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWsdlVersionAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceMarkupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInvoiceMarkup" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceMarkupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInvoiceMarkupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceMarkupAutotaskIntegrations">
+    <wsdl:part name="AutotaskIntegrations" element="tns:AutotaskIntegrations" />
+  </wsdl:message>
+  <wsdl:portType name="ATWSSoap">
+    <wsdl:operation name="GetAttachment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Attachment function, returns file attachment info for version 1.5</wsdl:documentation>
+      <wsdl:input message="tns:GetAttachmentSoapIn" />
+      <wsdl:output message="tns:GetAttachmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAttachment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Create Attachment function for version 1.5</wsdl:documentation>
+      <wsdl:input message="tns:CreateAttachmentSoapIn" />
+      <wsdl:output message="tns:CreateAttachmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttachment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Delete Attachment function for version 1.5</wsdl:documentation>
+      <wsdl:input message="tns:DeleteAttachmentSoapIn" />
+      <wsdl:output message="tns:DeleteAttachmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntityInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Default EntityInfo function, returns entity info for version 1.5</wsdl:documentation>
+      <wsdl:input name="GetEntityInfo" message="tns:GetEntityInfoSoapIn" />
+      <wsdl:output name="GetEntityInfo" message="tns:GetEntityInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Default GetFieldInfo function, returns information for version 1.5</wsdl:documentation>
+      <wsdl:input message="tns:GetFieldInfoSoapIn" />
+      <wsdl:output message="tns:GetFieldInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUDFInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Default GetUDFInfo function, returns information for version 1.5</wsdl:documentation>
+      <wsdl:input message="tns:getUDFInfoSoapIn" />
+      <wsdl:output message="tns:getUDFInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">query function to extract data, sXML is in QueryXML format.</wsdl:documentation>
+      <wsdl:input message="tns:querySoapIn" />
+      <wsdl:output message="tns:querySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">create function will insert any new entities into the Autotask system.</wsdl:documentation>
+      <wsdl:input message="tns:createSoapIn" />
+      <wsdl:output message="tns:createSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">update function will update all entities with the new values passed to it.</wsdl:documentation>
+      <wsdl:input message="tns:updateSoapIn" />
+      <wsdl:output message="tns:updateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">delete function will delete all the entities passed to it.</wsdl:documentation>
+      <wsdl:input message="tns:deleteSoapIn" />
+      <wsdl:output message="tns:deleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getZoneInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets information about what zone/URL the client should use.</wsdl:documentation>
+      <wsdl:input message="tns:getZoneInfoSoapIn" />
+      <wsdl:output message="tns:getZoneInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getThresholdAndUsageInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">getThresholdAndUsageInfo function to get the threshold, timeframe and current number of external request.</wsdl:documentation>
+      <wsdl:input message="tns:getThresholdAndUsageInfoSoapIn" />
+      <wsdl:output message="tns:getThresholdAndUsageInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWsdlVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetWsdlVersion function to get the current wsdl version for the zone.</wsdl:documentation>
+      <wsdl:input message="tns:GetWsdlVersionSoapIn" />
+      <wsdl:output message="tns:GetWsdlVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceMarkup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the requested markup format for a given invoice.</wsdl:documentation>
+      <wsdl:input message="tns:GetInvoiceMarkupSoapIn" />
+      <wsdl:output message="tns:GetInvoiceMarkupSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ATWSSoap" type="tns:ATWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAttachment">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/GetAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAttachmentAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAttachment">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/CreateAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreateAttachmentAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttachment">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/DeleteAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteAttachmentAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityInfo">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/GetEntityInfo" style="document" />
+      <wsdl:input name="GetEntityInfo">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetEntityInfoAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetEntityInfo">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFieldInfo">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/GetFieldInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFieldInfoAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUDFInfo">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/getUDFInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getUDFInfoAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="query">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:queryAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:createAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:deleteAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZoneInfo">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/getZoneInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThresholdAndUsageInfo">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/getThresholdAndUsageInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getThresholdAndUsageInfoAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWsdlVersion">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/GetWsdlVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetWsdlVersionAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceMarkup">
+      <soap:operation soapAction="http://autotask.net/ATWS/v1_5/GetInvoiceMarkup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetInvoiceMarkupAutotaskIntegrations" part="AutotaskIntegrations" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ATWS">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Autotask Web Services Version 1.5</wsdl:documentation>
+    <wsdl:port name="ATWSSoap" binding="tns:ATWSSoap">
+      <soap:address location="https://webservices.autotask.net/ATServices/1.5/atws.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
