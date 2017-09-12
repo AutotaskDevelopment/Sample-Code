@@ -6,7 +6,7 @@ This repository is not all inclusive. If there are examples you would like to se
 
 # Query Structure
 Queries are in XML.
-The base sturicture is as follows:   
+The base structure is as follows:   
 ```xml 
   <queryxml>  
     <entity>ENTITY NAME</entity>    
@@ -43,7 +43,7 @@ and AccountType = 1 AND (Active = true AND Country = "United States") would be:
 </queryxml>
 ```
 
-Queries that contain OR operaters must have a ```<condition>``` tag around each field.   
+Queries that contain OR operators must have a ```<condition>``` tag around each field.   
 For example: AccountType = 1 AND Active = true AND (Country = "United States" OR Country = "United Kingdom")   
 ```xml
 <queryxml>
