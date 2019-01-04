@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/slnx.sqlite
+/.vs/Sample-Code/v15/.suo
+/.vs/ProjectSettings.json
+*.suo
+/API Documentation Samples/C# Example/SampleAutotaskAPI/obj/Release
+/API Documentation Samples/C# Example/SampleAutotaskAPI/obj/Debug
+/API Documentation Samples/VB Example/SampleAutotaskAPIVB/obj/Release
+/API Documentation Samples/VB Example/SampleAutotaskAPIVB/obj/Debug
+/API Documentation Samples/C# Example/.vs/SampleAutotaskAPI/v15/Server/sqlite3
+/Upload Attachment Example/Upload Attachment Example/obj/Release
+/Upload Attachment Example/Upload Attachment Example/obj/Debug
+/Emoticon Survey Example/EmoticonWebProject/EmoticonWebProject/obj/Release
+/Emoticon Survey Example/EmoticonWebProject/EmoticonWebProject/obj/Debug
