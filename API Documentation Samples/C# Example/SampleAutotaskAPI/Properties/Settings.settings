@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SampleAutotaskAPI.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="SampleAutotaskAPI_Autotask_Net_Webservices_ATWS" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://webservices.autotask.net/ATServices/1.5/atws.asmx</Value>
+    <Setting Name="SampleAutotaskAPI_Autotask_Net_webservices_ATWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://webservices.autotask.net/ATServices/1.6/atws.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

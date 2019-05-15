@@ -28,7 +28,7 @@ namespace SampleAutotaskAPI
         /// </summary>
         /// <param name="user">The username.</param>
         /// <param name="pass">The password.</param>
-        public AutotaskApiTests(string user, string pass)
+        public AutotaskApiTests(string user, string pass, string trackingId)
         {
             this.atwsServices = new ATWS { Url = this.webServiceBaseApiUrl };
             try
@@ -41,11 +41,12 @@ namespace SampleAutotaskAPI
                     NetworkCredential credentials = new NetworkCredential(user, pass);
                     CredentialCache cache = new CredentialCache { { new Uri(this.atwsServices.Url), "Basic", credentials } };
                     this.atwsServices.Credentials = cache;
+                    this.atwsServices.AutotaskIntegrationsValue = new AutotaskIntegrations { IntegrationCode = trackingId };
                 }
                 else
                 {
                     throw new Exception("Error with getZoneInfo()");
-                }                
+                }
             }
             catch (Exception exception)
             {
@@ -249,6 +250,46 @@ namespace SampleAutotaskAPI
             }
 
             return retContact;
+        }
+
+        /// <summary>
+        /// Creates a ticket note by the provided resource id using Impersonation.
+        /// </summary>
+        /// <param name="assignResourceId">The resource id.</param>
+        /// <returns>A new ticket note.</returns>
+        public AccountNote CreateAccountNoteAs(long impersonateResourceId, long assignResourceId, DateTime startDateTime, DateTime endDateTime)
+        {
+            AccountNote retNote = null;
+            Field[] fields = this.atwsServices.GetFieldInfo("AccountNote");
+            string actionTypeValue = PickListValueFromField(fields, "ActionType", "General");
+            AccountNote note = new AccountNote
+            {
+                id = 0,
+                AccountID = 0,
+                Note = "Test note created via impersonation",
+                StartDateTime = startDateTime,
+                EndDateTime = endDateTime,
+                ActionType = actionTypeValue,
+                AssignedResourceID = assignResourceId
+            };
+
+            Entity[] entContact = { note };
+
+            this.atwsServices.AutotaskIntegrationsValue.ImpersonateAsResourceID = (int)impersonateResourceId;
+            ATWSResponse respContact = this.atwsServices.create(entContact);
+            if (respContact.ReturnCode > 0 && respContact.EntityResults.Length > 0)
+            {
+                retNote = (AccountNote)respContact.EntityResults[0];
+            }
+            else
+            {
+                if (respContact.EntityReturnInfoResults.Length > 0)
+                {
+                    throw new Exception("Could not create the Account Note: " + respContact.EntityReturnInfoResults[0].Message);
+                }
+            }
+
+            return retNote;
         }
 
         /// <summary>

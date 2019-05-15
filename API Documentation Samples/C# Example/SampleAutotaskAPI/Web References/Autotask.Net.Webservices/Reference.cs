@@ -23,10 +23,10 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name="ATWSSoap", Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Web.Services.WebServiceBindingAttribute(Name="ATWSSoap", Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ATWS : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private AutotaskIntegrations autotaskIntegrationsValueField;
@@ -63,7 +63,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         public ATWS() {
-            this.Url = global::SampleAutotaskAPI.Properties.Settings.Default.SampleAutotaskAPI_Autotask_Net_Webservices_ATWS;
+            this.Url = global::SampleAutotaskAPI.Properties.Settings.Default.SampleAutotaskAPI_Autotask_Net_webservices_ATWS;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
@@ -150,7 +150,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/GetAttachment", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/GetAttachment", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public Attachment GetAttachment(long attachmentId) {
             object[] results = this.Invoke("GetAttachment", new object[] {
                         attachmentId});
@@ -180,7 +180,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/CreateAttachment", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/CreateAttachment", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public long CreateAttachment(Attachment attachment) {
             object[] results = this.Invoke("CreateAttachment", new object[] {
                         attachment});
@@ -210,7 +210,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/DeleteAttachment", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/DeleteAttachment", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string DeleteAttachment(long attachmentId) {
             object[] results = this.Invoke("DeleteAttachment", new object[] {
                         attachmentId});
@@ -240,7 +240,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/GetEntityInfo", RequestElementName="GetEntityInfo", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseElementName="GetEntityInfoResponse", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/GetEntityInfo", RequestElementName="GetEntityInfo", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseElementName="GetEntityInfoResponse", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlArrayAttribute("GetEntityInfoResult")]
         public EntityInfo[] getEntityInfo() {
             object[] results = this.Invoke("getEntityInfo", new object[0]);
@@ -269,7 +269,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/GetFieldInfo", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/GetFieldInfo", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public Field[] GetFieldInfo(string psObjectType) {
             object[] results = this.Invoke("GetFieldInfo", new object[] {
                         psObjectType});
@@ -299,7 +299,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/getUDFInfo", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/getUDFInfo", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public Field[] getUDFInfo(string psTable) {
             object[] results = this.Invoke("getUDFInfo", new object[] {
                         psTable});
@@ -329,7 +329,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/query", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/query", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public ATWSResponse query(string sXML) {
             object[] results = this.Invoke("query", new object[] {
                         sXML});
@@ -359,7 +359,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/create", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/create", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public ATWSResponse create(Entity[] Entities) {
             object[] results = this.Invoke("create", new object[] {
                         Entities});
@@ -389,7 +389,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/update", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/update", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public ATWSResponse update(Entity[] Entities) {
             object[] results = this.Invoke("update", new object[] {
                         Entities});
@@ -419,7 +419,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/delete", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/delete", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public ATWSResponse delete(Entity[] Entities) {
             object[] results = this.Invoke("delete", new object[] {
                         Entities});
@@ -448,7 +448,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/getZoneInfo", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/getZoneInfo", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public ATWSZoneInfo getZoneInfo(string UserName) {
             object[] results = this.Invoke("getZoneInfo", new object[] {
                         UserName});
@@ -478,7 +478,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/getThresholdAndUsageInfo", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/getThresholdAndUsageInfo", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public ATWSResponse getThresholdAndUsageInfo() {
             object[] results = this.Invoke("getThresholdAndUsageInfo", new object[0]);
             return ((ATWSResponse)(results[0]));
@@ -506,7 +506,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/GetWsdlVersion", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/GetWsdlVersion", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string GetWsdlVersion() {
             object[] results = this.Invoke("GetWsdlVersion", new object[0]);
             return ((string)(results[0]));
@@ -534,7 +534,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapHeaderAttribute("AutotaskIntegrationsValue")]
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_5/GetInvoiceMarkup", RequestNamespace="http://autotask.net/ATWS/v1_5/", ResponseNamespace="http://autotask.net/ATWS/v1_5/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://autotask.net/ATWS/v1_6/GetInvoiceMarkup", RequestNamespace="http://autotask.net/ATWS/v1_6/", ResponseNamespace="http://autotask.net/ATWS/v1_6/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string GetInvoiceMarkup(int InvoiceId, string Format) {
             object[] results = this.Invoke("GetInvoiceMarkup", new object[] {
                         InvoiceId,
@@ -584,15 +584,21 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://autotask.net/ATWS/v1_5/", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://autotask.net/ATWS/v1_6/", IsNullable=false)]
     public partial class AutotaskIntegrations : System.Web.Services.Protocols.SoapHeader {
         
         private string partnerIDField;
+        
+        private string integrationCodeField;
+        
+        private int impersonateAsResourceIDField;
+        
+        private bool impersonateAsResourceIDFieldSpecified;
         
         private System.Xml.XmlAttribute[] anyAttrField;
         
@@ -603,6 +609,37 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.partnerIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string IntegrationCode {
+            get {
+                return this.integrationCodeField;
+            }
+            set {
+                this.integrationCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ImpersonateAsResourceID {
+            get {
+                return this.impersonateAsResourceIDField;
+            }
+            set {
+                this.impersonateAsResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ImpersonateAsResourceIDSpecified {
+            get {
+                return this.impersonateAsResourceIDFieldSpecified;
+            }
+            set {
+                this.impersonateAsResourceIDFieldSpecified = value;
             }
         }
         
@@ -619,11 +656,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ATWSZoneInfo {
         
         private string uRLField;
@@ -633,6 +670,8 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private string dataBaseTypeField;
         
         private int ciField;
+        
+        private string webUrlField;
         
         /// <remarks/>
         public string URL {
@@ -673,14 +712,24 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.ciField = value;
             }
         }
+        
+        /// <remarks/>
+        public string WebUrl {
+            get {
+                return this.webUrlField;
+            }
+            set {
+                this.webUrlField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class EntityDuplicateStatus {
         
         private bool foundField;
@@ -721,11 +770,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class EntityReturnInfo {
         
         private long entityIdField;
@@ -778,9 +827,9 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public enum EntityReturnInfoDatabaseAction {
         
         /// <remarks/>
@@ -794,11 +843,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ATWSError {
         
         private string messageField;
@@ -815,11 +864,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ATWSResponse {
         
         private int returnCodeField;
@@ -884,9 +933,48 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractExclusionSetExcludedRole))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractExclusionSetExcludedWorkType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractExclusionSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TicketChecklistLibrary))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChecklistLibraryChecklistItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChecklistLibrary))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TicketAdditionalInstalledProduct))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TicketHistory))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactGroupContact))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContactGroup))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResourceServiceDeskRole))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurveyResults))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Survey))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PurchaseApproval))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceLevelAgreementResults))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TicketCategoryFieldDefaults))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TicketCategory))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TicketChecklistItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccountPhysicalLocation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessDivisionSubdivisionResource))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessDivisionSubdivision))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessSubdivision))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessDivision))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessLocation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Holiday))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(HolidaySet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResourceRoleQueue))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResourceRoleDepartment))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceListWorkTypeModifier))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceListServiceBundle))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceListRole))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceListMaterialCode))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceListProduct))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceListService))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Currency))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkTypeModifier))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NotificationHistory))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccountAlert))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceBundleService))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResourceRole))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TicketSecondaryResource))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TicketAdditionalContact))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaskSecondaryResource))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaskPredecessor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Department))]
@@ -909,9 +997,13 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ClientPortalUser))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BillingItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Resource))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SubscriptionPeriod))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Subscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InstalledProductTypeUdfAssociation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InstalledProductType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InstalledProduct))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractExclusionRole))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractExclusionAllocationCode))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Contract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccountTeam))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Account))]
@@ -940,6 +1032,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractServiceBundle))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractNote))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractMilestone))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractRoleCost))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractRate))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractFactor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractTicketPurchase))]
@@ -960,6 +1053,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(QuoteItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Country))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesOrder))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(QuoteTemplate))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Quote))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Skill))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ShippingType))]
@@ -970,13 +1064,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxRegion))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxCategory))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Tax))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ClassificationIcon))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(QuoteLocation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttachmentInfo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public abstract partial class Entity {
         
         private Field[] fieldsField;
@@ -1017,11 +1112,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Field {
         
         private string nameField;
@@ -1194,11 +1289,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class PickListValue {
         
         private string valueField;
@@ -1313,11 +1408,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class UserDefinedField {
         
         private string nameField;
@@ -1346,28 +1441,3190 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
-    public partial class ServiceBundleService : Entity {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ContractExclusionSetExcludedRole : Entity {
         
-        private object idField;
+        private object contractExclusionSetIDField;
+        
+        private object excludedRoleIDField;
+        
+        /// <remarks/>
+        public object ContractExclusionSetID {
+            get {
+                return this.contractExclusionSetIDField;
+            }
+            set {
+                this.contractExclusionSetIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ExcludedRoleID {
+            get {
+                return this.excludedRoleIDField;
+            }
+            set {
+                this.excludedRoleIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ContractExclusionSetExcludedWorkType : Entity {
+        
+        private object contractExclusionSetIDField;
+        
+        private object excludedWorkTypeIDField;
+        
+        /// <remarks/>
+        public object ContractExclusionSetID {
+            get {
+                return this.contractExclusionSetIDField;
+            }
+            set {
+                this.contractExclusionSetIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ExcludedWorkTypeID {
+            get {
+                return this.excludedWorkTypeIDField;
+            }
+            set {
+                this.excludedWorkTypeIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ContractExclusionSet : Entity {
+        
+        private object nameField;
+        
+        private object descriptionField;
+        
+        private object activeField;
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class TicketChecklistLibrary : Entity {
+        
+        private object ticketIDField;
+        
+        private object checklistLibraryIDField;
+        
+        /// <remarks/>
+        public object TicketID {
+            get {
+                return this.ticketIDField;
+            }
+            set {
+                this.ticketIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ChecklistLibraryID {
+            get {
+                return this.checklistLibraryIDField;
+            }
+            set {
+                this.checklistLibraryIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ChecklistLibraryChecklistItem : Entity {
+        
+        private object itemNameField;
+        
+        private object importantField;
+        
+        private object knowledgebaseArticleIDField;
+        
+        private object positionField;
+        
+        private object checklistLibraryIDField;
+        
+        /// <remarks/>
+        public object ItemName {
+            get {
+                return this.itemNameField;
+            }
+            set {
+                this.itemNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Important {
+            get {
+                return this.importantField;
+            }
+            set {
+                this.importantField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object KnowledgebaseArticleID {
+            get {
+                return this.knowledgebaseArticleIDField;
+            }
+            set {
+                this.knowledgebaseArticleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Position {
+            get {
+                return this.positionField;
+            }
+            set {
+                this.positionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ChecklistLibraryID {
+            get {
+                return this.checklistLibraryIDField;
+            }
+            set {
+                this.checklistLibraryIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ChecklistLibrary : Entity {
+        
+        private object nameField;
+        
+        private object descriptionField;
+        
+        private object entityTypeField;
+        
+        private object activeField;
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object EntityType {
+            get {
+                return this.entityTypeField;
+            }
+            set {
+                this.entityTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class TicketAdditionalInstalledProduct : Entity {
+        
+        private object ticketIDField;
+        
+        private object installedProductIDField;
+        
+        /// <remarks/>
+        public object TicketID {
+            get {
+                return this.ticketIDField;
+            }
+            set {
+                this.ticketIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InstalledProductID {
+            get {
+                return this.installedProductIDField;
+            }
+            set {
+                this.installedProductIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class TicketHistory : Entity {
+        
+        private object ticketIDField;
+        
+        private object actionField;
+        
+        private object detailField;
+        
+        private object resourceIDField;
+        
+        private object dateField;
+        
+        /// <remarks/>
+        public object TicketID {
+            get {
+                return this.ticketIDField;
+            }
+            set {
+                this.ticketIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Action {
+            get {
+                return this.actionField;
+            }
+            set {
+                this.actionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Detail {
+            get {
+                return this.detailField;
+            }
+            set {
+                this.detailField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResourceID {
+            get {
+                return this.resourceIDField;
+            }
+            set {
+                this.resourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Date {
+            get {
+                return this.dateField;
+            }
+            set {
+                this.dateField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ContactGroupContact : Entity {
+        
+        private object contactGroupIDField;
+        
+        private object contactIDField;
+        
+        /// <remarks/>
+        public object ContactGroupID {
+            get {
+                return this.contactGroupIDField;
+            }
+            set {
+                this.contactGroupIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContactID {
+            get {
+                return this.contactIDField;
+            }
+            set {
+                this.contactIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ContactGroup : Entity {
+        
+        private object nameField;
+        
+        private object activeField;
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ResourceServiceDeskRole : Entity {
+        
+        private object resourceIDField;
+        
+        private object roleIDField;
+        
+        private object activeField;
+        
+        private object defaultField;
+        
+        /// <remarks/>
+        public object ResourceID {
+            get {
+                return this.resourceIDField;
+            }
+            set {
+                this.resourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RoleID {
+            get {
+                return this.roleIDField;
+            }
+            set {
+                this.roleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Default {
+            get {
+                return this.defaultField;
+            }
+            set {
+                this.defaultField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class SurveyResults : Entity {
+        
+        private object accountIDField;
+        
+        private object companyRatingField;
+        
+        private object contactIDField;
+        
+        private object contactRatingField;
+        
+        private object completeDateField;
+        
+        private object resourceRatingField;
+        
+        private object sendDateField;
+        
+        private object surveyIDField;
+        
+        private object surveyRatingField;
+        
+        private object ticketIDField;
+        
+        /// <remarks/>
+        public object AccountID {
+            get {
+                return this.accountIDField;
+            }
+            set {
+                this.accountIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CompanyRating {
+            get {
+                return this.companyRatingField;
+            }
+            set {
+                this.companyRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContactID {
+            get {
+                return this.contactIDField;
+            }
+            set {
+                this.contactIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContactRating {
+            get {
+                return this.contactRatingField;
+            }
+            set {
+                this.contactRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CompleteDate {
+            get {
+                return this.completeDateField;
+            }
+            set {
+                this.completeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResourceRating {
+            get {
+                return this.resourceRatingField;
+            }
+            set {
+                this.resourceRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SendDate {
+            get {
+                return this.sendDateField;
+            }
+            set {
+                this.sendDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SurveyID {
+            get {
+                return this.surveyIDField;
+            }
+            set {
+                this.surveyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SurveyRating {
+            get {
+                return this.surveyRatingField;
+            }
+            set {
+                this.surveyRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TicketID {
+            get {
+                return this.ticketIDField;
+            }
+            set {
+                this.ticketIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class Survey : Entity {
+        
+        private object nameField;
+        
+        private object displayNameField;
+        
+        private object descriptionField;
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DisplayName {
+            get {
+                return this.displayNameField;
+            }
+            set {
+                this.displayNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class PurchaseApproval : Entity {
+        
+        private object costTypeField;
+        
+        private object isApprovedField;
+        
+        private object rejectNoteField;
+        
+        /// <remarks/>
+        public object CostType {
+            get {
+                return this.costTypeField;
+            }
+            set {
+                this.costTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object IsApproved {
+            get {
+                return this.isApprovedField;
+            }
+            set {
+                this.isApprovedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RejectNote {
+            get {
+                return this.rejectNoteField;
+            }
+            set {
+                this.rejectNoteField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ServiceLevelAgreementResults : Entity {
+        
+        private object ticketIDField;
+        
+        private object serviceLevelAgreementNameField;
+        
+        private object firstResponseElapsedHoursField;
+        
+        private object firstResponseInitiatingResourceIDField;
+        
+        private object firstResponseResourceIDField;
+        
+        private object firstResponseMetField;
+        
+        private object resolutionPlanElapsedHoursField;
+        
+        private object resolutionPlanResourceIDField;
+        
+        private object resolutionPlanMetField;
+        
+        private object resolutionElapsedHoursField;
+        
+        private object resolutionResourceIDField;
+        
+        private object resolutionMetField;
+        
+        /// <remarks/>
+        public object TicketID {
+            get {
+                return this.ticketIDField;
+            }
+            set {
+                this.ticketIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ServiceLevelAgreementName {
+            get {
+                return this.serviceLevelAgreementNameField;
+            }
+            set {
+                this.serviceLevelAgreementNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FirstResponseElapsedHours {
+            get {
+                return this.firstResponseElapsedHoursField;
+            }
+            set {
+                this.firstResponseElapsedHoursField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FirstResponseInitiatingResourceID {
+            get {
+                return this.firstResponseInitiatingResourceIDField;
+            }
+            set {
+                this.firstResponseInitiatingResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FirstResponseResourceID {
+            get {
+                return this.firstResponseResourceIDField;
+            }
+            set {
+                this.firstResponseResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FirstResponseMet {
+            get {
+                return this.firstResponseMetField;
+            }
+            set {
+                this.firstResponseMetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResolutionPlanElapsedHours {
+            get {
+                return this.resolutionPlanElapsedHoursField;
+            }
+            set {
+                this.resolutionPlanElapsedHoursField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResolutionPlanResourceID {
+            get {
+                return this.resolutionPlanResourceIDField;
+            }
+            set {
+                this.resolutionPlanResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResolutionPlanMet {
+            get {
+                return this.resolutionPlanMetField;
+            }
+            set {
+                this.resolutionPlanMetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResolutionElapsedHours {
+            get {
+                return this.resolutionElapsedHoursField;
+            }
+            set {
+                this.resolutionElapsedHoursField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResolutionResourceID {
+            get {
+                return this.resolutionResourceIDField;
+            }
+            set {
+                this.resolutionResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResolutionMet {
+            get {
+                return this.resolutionMetField;
+            }
+            set {
+                this.resolutionMetField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class TicketCategoryFieldDefaults : Entity {
+        
+        private object businessDivisionSubdivisionIDField;
+        
+        private object descriptionField;
+        
+        private object estimatedHoursField;
+        
+        private object issueTypeIDField;
+        
+        private object purchaseOrderNumberField;
+        
+        private object queueIDField;
+        
+        private object resolutionField;
+        
+        private object serviceLevelAgreementIDField;
+        
+        private object sourceIDField;
+        
+        private object subIssueTypeIDField;
+        
+        private object ticketCategoryIDField;
+        
+        private object ticketTypeIDField;
+        
+        private object titleField;
+        
+        private object workTypeIDField;
+        
+        private object statusField;
+        
+        private object priorityField;
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object EstimatedHours {
+            get {
+                return this.estimatedHoursField;
+            }
+            set {
+                this.estimatedHoursField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object IssueTypeID {
+            get {
+                return this.issueTypeIDField;
+            }
+            set {
+                this.issueTypeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PurchaseOrderNumber {
+            get {
+                return this.purchaseOrderNumberField;
+            }
+            set {
+                this.purchaseOrderNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object QueueID {
+            get {
+                return this.queueIDField;
+            }
+            set {
+                this.queueIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Resolution {
+            get {
+                return this.resolutionField;
+            }
+            set {
+                this.resolutionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ServiceLevelAgreementID {
+            get {
+                return this.serviceLevelAgreementIDField;
+            }
+            set {
+                this.serviceLevelAgreementIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SourceID {
+            get {
+                return this.sourceIDField;
+            }
+            set {
+                this.sourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SubIssueTypeID {
+            get {
+                return this.subIssueTypeIDField;
+            }
+            set {
+                this.subIssueTypeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TicketCategoryID {
+            get {
+                return this.ticketCategoryIDField;
+            }
+            set {
+                this.ticketCategoryIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TicketTypeID {
+            get {
+                return this.ticketTypeIDField;
+            }
+            set {
+                this.ticketTypeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object WorkTypeID {
+            get {
+                return this.workTypeIDField;
+            }
+            set {
+                this.workTypeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Priority {
+            get {
+                return this.priorityField;
+            }
+            set {
+                this.priorityField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class TicketCategory : Entity {
+        
+        private object nameField;
+        
+        private object nicknameField;
+        
+        private object activeField;
+        
+        private object displayColorRGBField;
+        
+        private object globalDefaultField;
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Nickname {
+            get {
+                return this.nicknameField;
+            }
+            set {
+                this.nicknameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DisplayColorRGB {
+            get {
+                return this.displayColorRGBField;
+            }
+            set {
+                this.displayColorRGBField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object GlobalDefault {
+            get {
+                return this.globalDefaultField;
+            }
+            set {
+                this.globalDefaultField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class TicketChecklistItem : Entity {
+        
+        private object completedField;
+        
+        private object completedByResourceIDField;
+        
+        private object completedDateTimeField;
+        
+        private object importantField;
+        
+        private object itemNameField;
+        
+        private object knowledgebaseArticleIDField;
+        
+        private object positionField;
+        
+        private object ticketIDField;
+        
+        /// <remarks/>
+        public object Completed {
+            get {
+                return this.completedField;
+            }
+            set {
+                this.completedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CompletedByResourceID {
+            get {
+                return this.completedByResourceIDField;
+            }
+            set {
+                this.completedByResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CompletedDateTime {
+            get {
+                return this.completedDateTimeField;
+            }
+            set {
+                this.completedDateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Important {
+            get {
+                return this.importantField;
+            }
+            set {
+                this.importantField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ItemName {
+            get {
+                return this.itemNameField;
+            }
+            set {
+                this.itemNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object KnowledgebaseArticleID {
+            get {
+                return this.knowledgebaseArticleIDField;
+            }
+            set {
+                this.knowledgebaseArticleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Position {
+            get {
+                return this.positionField;
+            }
+            set {
+                this.positionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TicketID {
+            get {
+                return this.ticketIDField;
+            }
+            set {
+                this.ticketIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class AccountPhysicalLocation : Entity {
+        
+        private object accountIDField;
+        
+        private object nameField;
+        
+        private object descriptionField;
+        
+        private object address1Field;
+        
+        private object address2Field;
+        
+        private object cityField;
+        
+        private object stateField;
+        
+        private object postalCodeField;
+        
+        private object countryIDField;
+        
+        private object phoneField;
+        
+        private object alternatePhone1Field;
+        
+        private object alternatePhone2Field;
+        
+        private object faxField;
+        
+        private object roundtripDistanceField;
+        
+        private object activeField;
+        
+        private object primaryField;
+        
+        /// <remarks/>
+        public object AccountID {
+            get {
+                return this.accountIDField;
+            }
+            set {
+                this.accountIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Address1 {
+            get {
+                return this.address1Field;
+            }
+            set {
+                this.address1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Address2 {
+            get {
+                return this.address2Field;
+            }
+            set {
+                this.address2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object City {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object State {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PostalCode {
+            get {
+                return this.postalCodeField;
+            }
+            set {
+                this.postalCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CountryID {
+            get {
+                return this.countryIDField;
+            }
+            set {
+                this.countryIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Phone {
+            get {
+                return this.phoneField;
+            }
+            set {
+                this.phoneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AlternatePhone1 {
+            get {
+                return this.alternatePhone1Field;
+            }
+            set {
+                this.alternatePhone1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AlternatePhone2 {
+            get {
+                return this.alternatePhone2Field;
+            }
+            set {
+                this.alternatePhone2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Fax {
+            get {
+                return this.faxField;
+            }
+            set {
+                this.faxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RoundtripDistance {
+            get {
+                return this.roundtripDistanceField;
+            }
+            set {
+                this.roundtripDistanceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Primary {
+            get {
+                return this.primaryField;
+            }
+            set {
+                this.primaryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class BusinessDivisionSubdivisionResource : Entity {
+        
+        private object businessDivisionSubdivisionIDField;
+        
+        private object resourceIDField;
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResourceID {
+            get {
+                return this.resourceIDField;
+            }
+            set {
+                this.resourceIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class BusinessDivisionSubdivision : Entity {
+        
+        private object businessDivisionIDField;
+        
+        private object businessSubdivisionIDField;
+        
+        private object activeField;
+        
+        /// <remarks/>
+        public object BusinessDivisionID {
+            get {
+                return this.businessDivisionIDField;
+            }
+            set {
+                this.businessDivisionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessSubdivisionID {
+            get {
+                return this.businessSubdivisionIDField;
+            }
+            set {
+                this.businessSubdivisionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class BusinessSubdivision : Entity {
+        
+        private object nameField;
+        
+        private object descriptionField;
+        
+        private object activeField;
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class BusinessDivision : Entity {
+        
+        private object nameField;
+        
+        private object descriptionField;
+        
+        private object activeField;
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class BusinessLocation : Entity {
+        
+        private object nameField;
+        
+        private object address1Field;
+        
+        private object address2Field;
+        
+        private object cityField;
+        
+        private object stateField;
+        
+        private object postalCodeField;
+        
+        private object additionalAddressInfoField;
+        
+        private object countryIDField;
+        
+        private object holidaySetIDField;
+        
+        private object noHoursOnHolidaysField;
+        
+        private object defaultField;
+        
+        private object firstDayOfWeekField;
+        
+        private object dateFormatField;
+        
+        private object timeFormatField;
+        
+        private object numberFormatField;
+        
+        private object timeZoneIDField;
+        
+        private object sundayBusinessHoursStartTimeField;
+        
+        private object sundayBusinessHoursEndTimeField;
+        
+        private object sundayExtendedHoursStartTimeField;
+        
+        private object sundayExtendedHoursEndTimeField;
+        
+        private object mondayBusinessHoursStartTimeField;
+        
+        private object mondayBusinessHoursEndTimeField;
+        
+        private object mondayExtendedHoursStartTimeField;
+        
+        private object mondayExtendedHoursEndTimeField;
+        
+        private object tuesdayBusinessHoursStartTimeField;
+        
+        private object tuesdayBusinessHoursEndTimeField;
+        
+        private object tuesdayExtendedHoursStartTimeField;
+        
+        private object tuesdayExtendedHoursEndTimeField;
+        
+        private object wednesdayBusinessHoursStartTimeField;
+        
+        private object wednesdayBusinessHoursEndTimeField;
+        
+        private object wednesdayExtendedHoursStartTimeField;
+        
+        private object wednesdayExtendedHoursEndTimeField;
+        
+        private object thursdayBusinessHoursStartTimeField;
+        
+        private object thursdayBusinessHoursEndTimeField;
+        
+        private object thursdayExtendedHoursStartTimeField;
+        
+        private object thursdayExtendedHoursEndTimeField;
+        
+        private object fridayBusinessHoursStartTimeField;
+        
+        private object fridayBusinessHoursEndTimeField;
+        
+        private object fridayExtendedHoursStartTimeField;
+        
+        private object fridayExtendedHoursEndTimeField;
+        
+        private object saturdayBusinessHoursStartTimeField;
+        
+        private object saturdayBusinessHoursEndTimeField;
+        
+        private object saturdayExtendedHoursStartTimeField;
+        
+        private object saturdayExtendedHoursEndTimeField;
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Address1 {
+            get {
+                return this.address1Field;
+            }
+            set {
+                this.address1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Address2 {
+            get {
+                return this.address2Field;
+            }
+            set {
+                this.address2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object City {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object State {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PostalCode {
+            get {
+                return this.postalCodeField;
+            }
+            set {
+                this.postalCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AdditionalAddressInfo {
+            get {
+                return this.additionalAddressInfoField;
+            }
+            set {
+                this.additionalAddressInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CountryID {
+            get {
+                return this.countryIDField;
+            }
+            set {
+                this.countryIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object HolidaySetID {
+            get {
+                return this.holidaySetIDField;
+            }
+            set {
+                this.holidaySetIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object NoHoursOnHolidays {
+            get {
+                return this.noHoursOnHolidaysField;
+            }
+            set {
+                this.noHoursOnHolidaysField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Default {
+            get {
+                return this.defaultField;
+            }
+            set {
+                this.defaultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FirstDayOfWeek {
+            get {
+                return this.firstDayOfWeekField;
+            }
+            set {
+                this.firstDayOfWeekField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DateFormat {
+            get {
+                return this.dateFormatField;
+            }
+            set {
+                this.dateFormatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TimeFormat {
+            get {
+                return this.timeFormatField;
+            }
+            set {
+                this.timeFormatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object NumberFormat {
+            get {
+                return this.numberFormatField;
+            }
+            set {
+                this.numberFormatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TimeZoneID {
+            get {
+                return this.timeZoneIDField;
+            }
+            set {
+                this.timeZoneIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SundayBusinessHoursStartTime {
+            get {
+                return this.sundayBusinessHoursStartTimeField;
+            }
+            set {
+                this.sundayBusinessHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SundayBusinessHoursEndTime {
+            get {
+                return this.sundayBusinessHoursEndTimeField;
+            }
+            set {
+                this.sundayBusinessHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SundayExtendedHoursStartTime {
+            get {
+                return this.sundayExtendedHoursStartTimeField;
+            }
+            set {
+                this.sundayExtendedHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SundayExtendedHoursEndTime {
+            get {
+                return this.sundayExtendedHoursEndTimeField;
+            }
+            set {
+                this.sundayExtendedHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object MondayBusinessHoursStartTime {
+            get {
+                return this.mondayBusinessHoursStartTimeField;
+            }
+            set {
+                this.mondayBusinessHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object MondayBusinessHoursEndTime {
+            get {
+                return this.mondayBusinessHoursEndTimeField;
+            }
+            set {
+                this.mondayBusinessHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object MondayExtendedHoursStartTime {
+            get {
+                return this.mondayExtendedHoursStartTimeField;
+            }
+            set {
+                this.mondayExtendedHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object MondayExtendedHoursEndTime {
+            get {
+                return this.mondayExtendedHoursEndTimeField;
+            }
+            set {
+                this.mondayExtendedHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TuesdayBusinessHoursStartTime {
+            get {
+                return this.tuesdayBusinessHoursStartTimeField;
+            }
+            set {
+                this.tuesdayBusinessHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TuesdayBusinessHoursEndTime {
+            get {
+                return this.tuesdayBusinessHoursEndTimeField;
+            }
+            set {
+                this.tuesdayBusinessHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TuesdayExtendedHoursStartTime {
+            get {
+                return this.tuesdayExtendedHoursStartTimeField;
+            }
+            set {
+                this.tuesdayExtendedHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TuesdayExtendedHoursEndTime {
+            get {
+                return this.tuesdayExtendedHoursEndTimeField;
+            }
+            set {
+                this.tuesdayExtendedHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object WednesdayBusinessHoursStartTime {
+            get {
+                return this.wednesdayBusinessHoursStartTimeField;
+            }
+            set {
+                this.wednesdayBusinessHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object WednesdayBusinessHoursEndTime {
+            get {
+                return this.wednesdayBusinessHoursEndTimeField;
+            }
+            set {
+                this.wednesdayBusinessHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object WednesdayExtendedHoursStartTime {
+            get {
+                return this.wednesdayExtendedHoursStartTimeField;
+            }
+            set {
+                this.wednesdayExtendedHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object WednesdayExtendedHoursEndTime {
+            get {
+                return this.wednesdayExtendedHoursEndTimeField;
+            }
+            set {
+                this.wednesdayExtendedHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ThursdayBusinessHoursStartTime {
+            get {
+                return this.thursdayBusinessHoursStartTimeField;
+            }
+            set {
+                this.thursdayBusinessHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ThursdayBusinessHoursEndTime {
+            get {
+                return this.thursdayBusinessHoursEndTimeField;
+            }
+            set {
+                this.thursdayBusinessHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ThursdayExtendedHoursStartTime {
+            get {
+                return this.thursdayExtendedHoursStartTimeField;
+            }
+            set {
+                this.thursdayExtendedHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ThursdayExtendedHoursEndTime {
+            get {
+                return this.thursdayExtendedHoursEndTimeField;
+            }
+            set {
+                this.thursdayExtendedHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FridayBusinessHoursStartTime {
+            get {
+                return this.fridayBusinessHoursStartTimeField;
+            }
+            set {
+                this.fridayBusinessHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FridayBusinessHoursEndTime {
+            get {
+                return this.fridayBusinessHoursEndTimeField;
+            }
+            set {
+                this.fridayBusinessHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FridayExtendedHoursStartTime {
+            get {
+                return this.fridayExtendedHoursStartTimeField;
+            }
+            set {
+                this.fridayExtendedHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FridayExtendedHoursEndTime {
+            get {
+                return this.fridayExtendedHoursEndTimeField;
+            }
+            set {
+                this.fridayExtendedHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SaturdayBusinessHoursStartTime {
+            get {
+                return this.saturdayBusinessHoursStartTimeField;
+            }
+            set {
+                this.saturdayBusinessHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SaturdayBusinessHoursEndTime {
+            get {
+                return this.saturdayBusinessHoursEndTimeField;
+            }
+            set {
+                this.saturdayBusinessHoursEndTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SaturdayExtendedHoursStartTime {
+            get {
+                return this.saturdayExtendedHoursStartTimeField;
+            }
+            set {
+                this.saturdayExtendedHoursStartTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SaturdayExtendedHoursEndTime {
+            get {
+                return this.saturdayExtendedHoursEndTimeField;
+            }
+            set {
+                this.saturdayExtendedHoursEndTimeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class Holiday : Entity {
+        
+        private object holidayNameField;
+        
+        private object holidayDateField;
+        
+        private object holidaySetIDField;
+        
+        /// <remarks/>
+        public object HolidayName {
+            get {
+                return this.holidayNameField;
+            }
+            set {
+                this.holidayNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object HolidayDate {
+            get {
+                return this.holidayDateField;
+            }
+            set {
+                this.holidayDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object HolidaySetID {
+            get {
+                return this.holidaySetIDField;
+            }
+            set {
+                this.holidaySetIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class HolidaySet : Entity {
+        
+        private object holidaySetNameField;
+        
+        private object holidaySetDescriptionField;
+        
+        /// <remarks/>
+        public object HolidaySetName {
+            get {
+                return this.holidaySetNameField;
+            }
+            set {
+                this.holidaySetNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object HolidaySetDescription {
+            get {
+                return this.holidaySetDescriptionField;
+            }
+            set {
+                this.holidaySetDescriptionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ResourceRoleQueue : Entity {
+        
+        private object resourceIDField;
+        
+        private object roleIDField;
+        
+        private object queueIDField;
+        
+        private object activeField;
+        
+        private object defaultField;
+        
+        /// <remarks/>
+        public object ResourceID {
+            get {
+                return this.resourceIDField;
+            }
+            set {
+                this.resourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RoleID {
+            get {
+                return this.roleIDField;
+            }
+            set {
+                this.roleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object QueueID {
+            get {
+                return this.queueIDField;
+            }
+            set {
+                this.queueIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Default {
+            get {
+                return this.defaultField;
+            }
+            set {
+                this.defaultField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ResourceRoleDepartment : Entity {
+        
+        private object departmentIDField;
+        
+        private object resourceIDField;
+        
+        private object roleIDField;
+        
+        private object activeField;
+        
+        private object defaultField;
+        
+        private object departmentLeadField;
+        
+        /// <remarks/>
+        public object DepartmentID {
+            get {
+                return this.departmentIDField;
+            }
+            set {
+                this.departmentIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResourceID {
+            get {
+                return this.resourceIDField;
+            }
+            set {
+                this.resourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RoleID {
+            get {
+                return this.roleIDField;
+            }
+            set {
+                this.roleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Default {
+            get {
+                return this.defaultField;
+            }
+            set {
+                this.defaultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DepartmentLead {
+            get {
+                return this.departmentLeadField;
+            }
+            set {
+                this.departmentLeadField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class PriceListWorkTypeModifier : Entity {
+        
+        private object workTypeModifierIDField;
+        
+        private object modifierValueField;
+        
+        private object modifierTypeField;
+        
+        private object currencyIDField;
+        
+        private object usesInternalCurrencyPriceField;
+        
+        /// <remarks/>
+        public object WorkTypeModifierID {
+            get {
+                return this.workTypeModifierIDField;
+            }
+            set {
+                this.workTypeModifierIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ModifierValue {
+            get {
+                return this.modifierValueField;
+            }
+            set {
+                this.modifierValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ModifierType {
+            get {
+                return this.modifierTypeField;
+            }
+            set {
+                this.modifierTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyID {
+            get {
+                return this.currencyIDField;
+            }
+            set {
+                this.currencyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UsesInternalCurrencyPrice {
+            get {
+                return this.usesInternalCurrencyPriceField;
+            }
+            set {
+                this.usesInternalCurrencyPriceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class PriceListServiceBundle : Entity {
+        
+        private object serviceBundleIDField;
+        
+        private object currencyIDField;
+        
+        private object usesInternalCurrencyPriceField;
+        
+        private object unitPriceField;
+        
+        /// <remarks/>
+        public object ServiceBundleID {
+            get {
+                return this.serviceBundleIDField;
+            }
+            set {
+                this.serviceBundleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyID {
+            get {
+                return this.currencyIDField;
+            }
+            set {
+                this.currencyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UsesInternalCurrencyPrice {
+            get {
+                return this.usesInternalCurrencyPriceField;
+            }
+            set {
+                this.usesInternalCurrencyPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UnitPrice {
+            get {
+                return this.unitPriceField;
+            }
+            set {
+                this.unitPriceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class PriceListRole : Entity {
+        
+        private object roleIDField;
+        
+        private object currencyIDField;
+        
+        private object usesInternalCurrencyPriceField;
+        
+        private object hourlyRateField;
+        
+        /// <remarks/>
+        public object RoleID {
+            get {
+                return this.roleIDField;
+            }
+            set {
+                this.roleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyID {
+            get {
+                return this.currencyIDField;
+            }
+            set {
+                this.currencyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UsesInternalCurrencyPrice {
+            get {
+                return this.usesInternalCurrencyPriceField;
+            }
+            set {
+                this.usesInternalCurrencyPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object HourlyRate {
+            get {
+                return this.hourlyRateField;
+            }
+            set {
+                this.hourlyRateField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class PriceListMaterialCode : Entity {
+        
+        private object allocationCodeIDField;
+        
+        private object currencyIDField;
+        
+        private object usesInternalCurrencyPriceField;
+        
+        private object unitPriceField;
+        
+        /// <remarks/>
+        public object AllocationCodeID {
+            get {
+                return this.allocationCodeIDField;
+            }
+            set {
+                this.allocationCodeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyID {
+            get {
+                return this.currencyIDField;
+            }
+            set {
+                this.currencyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UsesInternalCurrencyPrice {
+            get {
+                return this.usesInternalCurrencyPriceField;
+            }
+            set {
+                this.usesInternalCurrencyPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UnitPrice {
+            get {
+                return this.unitPriceField;
+            }
+            set {
+                this.unitPriceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class PriceListProduct : Entity {
+        
+        private object productIDField;
+        
+        private object currencyIDField;
+        
+        private object usesInternalCurrencyPriceField;
+        
+        private object unitPriceField;
+        
+        /// <remarks/>
+        public object ProductID {
+            get {
+                return this.productIDField;
+            }
+            set {
+                this.productIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyID {
+            get {
+                return this.currencyIDField;
+            }
+            set {
+                this.currencyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UsesInternalCurrencyPrice {
+            get {
+                return this.usesInternalCurrencyPriceField;
+            }
+            set {
+                this.usesInternalCurrencyPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UnitPrice {
+            get {
+                return this.unitPriceField;
+            }
+            set {
+                this.unitPriceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class PriceListService : Entity {
+        
+        private object serviceIDField;
+        
+        private object currencyIDField;
+        
+        private object usesInternalCurrencyPriceField;
+        
+        private object unitPriceField;
+        
+        /// <remarks/>
+        public object ServiceID {
+            get {
+                return this.serviceIDField;
+            }
+            set {
+                this.serviceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyID {
+            get {
+                return this.currencyIDField;
+            }
+            set {
+                this.currencyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UsesInternalCurrencyPrice {
+            get {
+                return this.usesInternalCurrencyPriceField;
+            }
+            set {
+                this.usesInternalCurrencyPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UnitPrice {
+            get {
+                return this.unitPriceField;
+            }
+            set {
+                this.unitPriceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class Currency : Entity {
+        
+        private object nameField;
+        
+        private object descriptionField;
+        
+        private object displaySymbolField;
+        
+        private object exchangeRateField;
+        
+        private object lastModifiedDateTimeField;
+        
+        private object updateResourceIdField;
+        
+        private object isInternalCurrencyField;
+        
+        private object activeField;
+        
+        private object currencyPositiveFormatField;
+        
+        private object currencyNegativeFormatField;
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DisplaySymbol {
+            get {
+                return this.displaySymbolField;
+            }
+            set {
+                this.displaySymbolField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ExchangeRate {
+            get {
+                return this.exchangeRateField;
+            }
+            set {
+                this.exchangeRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastModifiedDateTime {
+            get {
+                return this.lastModifiedDateTimeField;
+            }
+            set {
+                this.lastModifiedDateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UpdateResourceId {
+            get {
+                return this.updateResourceIdField;
+            }
+            set {
+                this.updateResourceIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object IsInternalCurrency {
+            get {
+                return this.isInternalCurrencyField;
+            }
+            set {
+                this.isInternalCurrencyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyPositiveFormat {
+            get {
+                return this.currencyPositiveFormatField;
+            }
+            set {
+                this.currencyPositiveFormatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyNegativeFormat {
+            get {
+                return this.currencyNegativeFormatField;
+            }
+            set {
+                this.currencyNegativeFormatField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class WorkTypeModifier : Entity {
+        
+        private object modifierValueField;
+        
+        private object modifierTypeField;
+        
+        /// <remarks/>
+        public object ModifierValue {
+            get {
+                return this.modifierValueField;
+            }
+            set {
+                this.modifierValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ModifierType {
+            get {
+                return this.modifierTypeField;
+            }
+            set {
+                this.modifierTypeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class NotificationHistory : Entity {
+        
+        private object notificationSentTimeField;
+        
+        private object templateNameField;
+        
+        private object notificationHistoryTypeIDField;
+        
+        private object entityTitleField;
+        
+        private object entityNumberField;
+        
+        private bool isDeletedField;
+        
+        private bool isActiveField;
+        
+        private bool isTemplateJobField;
+        
+        private object initiatingResourceIDField;
+        
+        private object initiatingContactIDField;
+        
+        private object recipientEmailAddressField;
+        
+        private object recipientDisplayNameField;
+        
+        private object accountIDField;
+        
+        private object quoteIDField;
+        
+        private object opportunityIDField;
+        
+        private object projectIDField;
+        
+        private object taskIDField;
+        
+        private object ticketIDField;
+        
+        private object timeEntryIDField;
+        
+        /// <remarks/>
+        public object NotificationSentTime {
+            get {
+                return this.notificationSentTimeField;
+            }
+            set {
+                this.notificationSentTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TemplateName {
+            get {
+                return this.templateNameField;
+            }
+            set {
+                this.templateNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object NotificationHistoryTypeID {
+            get {
+                return this.notificationHistoryTypeIDField;
+            }
+            set {
+                this.notificationHistoryTypeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object EntityTitle {
+            get {
+                return this.entityTitleField;
+            }
+            set {
+                this.entityTitleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object EntityNumber {
+            get {
+                return this.entityNumberField;
+            }
+            set {
+                this.entityNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsDeleted {
+            get {
+                return this.isDeletedField;
+            }
+            set {
+                this.isDeletedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsActive {
+            get {
+                return this.isActiveField;
+            }
+            set {
+                this.isActiveField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsTemplateJob {
+            get {
+                return this.isTemplateJobField;
+            }
+            set {
+                this.isTemplateJobField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InitiatingResourceID {
+            get {
+                return this.initiatingResourceIDField;
+            }
+            set {
+                this.initiatingResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InitiatingContactID {
+            get {
+                return this.initiatingContactIDField;
+            }
+            set {
+                this.initiatingContactIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RecipientEmailAddress {
+            get {
+                return this.recipientEmailAddressField;
+            }
+            set {
+                this.recipientEmailAddressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RecipientDisplayName {
+            get {
+                return this.recipientDisplayNameField;
+            }
+            set {
+                this.recipientDisplayNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AccountID {
+            get {
+                return this.accountIDField;
+            }
+            set {
+                this.accountIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object QuoteID {
+            get {
+                return this.quoteIDField;
+            }
+            set {
+                this.quoteIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object OpportunityID {
+            get {
+                return this.opportunityIDField;
+            }
+            set {
+                this.opportunityIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ProjectID {
+            get {
+                return this.projectIDField;
+            }
+            set {
+                this.projectIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TaskID {
+            get {
+                return this.taskIDField;
+            }
+            set {
+                this.taskIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TicketID {
+            get {
+                return this.ticketIDField;
+            }
+            set {
+                this.ticketIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TimeEntryID {
+            get {
+                return this.timeEntryIDField;
+            }
+            set {
+                this.timeEntryIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class AccountAlert : Entity {
+        
+        private object accountIDField;
+        
+        private object alertTypeIDField;
+        
+        private object alertTextField;
+        
+        /// <remarks/>
+        public object AccountID {
+            get {
+                return this.accountIDField;
+            }
+            set {
+                this.accountIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AlertTypeID {
+            get {
+                return this.alertTypeIDField;
+            }
+            set {
+                this.alertTypeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AlertText {
+            get {
+                return this.alertTextField;
+            }
+            set {
+                this.alertTextField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ServiceBundleService : Entity {
         
         private object serviceBundleIDField;
         
         private object serviceIDField;
-        
-        /// <remarks/>
-        public object Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
         
         /// <remarks/>
         public object ServiceBundleID {
@@ -1391,14 +4648,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ResourceRole : Entity {
-        
-        private object idField;
         
         private object departmentIDField;
         
@@ -1409,16 +4664,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object roleIDField;
         
         private object activeField;
-        
-        /// <remarks/>
-        public object Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
         
         /// <remarks/>
         public object DepartmentID {
@@ -1472,30 +4717,18 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class TicketSecondaryResource : Entity {
-        
-        private object idField;
         
         private object ticketIDField;
         
         private object resourceIDField;
         
         private object roleIDField;
-        
-        /// <remarks/>
-        public object Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
         
         /// <remarks/>
         public object TicketID {
@@ -1529,30 +4762,51 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
-    public partial class TaskSecondaryResource : Entity {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class TicketAdditionalContact : Entity {
         
-        private object idField;
+        private object contactIDField;
+        
+        private object ticketIDField;
+        
+        /// <remarks/>
+        public object ContactID {
+            get {
+                return this.contactIDField;
+            }
+            set {
+                this.contactIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TicketID {
+            get {
+                return this.ticketIDField;
+            }
+            set {
+                this.ticketIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class TaskSecondaryResource : Entity {
         
         private object taskIDField;
         
         private object resourceIDField;
         
         private object roleIDField;
-        
-        /// <remarks/>
-        public object Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
         
         /// <remarks/>
         public object TaskID {
@@ -1586,28 +4840,26 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class TaskPredecessor : Entity {
         
-        private object idField;
+        private object lagDaysField;
         
         private object predecessorTaskIDField;
         
         private object successorTaskIDField;
         
-        private object lagDaysField;
-        
         /// <remarks/>
-        public object Id {
+        public object LagDays {
             get {
-                return this.idField;
+                return this.lagDaysField;
             }
             set {
-                this.idField = value;
+                this.lagDaysField = value;
             }
         }
         
@@ -1630,27 +4882,15 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.successorTaskIDField = value;
             }
         }
-        
-        /// <remarks/>
-        public object LagDays {
-            get {
-                return this.lagDaysField;
-            }
-            set {
-                this.lagDaysField = value;
-            }
-        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Department : Entity {
-        
-        private object idField;
         
         private object nameField;
         
@@ -1659,16 +4899,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object numberField;
         
         private object descriptionField;
-        
-        /// <remarks/>
-        public object Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
         
         /// <remarks/>
         public object Name {
@@ -1712,14 +4942,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class PaymentTerm : Entity {
-        
-        private object idField;
         
         private object nameField;
         
@@ -1728,16 +4956,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object activeField;
         
         private object paymentDueInDaysField;
-        
-        /// <remarks/>
-        public object Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
         
         /// <remarks/>
         public object Name {
@@ -1781,14 +4999,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class InvoiceTemplate : Entity {
-        
-        private object idField;
         
         private object displayTaxCategoryField;
         
@@ -1836,15 +5052,9 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object showVerticalGridLinesField;
         
-        /// <remarks/>
-        public object Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
+        private object currencyPositiveFormatField;
+        
+        private object currencyNegativeFormatField;
         
         /// <remarks/>
         public object DisplayTaxCategory {
@@ -2075,33 +5285,41 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.showVerticalGridLinesField = value;
             }
         }
+        
+        /// <remarks/>
+        public object CurrencyPositiveFormat {
+            get {
+                return this.currencyPositiveFormatField;
+            }
+            set {
+                this.currencyPositiveFormatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyNegativeFormat {
+            get {
+                return this.currencyNegativeFormatField;
+            }
+            set {
+                this.currencyNegativeFormatField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class AdditionalInvoiceFieldValue : Entity {
-        
-        private object idField;
         
         private object additionalInvoiceFieldIDField;
         
         private object invoiceBatchIDField;
         
         private object fieldValueField;
-        
-        /// <remarks/>
-        public object Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
         
         /// <remarks/>
         public object AdditionalInvoiceFieldID {
@@ -2135,14 +5353,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class UserDefinedFieldListItem : Entity {
-        
-        private object idField;
         
         private object udfFieldIdField;
         
@@ -2151,16 +5367,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object valueForDisplayField;
         
         private object createDateField;
-        
-        /// <remarks/>
-        public object Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
         
         /// <remarks/>
         public object UdfFieldId {
@@ -2204,14 +5410,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class UserDefinedFieldDefinition : Entity {
-        
-        private object idField;
         
         private object nameField;
         
@@ -2226,6 +5430,8 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object isFieldMappingField;
         
         private object isProtectedField;
+        
+        private object isEncryptedField;
         
         private object isRequiredField;
         
@@ -2244,16 +5450,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object numberOfDecimalPlacesField;
         
         private object isVisibleToClientPortalField;
-        
-        /// <remarks/>
-        public object Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
         
         /// <remarks/>
         public object Name {
@@ -2322,6 +5518,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.isProtectedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object IsEncrypted {
+            get {
+                return this.isEncryptedField;
+            }
+            set {
+                this.isEncryptedField = value;
             }
         }
         
@@ -2417,11 +5623,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class InternalLocation : Entity {
         
         private object nameField;
@@ -2558,38 +5764,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class TicketCost : Entity {
         
-        private object ticketIDField;
-        
-        private object productIDField;
-        
         private object allocationCodeIDField;
-        
-        private object nameField;
-        
-        private object descriptionField;
-        
-        private object datePurchasedField;
-        
-        private object costTypeField;
-        
-        private object purchaseOrderNumberField;
-        
-        private object internalPurchaseOrderNumberField;
-        
-        private object unitQuantityField;
-        
-        private object unitCostField;
-        
-        private object unitPriceField;
-        
-        private object extendedCostField;
         
         private object billableAmountField;
         
@@ -2597,39 +5779,51 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object billedField;
         
+        private object costTypeField;
+        
+        private object createDateField;
+        
+        private object creatorResourceIDField;
+        
+        private object datePurchasedField;
+        
+        private object descriptionField;
+        
+        private object extendedCostField;
+        
+        private object internalPurchaseOrderNumberField;
+        
+        private object productIDField;
+        
+        private object purchaseOrderNumberField;
+        
+        private object nameField;
+        
+        private object contractServiceIDField;
+        
+        private object contractServiceBundleIDField;
+        
         private object statusField;
         
         private object statusLastModifiedByField;
         
         private object statusLastModifiedDateField;
         
-        private object createDateField;
+        private object unitCostField;
         
-        private object creatorResourceIDField;
+        private object unitPriceField;
         
-        private object contractServiceIDField;
+        private object unitQuantityField;
         
-        private object contractServiceBundleIDField;
+        private object internalCurrencyBillableAmountField;
         
-        /// <remarks/>
-        public object TicketID {
-            get {
-                return this.ticketIDField;
-            }
-            set {
-                this.ticketIDField = value;
-            }
-        }
+        private object internalCurrencyUnitPriceField;
         
-        /// <remarks/>
-        public object ProductID {
-            get {
-                return this.productIDField;
-            }
-            set {
-                this.productIDField = value;
-            }
-        }
+        private object businessDivisionSubdivisionIDField;
+        
+        private object ticketIDField;
+        
+        private object notesField;
         
         /// <remarks/>
         public object AllocationCodeID {
@@ -2638,106 +5832,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.allocationCodeIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object DatePurchased {
-            get {
-                return this.datePurchasedField;
-            }
-            set {
-                this.datePurchasedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object CostType {
-            get {
-                return this.costTypeField;
-            }
-            set {
-                this.costTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object PurchaseOrderNumber {
-            get {
-                return this.purchaseOrderNumberField;
-            }
-            set {
-                this.purchaseOrderNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object InternalPurchaseOrderNumber {
-            get {
-                return this.internalPurchaseOrderNumberField;
-            }
-            set {
-                this.internalPurchaseOrderNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object UnitQuantity {
-            get {
-                return this.unitQuantityField;
-            }
-            set {
-                this.unitQuantityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object UnitCost {
-            get {
-                return this.unitCostField;
-            }
-            set {
-                this.unitCostField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object UnitPrice {
-            get {
-                return this.unitPriceField;
-            }
-            set {
-                this.unitPriceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ExtendedCost {
-            get {
-                return this.extendedCostField;
-            }
-            set {
-                this.extendedCostField = value;
             }
         }
         
@@ -2772,6 +5866,126 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object CostType {
+            get {
+                return this.costTypeField;
+            }
+            set {
+                this.costTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreateDate {
+            get {
+                return this.createDateField;
+            }
+            set {
+                this.createDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreatorResourceID {
+            get {
+                return this.creatorResourceIDField;
+            }
+            set {
+                this.creatorResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DatePurchased {
+            get {
+                return this.datePurchasedField;
+            }
+            set {
+                this.datePurchasedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ExtendedCost {
+            get {
+                return this.extendedCostField;
+            }
+            set {
+                this.extendedCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalPurchaseOrderNumber {
+            get {
+                return this.internalPurchaseOrderNumberField;
+            }
+            set {
+                this.internalPurchaseOrderNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ProductID {
+            get {
+                return this.productIDField;
+            }
+            set {
+                this.productIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PurchaseOrderNumber {
+            get {
+                return this.purchaseOrderNumberField;
+            }
+            set {
+                this.purchaseOrderNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContractServiceID {
+            get {
+                return this.contractServiceIDField;
+            }
+            set {
+                this.contractServiceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContractServiceBundleID {
+            get {
+                return this.contractServiceBundleIDField;
+            }
+            set {
+                this.contractServiceBundleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object Status {
             get {
                 return this.statusField;
@@ -2802,52 +6016,92 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object CreateDate {
+        public object UnitCost {
             get {
-                return this.createDateField;
+                return this.unitCostField;
             }
             set {
-                this.createDateField = value;
+                this.unitCostField = value;
             }
         }
         
         /// <remarks/>
-        public object CreatorResourceID {
+        public object UnitPrice {
             get {
-                return this.creatorResourceIDField;
+                return this.unitPriceField;
             }
             set {
-                this.creatorResourceIDField = value;
+                this.unitPriceField = value;
             }
         }
         
         /// <remarks/>
-        public object ContractServiceID {
+        public object UnitQuantity {
             get {
-                return this.contractServiceIDField;
+                return this.unitQuantityField;
             }
             set {
-                this.contractServiceIDField = value;
+                this.unitQuantityField = value;
             }
         }
         
         /// <remarks/>
-        public object ContractServiceBundleID {
+        public object InternalCurrencyBillableAmount {
             get {
-                return this.contractServiceBundleIDField;
+                return this.internalCurrencyBillableAmountField;
             }
             set {
-                this.contractServiceBundleIDField = value;
+                this.internalCurrencyBillableAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyUnitPrice {
+            get {
+                return this.internalCurrencyUnitPriceField;
+            }
+            set {
+                this.internalCurrencyUnitPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TicketID {
+            get {
+                return this.ticketIDField;
+            }
+            set {
+                this.ticketIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Notes {
+            get {
+                return this.notesField;
+            }
+            set {
+                this.notesField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class TicketChangeRequestApproval : Entity {
         
         private object ticketIDField;
@@ -2924,11 +6178,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ChangeRequestLink : Entity {
         
         private object changeRequestTicketIDField;
@@ -2957,40 +6211,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ProjectCost : Entity {
         
-        private object projectIDField;
-        
-        private object productIDField;
-        
         private object allocationCodeIDField;
-        
-        private object nameField;
-        
-        private object descriptionField;
-        
-        private object datePurchasedField;
-        
-        private object costTypeField;
-        
-        private object purchaseOrderNumberField;
-        
-        private object internalPurchaseOrderNumberField;
-        
-        private object unitQuantityField;
-        
-        private object unitCostField;
-        
-        private object unitPriceField;
-        
-        private object extendedCostField;
-        
-        private object estimatedCostField;
         
         private object billableAmountField;
         
@@ -2998,39 +6226,53 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object billedField;
         
+        private object costTypeField;
+        
+        private object createDateField;
+        
+        private object creatorResourceIDField;
+        
+        private object datePurchasedField;
+        
+        private object descriptionField;
+        
+        private object extendedCostField;
+        
+        private object internalPurchaseOrderNumberField;
+        
+        private object productIDField;
+        
+        private object purchaseOrderNumberField;
+        
+        private object nameField;
+        
+        private object contractServiceIDField;
+        
+        private object contractServiceBundleIDField;
+        
         private object statusField;
         
         private object statusLastModifiedByField;
         
         private object statusLastModifiedDateField;
         
-        private object createDateField;
+        private object unitCostField;
         
-        private object creatorResourceIDField;
+        private object unitPriceField;
         
-        private object contractServiceIDField;
+        private object unitQuantityField;
         
-        private object contractServiceBundleIDField;
+        private object internalCurrencyBillableAmountField;
         
-        /// <remarks/>
-        public object ProjectID {
-            get {
-                return this.projectIDField;
-            }
-            set {
-                this.projectIDField = value;
-            }
-        }
+        private object internalCurrencyUnitPriceField;
         
-        /// <remarks/>
-        public object ProductID {
-            get {
-                return this.productIDField;
-            }
-            set {
-                this.productIDField = value;
-            }
-        }
+        private object businessDivisionSubdivisionIDField;
+        
+        private object projectIDField;
+        
+        private object estimatedCostField;
+        
+        private object notesField;
         
         /// <remarks/>
         public object AllocationCodeID {
@@ -3043,32 +6285,32 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object Name {
+        public object BillableAmount {
             get {
-                return this.nameField;
+                return this.billableAmountField;
             }
             set {
-                this.nameField = value;
+                this.billableAmountField = value;
             }
         }
         
         /// <remarks/>
-        public object Description {
+        public object BillableToAccount {
             get {
-                return this.descriptionField;
+                return this.billableToAccountField;
             }
             set {
-                this.descriptionField = value;
+                this.billableToAccountField = value;
             }
         }
         
         /// <remarks/>
-        public object DatePurchased {
+        public object Billed {
             get {
-                return this.datePurchasedField;
+                return this.billedField;
             }
             set {
-                this.datePurchasedField = value;
+                this.billedField = value;
             }
         }
         
@@ -3083,12 +6325,52 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object PurchaseOrderNumber {
+        public object CreateDate {
             get {
-                return this.purchaseOrderNumberField;
+                return this.createDateField;
             }
             set {
-                this.purchaseOrderNumberField = value;
+                this.createDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreatorResourceID {
+            get {
+                return this.creatorResourceIDField;
+            }
+            set {
+                this.creatorResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DatePurchased {
+            get {
+                return this.datePurchasedField;
+            }
+            set {
+                this.datePurchasedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ExtendedCost {
+            get {
+                return this.extendedCostField;
+            }
+            set {
+                this.extendedCostField = value;
             }
         }
         
@@ -3103,12 +6385,82 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object UnitQuantity {
+        public object ProductID {
             get {
-                return this.unitQuantityField;
+                return this.productIDField;
             }
             set {
-                this.unitQuantityField = value;
+                this.productIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PurchaseOrderNumber {
+            get {
+                return this.purchaseOrderNumberField;
+            }
+            set {
+                this.purchaseOrderNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContractServiceID {
+            get {
+                return this.contractServiceIDField;
+            }
+            set {
+                this.contractServiceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContractServiceBundleID {
+            get {
+                return this.contractServiceBundleIDField;
+            }
+            set {
+                this.contractServiceBundleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object StatusLastModifiedBy {
+            get {
+                return this.statusLastModifiedByField;
+            }
+            set {
+                this.statusLastModifiedByField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object StatusLastModifiedDate {
+            get {
+                return this.statusLastModifiedDateField;
+            }
+            set {
+                this.statusLastModifiedDateField = value;
             }
         }
         
@@ -3133,12 +6485,52 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object ExtendedCost {
+        public object UnitQuantity {
             get {
-                return this.extendedCostField;
+                return this.unitQuantityField;
             }
             set {
-                this.extendedCostField = value;
+                this.unitQuantityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyBillableAmount {
+            get {
+                return this.internalCurrencyBillableAmountField;
+            }
+            set {
+                this.internalCurrencyBillableAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyUnitPrice {
+            get {
+                return this.internalCurrencyUnitPriceField;
+            }
+            set {
+                this.internalCurrencyUnitPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ProjectID {
+            get {
+                return this.projectIDField;
+            }
+            set {
+                this.projectIDField = value;
             }
         }
         
@@ -3153,6 +6545,89 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object Notes {
+            get {
+                return this.notesField;
+            }
+            set {
+                this.notesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ContractCost : Entity {
+        
+        private object allocationCodeIDField;
+        
+        private object billableAmountField;
+        
+        private object billableToAccountField;
+        
+        private object billedField;
+        
+        private object costTypeField;
+        
+        private object createDateField;
+        
+        private object creatorResourceIDField;
+        
+        private object datePurchasedField;
+        
+        private object descriptionField;
+        
+        private object extendedCostField;
+        
+        private object internalPurchaseOrderNumberField;
+        
+        private object productIDField;
+        
+        private object purchaseOrderNumberField;
+        
+        private object nameField;
+        
+        private object contractServiceIDField;
+        
+        private object contractServiceBundleIDField;
+        
+        private object statusField;
+        
+        private object statusLastModifiedByField;
+        
+        private object statusLastModifiedDateField;
+        
+        private object unitCostField;
+        
+        private object unitPriceField;
+        
+        private object unitQuantityField;
+        
+        private object internalCurrencyBillableAmountField;
+        
+        private object internalCurrencyUnitPriceField;
+        
+        private object businessDivisionSubdivisionIDField;
+        
+        private object contractIDField;
+        
+        private object notesField;
+        
+        /// <remarks/>
+        public object AllocationCodeID {
+            get {
+                return this.allocationCodeIDField;
+            }
+            set {
+                this.allocationCodeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object BillableAmount {
             get {
                 return this.billableAmountField;
@@ -3183,6 +6658,126 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object CostType {
+            get {
+                return this.costTypeField;
+            }
+            set {
+                this.costTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreateDate {
+            get {
+                return this.createDateField;
+            }
+            set {
+                this.createDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreatorResourceID {
+            get {
+                return this.creatorResourceIDField;
+            }
+            set {
+                this.creatorResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DatePurchased {
+            get {
+                return this.datePurchasedField;
+            }
+            set {
+                this.datePurchasedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ExtendedCost {
+            get {
+                return this.extendedCostField;
+            }
+            set {
+                this.extendedCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalPurchaseOrderNumber {
+            get {
+                return this.internalPurchaseOrderNumberField;
+            }
+            set {
+                this.internalPurchaseOrderNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ProductID {
+            get {
+                return this.productIDField;
+            }
+            set {
+                this.productIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PurchaseOrderNumber {
+            get {
+                return this.purchaseOrderNumberField;
+            }
+            set {
+                this.purchaseOrderNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContractServiceID {
+            get {
+                return this.contractServiceIDField;
+            }
+            set {
+                this.contractServiceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContractServiceBundleID {
+            get {
+                return this.contractServiceBundleIDField;
+            }
+            set {
+                this.contractServiceBundleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object Status {
             get {
                 return this.statusField;
@@ -3209,201 +6804,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.statusLastModifiedDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object CreateDate {
-            get {
-                return this.createDateField;
-            }
-            set {
-                this.createDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object CreatorResourceID {
-            get {
-                return this.creatorResourceIDField;
-            }
-            set {
-                this.creatorResourceIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ContractServiceID {
-            get {
-                return this.contractServiceIDField;
-            }
-            set {
-                this.contractServiceIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ContractServiceBundleID {
-            get {
-                return this.contractServiceBundleIDField;
-            }
-            set {
-                this.contractServiceBundleIDField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
-    public partial class ContractCost : Entity {
-        
-        private object contractIDField;
-        
-        private object productIDField;
-        
-        private object allocationCodeIDField;
-        
-        private object nameField;
-        
-        private object descriptionField;
-        
-        private object datePurchasedField;
-        
-        private object costTypeField;
-        
-        private object purchaseOrderNumberField;
-        
-        private object internalPurchaseOrderNumberField;
-        
-        private object unitQuantityField;
-        
-        private object unitCostField;
-        
-        private object unitPriceField;
-        
-        private object extendedCostField;
-        
-        private object billableAmountField;
-        
-        private object billableToAccountField;
-        
-        private object billedField;
-        
-        private object statusField;
-        
-        private object statusLastModifiedByField;
-        
-        private object statusLastModifiedDateField;
-        
-        private object createDateField;
-        
-        private object creatorResourceIDField;
-        
-        private object contractServiceIDField;
-        
-        private object contractServiceBundleIDField;
-        
-        /// <remarks/>
-        public object ContractID {
-            get {
-                return this.contractIDField;
-            }
-            set {
-                this.contractIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ProductID {
-            get {
-                return this.productIDField;
-            }
-            set {
-                this.productIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object AllocationCodeID {
-            get {
-                return this.allocationCodeIDField;
-            }
-            set {
-                this.allocationCodeIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object DatePurchased {
-            get {
-                return this.datePurchasedField;
-            }
-            set {
-                this.datePurchasedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object CostType {
-            get {
-                return this.costTypeField;
-            }
-            set {
-                this.costTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object PurchaseOrderNumber {
-            get {
-                return this.purchaseOrderNumberField;
-            }
-            set {
-                this.purchaseOrderNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object InternalPurchaseOrderNumber {
-            get {
-                return this.internalPurchaseOrderNumberField;
-            }
-            set {
-                this.internalPurchaseOrderNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object UnitQuantity {
-            get {
-                return this.unitQuantityField;
-            }
-            set {
-                this.unitQuantityField = value;
             }
         }
         
@@ -3428,122 +6828,72 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object ExtendedCost {
+        public object UnitQuantity {
             get {
-                return this.extendedCostField;
+                return this.unitQuantityField;
             }
             set {
-                this.extendedCostField = value;
+                this.unitQuantityField = value;
             }
         }
         
         /// <remarks/>
-        public object BillableAmount {
+        public object InternalCurrencyBillableAmount {
             get {
-                return this.billableAmountField;
+                return this.internalCurrencyBillableAmountField;
             }
             set {
-                this.billableAmountField = value;
+                this.internalCurrencyBillableAmountField = value;
             }
         }
         
         /// <remarks/>
-        public object BillableToAccount {
+        public object InternalCurrencyUnitPrice {
             get {
-                return this.billableToAccountField;
+                return this.internalCurrencyUnitPriceField;
             }
             set {
-                this.billableToAccountField = value;
+                this.internalCurrencyUnitPriceField = value;
             }
         }
         
         /// <remarks/>
-        public object Billed {
+        public object BusinessDivisionSubdivisionID {
             get {
-                return this.billedField;
+                return this.businessDivisionSubdivisionIDField;
             }
             set {
-                this.billedField = value;
+                this.businessDivisionSubdivisionIDField = value;
             }
         }
         
         /// <remarks/>
-        public object Status {
+        public object ContractID {
             get {
-                return this.statusField;
+                return this.contractIDField;
             }
             set {
-                this.statusField = value;
+                this.contractIDField = value;
             }
         }
         
         /// <remarks/>
-        public object StatusLastModifiedBy {
+        public object Notes {
             get {
-                return this.statusLastModifiedByField;
+                return this.notesField;
             }
             set {
-                this.statusLastModifiedByField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object StatusLastModifiedDate {
-            get {
-                return this.statusLastModifiedDateField;
-            }
-            set {
-                this.statusLastModifiedDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object CreateDate {
-            get {
-                return this.createDateField;
-            }
-            set {
-                this.createDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object CreatorResourceID {
-            get {
-                return this.creatorResourceIDField;
-            }
-            set {
-                this.creatorResourceIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ContractServiceID {
-            get {
-                return this.contractServiceIDField;
-            }
-            set {
-                this.contractServiceIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ContractServiceBundleID {
-            get {
-                return this.contractServiceBundleIDField;
-            }
-            set {
-                this.contractServiceBundleIDField = value;
+                this.notesField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class BillingItemApprovalLevel : Entity {
         
         private object timeEntryIDField;
@@ -3596,11 +6946,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ProjectNote : Entity {
         
         private object creatorResourceIDField;
@@ -3618,6 +6968,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object titleField;
         
         private object announceField;
+        
+        private object impersonatorCreatorResourceIDField;
+        
+        private object impersonatorUpdaterResourceIDField;
+        
+        private object createDateTimeField;
         
         /// <remarks/>
         public object CreatorResourceID {
@@ -3698,14 +7054,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.announceField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ImpersonatorCreatorResourceID {
+            get {
+                return this.impersonatorCreatorResourceIDField;
+            }
+            set {
+                this.impersonatorCreatorResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ImpersonatorUpdaterResourceID {
+            get {
+                return this.impersonatorUpdaterResourceIDField;
+            }
+            set {
+                this.impersonatorUpdaterResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreateDateTime {
+            get {
+                return this.createDateTimeField;
+            }
+            set {
+                this.createDateTimeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class TaskNote : Entity {
         
         private object creatorResourceIDField;
@@ -3721,6 +7107,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object taskIDField;
         
         private object titleField;
+        
+        private object impersonatorCreatorResourceIDField;
+        
+        private object impersonatorUpdaterResourceIDField;
+        
+        private object createDateTimeField;
         
         /// <remarks/>
         public object CreatorResourceID {
@@ -3791,14 +7183,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.titleField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ImpersonatorCreatorResourceID {
+            get {
+                return this.impersonatorCreatorResourceIDField;
+            }
+            set {
+                this.impersonatorCreatorResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ImpersonatorUpdaterResourceID {
+            get {
+                return this.impersonatorUpdaterResourceIDField;
+            }
+            set {
+                this.impersonatorUpdaterResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreateDateTime {
+            get {
+                return this.createDateTimeField;
+            }
+            set {
+                this.createDateTimeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ExpenseItem : Entity {
         
         private object expenseReportIDField;
@@ -3846,6 +7268,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object odometerStartField;
         
         private object odometerEndField;
+        
+        private object expenseCurrencyIDField;
+        
+        private object receiptAmountField;
+        
+        private object reimbursementAmountField;
+        
+        private object reimbursementCurrencyReimbursementAmountField;
         
         /// <remarks/>
         public object ExpenseReportID {
@@ -4076,14 +7506,54 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.odometerEndField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ExpenseCurrencyID {
+            get {
+                return this.expenseCurrencyIDField;
+            }
+            set {
+                this.expenseCurrencyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ReceiptAmount {
+            get {
+                return this.receiptAmountField;
+            }
+            set {
+                this.receiptAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ReimbursementAmount {
+            get {
+                return this.reimbursementAmountField;
+            }
+            set {
+                this.reimbursementAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ReimbursementCurrencyReimbursementAmount {
+            get {
+                return this.reimbursementCurrencyReimbursementAmountField;
+            }
+            set {
+                this.reimbursementCurrencyReimbursementAmountField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ExpenseReport : Entity {
         
         private object nameField;
@@ -4113,6 +7583,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object quickBooksReferenceNumberField;
         
         private object approvedDateField;
+        
+        private object reimbursementCurrencyIDField;
+        
+        private object reimbursementCurrencyCashAdvanceAmountField;
+        
+        private object reimbursementCurrencyAmountDueField;
+        
+        private object businessDivisionSubdivisionIDField;
         
         /// <remarks/>
         public object Name {
@@ -4253,14 +7731,54 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.approvedDateField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ReimbursementCurrencyID {
+            get {
+                return this.reimbursementCurrencyIDField;
+            }
+            set {
+                this.reimbursementCurrencyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ReimbursementCurrencyCashAdvanceAmount {
+            get {
+                return this.reimbursementCurrencyCashAdvanceAmountField;
+            }
+            set {
+                this.reimbursementCurrencyCashAdvanceAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ReimbursementCurrencyAmountDue {
+            get {
+                return this.reimbursementCurrencyAmountDueField;
+            }
+            set {
+                this.reimbursementCurrencyAmountDueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ClientPortalUser : Entity {
         
         private object securityLevelField;
@@ -4361,12 +7879,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class BillingItem : Entity {
+        
+        private object accountManagerWhenApprovedIDField;
         
         private object typeField;
         
@@ -4385,8 +7905,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object ourCostField;
         
         private object itemDateField;
-        
-        private object approvedTimeField;
         
         private object invoiceIDField;
         
@@ -4441,6 +7959,30 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object lineItemGroupDescriptionField;
         
         private object installedProductIDField;
+        
+        private object internalCurrencyExtendedPriceField;
+        
+        private object internalCurrencyRateField;
+        
+        private object internalCurrencyTaxDollarsField;
+        
+        private object internalCurrencyTotalAmountField;
+        
+        private object businessDivisionSubdivisionIDField;
+        
+        private object postedOnTimeField;
+        
+        private object postedDateField;
+        
+        /// <remarks/>
+        public object AccountManagerWhenApprovedID {
+            get {
+                return this.accountManagerWhenApprovedIDField;
+            }
+            set {
+                this.accountManagerWhenApprovedIDField = value;
+            }
+        }
         
         /// <remarks/>
         public object Type {
@@ -4529,16 +8071,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.itemDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ApprovedTime {
-            get {
-                return this.approvedTimeField;
-            }
-            set {
-                this.approvedTimeField = value;
             }
         }
         
@@ -4811,14 +8343,84 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.installedProductIDField = value;
             }
         }
+        
+        /// <remarks/>
+        public object InternalCurrencyExtendedPrice {
+            get {
+                return this.internalCurrencyExtendedPriceField;
+            }
+            set {
+                this.internalCurrencyExtendedPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyRate {
+            get {
+                return this.internalCurrencyRateField;
+            }
+            set {
+                this.internalCurrencyRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyTaxDollars {
+            get {
+                return this.internalCurrencyTaxDollarsField;
+            }
+            set {
+                this.internalCurrencyTaxDollarsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyTotalAmount {
+            get {
+                return this.internalCurrencyTotalAmountField;
+            }
+            set {
+                this.internalCurrencyTotalAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PostedOnTime {
+            get {
+                return this.postedOnTimeField;
+            }
+            set {
+                this.postedOnTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PostedDate {
+            get {
+                return this.postedDateField;
+            }
+            set {
+                this.postedDateField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Resource : Entity {
         
         private object activeField;
@@ -4886,6 +8488,10 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object internalCostField;
         
         private object hireDateField;
+        
+        private object surveyResourceRatingField;
+        
+        private object licenseTypeField;
         
         /// <remarks/>
         public object Active {
@@ -5216,14 +8822,304 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.hireDateField = value;
             }
         }
+        
+        /// <remarks/>
+        public object SurveyResourceRating {
+            get {
+                return this.surveyResourceRatingField;
+            }
+            set {
+                this.surveyResourceRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LicenseType {
+            get {
+                return this.licenseTypeField;
+            }
+            set {
+                this.licenseTypeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class SubscriptionPeriod : Entity {
+        
+        private object subscriptionIDField;
+        
+        private object periodDateField;
+        
+        private object periodPriceField;
+        
+        private object periodCostField;
+        
+        private object postedDateField;
+        
+        private object purchaseOrderNumberField;
+        
+        /// <remarks/>
+        public object SubscriptionID {
+            get {
+                return this.subscriptionIDField;
+            }
+            set {
+                this.subscriptionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PeriodDate {
+            get {
+                return this.periodDateField;
+            }
+            set {
+                this.periodDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PeriodPrice {
+            get {
+                return this.periodPriceField;
+            }
+            set {
+                this.periodPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PeriodCost {
+            get {
+                return this.periodCostField;
+            }
+            set {
+                this.periodCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PostedDate {
+            get {
+                return this.postedDateField;
+            }
+            set {
+                this.postedDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PurchaseOrderNumber {
+            get {
+                return this.purchaseOrderNumberField;
+            }
+            set {
+                this.purchaseOrderNumberField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class Subscription : Entity {
+        
+        private object subscriptionNameField;
+        
+        private object descriptionField;
+        
+        private object periodTypeField;
+        
+        private object effectiveDateField;
+        
+        private object expirationDateField;
+        
+        private object periodPriceField;
+        
+        private object totalPriceField;
+        
+        private object materialCodeIDField;
+        
+        private object purchaseOrderNumberField;
+        
+        private object periodCostField;
+        
+        private object totalCostField;
+        
+        private object statusField;
+        
+        private object installedProductIDField;
+        
+        private object vendorIDField;
+        
+        private object businessDivisionSubdivisionIDField;
+        
+        /// <remarks/>
+        public object SubscriptionName {
+            get {
+                return this.subscriptionNameField;
+            }
+            set {
+                this.subscriptionNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PeriodType {
+            get {
+                return this.periodTypeField;
+            }
+            set {
+                this.periodTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object EffectiveDate {
+            get {
+                return this.effectiveDateField;
+            }
+            set {
+                this.effectiveDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ExpirationDate {
+            get {
+                return this.expirationDateField;
+            }
+            set {
+                this.expirationDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PeriodPrice {
+            get {
+                return this.periodPriceField;
+            }
+            set {
+                this.periodPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TotalPrice {
+            get {
+                return this.totalPriceField;
+            }
+            set {
+                this.totalPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object MaterialCodeID {
+            get {
+                return this.materialCodeIDField;
+            }
+            set {
+                this.materialCodeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PurchaseOrderNumber {
+            get {
+                return this.purchaseOrderNumberField;
+            }
+            set {
+                this.purchaseOrderNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PeriodCost {
+            get {
+                return this.periodCostField;
+            }
+            set {
+                this.periodCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TotalCost {
+            get {
+                return this.totalCostField;
+            }
+            set {
+                this.totalCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InstalledProductID {
+            get {
+                return this.installedProductIDField;
+            }
+            set {
+                this.installedProductIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object VendorID {
+            get {
+                return this.vendorIDField;
+            }
+            set {
+                this.vendorIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class InstalledProductTypeUdfAssociation : Entity {
         
         private object installedProductTypeIdField;
@@ -5276,11 +9172,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class InstalledProductType : Entity {
         
         private object nameField;
@@ -5309,11 +9205,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class InstalledProduct : Entity {
         
         private object createDateField;
@@ -5367,6 +9263,122 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object installedByContactIDField;
         
         private object parentInstalledProductIDField;
+        
+        private object lastModifiedTimeField;
+        
+        private object contractServiceIDField;
+        
+        private object contractServiceBundleIDField;
+        
+        private object serviceLevelAgreementIDField;
+        
+        private object accountPhysicalLocationIDField;
+        
+        private object rMMDeviceIDField;
+        
+        private object rMMDeviceUIDField;
+        
+        private object rMMDeviceAuditArchitectureIDField;
+        
+        private object rMMDeviceAuditDescriptionField;
+        
+        private object rMMDeviceAuditDisplayAdaptorIDField;
+        
+        private object rMMDeviceAuditDomainIDField;
+        
+        private object rMMDeviceAuditExternalIPAddressField;
+        
+        private object rMMDeviceAuditHostnameField;
+        
+        private object rMMDeviceAuditIPAddressField;
+        
+        private object rMMDeviceAuditMacAddressField;
+        
+        private object rMMDeviceAuditManufacturerIDField;
+        
+        private object rMMDeviceAuditMemoryBytesField;
+        
+        private object rMMDeviceAuditModelIDField;
+        
+        private object rMMDeviceAuditMotherboardIDField;
+        
+        private object rMMDeviceAuditOperatingSystemField;
+        
+        private object rMMDeviceAuditProcessorIDField;
+        
+        private object rMMDeviceAuditServicePackIDField;
+        
+        private object rMMDeviceAuditStorageBytesField;
+        
+        private object rMMDeviceAuditDeviceTypeIDField;
+        
+        private object rMMDeviceAuditSNMPLocationField;
+        
+        private object rMMDeviceAuditSNMPNameField;
+        
+        private object rMMDeviceAuditSNMPContactField;
+        
+        private object rMMDeviceAuditMobileNetworkOperatorIDField;
+        
+        private object rMMDeviceAuditMobileNumberField;
+        
+        private object rMMDeviceAuditMissingPatchCountField;
+        
+        private object rMMOpenAlertCountField;
+        
+        private object rMMDeviceAuditLastUserField;
+        
+        private object dattoSerialNumberField;
+        
+        private object dattoInternalIPField;
+        
+        private object dattoRemoteIPField;
+        
+        private object dattoHostnameField;
+        
+        private object dattoProtectedKilobytesField;
+        
+        private object dattoUsedKilobytesField;
+        
+        private object dattoAvailableKilobytesField;
+        
+        private object dattoPercentageUsedField;
+        
+        private object dattoOffsiteUsedBytesField;
+        
+        private object dattoOSVersionIDField;
+        
+        private object dattoZFSVersionIDField;
+        
+        private object dattoKernelVersionIDField;
+        
+        private object dattoNICSpeedKilobitsPerSecondField;
+        
+        private object dattoDeviceMemoryMegabytesField;
+        
+        private object dattoUptimeSecondsField;
+        
+        private object dattoNumberOfAgentsField;
+        
+        private object dattoNumberOfDrivesField;
+        
+        private object dattoDrivesErrorsField;
+        
+        private object dattoNumberOfVolumesField;
+        
+        private object dattoLastCheckInDateTimeField;
+        
+        private object rMMDeviceAuditAntivirusStatusIDField;
+        
+        private object rMMDeviceAuditBackupStatusIDField;
+        
+        private object rMMDeviceAuditPatchStatusIDField;
+        
+        private object rMMDeviceAuditSoftwareStatusIDField;
+        
+        private object lastActivityPersonIDField;
+        
+        private object lastActivityPersonTypeField;
         
         /// <remarks/>
         public object CreateDate {
@@ -5627,14 +9639,660 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.parentInstalledProductIDField = value;
             }
         }
+        
+        /// <remarks/>
+        public object LastModifiedTime {
+            get {
+                return this.lastModifiedTimeField;
+            }
+            set {
+                this.lastModifiedTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContractServiceID {
+            get {
+                return this.contractServiceIDField;
+            }
+            set {
+                this.contractServiceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContractServiceBundleID {
+            get {
+                return this.contractServiceBundleIDField;
+            }
+            set {
+                this.contractServiceBundleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ServiceLevelAgreementID {
+            get {
+                return this.serviceLevelAgreementIDField;
+            }
+            set {
+                this.serviceLevelAgreementIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AccountPhysicalLocationID {
+            get {
+                return this.accountPhysicalLocationIDField;
+            }
+            set {
+                this.accountPhysicalLocationIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceID {
+            get {
+                return this.rMMDeviceIDField;
+            }
+            set {
+                this.rMMDeviceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceUID {
+            get {
+                return this.rMMDeviceUIDField;
+            }
+            set {
+                this.rMMDeviceUIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditArchitectureID {
+            get {
+                return this.rMMDeviceAuditArchitectureIDField;
+            }
+            set {
+                this.rMMDeviceAuditArchitectureIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditDescription {
+            get {
+                return this.rMMDeviceAuditDescriptionField;
+            }
+            set {
+                this.rMMDeviceAuditDescriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditDisplayAdaptorID {
+            get {
+                return this.rMMDeviceAuditDisplayAdaptorIDField;
+            }
+            set {
+                this.rMMDeviceAuditDisplayAdaptorIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditDomainID {
+            get {
+                return this.rMMDeviceAuditDomainIDField;
+            }
+            set {
+                this.rMMDeviceAuditDomainIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditExternalIPAddress {
+            get {
+                return this.rMMDeviceAuditExternalIPAddressField;
+            }
+            set {
+                this.rMMDeviceAuditExternalIPAddressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditHostname {
+            get {
+                return this.rMMDeviceAuditHostnameField;
+            }
+            set {
+                this.rMMDeviceAuditHostnameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditIPAddress {
+            get {
+                return this.rMMDeviceAuditIPAddressField;
+            }
+            set {
+                this.rMMDeviceAuditIPAddressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditMacAddress {
+            get {
+                return this.rMMDeviceAuditMacAddressField;
+            }
+            set {
+                this.rMMDeviceAuditMacAddressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditManufacturerID {
+            get {
+                return this.rMMDeviceAuditManufacturerIDField;
+            }
+            set {
+                this.rMMDeviceAuditManufacturerIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditMemoryBytes {
+            get {
+                return this.rMMDeviceAuditMemoryBytesField;
+            }
+            set {
+                this.rMMDeviceAuditMemoryBytesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditModelID {
+            get {
+                return this.rMMDeviceAuditModelIDField;
+            }
+            set {
+                this.rMMDeviceAuditModelIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditMotherboardID {
+            get {
+                return this.rMMDeviceAuditMotherboardIDField;
+            }
+            set {
+                this.rMMDeviceAuditMotherboardIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditOperatingSystem {
+            get {
+                return this.rMMDeviceAuditOperatingSystemField;
+            }
+            set {
+                this.rMMDeviceAuditOperatingSystemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditProcessorID {
+            get {
+                return this.rMMDeviceAuditProcessorIDField;
+            }
+            set {
+                this.rMMDeviceAuditProcessorIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditServicePackID {
+            get {
+                return this.rMMDeviceAuditServicePackIDField;
+            }
+            set {
+                this.rMMDeviceAuditServicePackIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditStorageBytes {
+            get {
+                return this.rMMDeviceAuditStorageBytesField;
+            }
+            set {
+                this.rMMDeviceAuditStorageBytesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditDeviceTypeID {
+            get {
+                return this.rMMDeviceAuditDeviceTypeIDField;
+            }
+            set {
+                this.rMMDeviceAuditDeviceTypeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditSNMPLocation {
+            get {
+                return this.rMMDeviceAuditSNMPLocationField;
+            }
+            set {
+                this.rMMDeviceAuditSNMPLocationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditSNMPName {
+            get {
+                return this.rMMDeviceAuditSNMPNameField;
+            }
+            set {
+                this.rMMDeviceAuditSNMPNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditSNMPContact {
+            get {
+                return this.rMMDeviceAuditSNMPContactField;
+            }
+            set {
+                this.rMMDeviceAuditSNMPContactField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditMobileNetworkOperatorID {
+            get {
+                return this.rMMDeviceAuditMobileNetworkOperatorIDField;
+            }
+            set {
+                this.rMMDeviceAuditMobileNetworkOperatorIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditMobileNumber {
+            get {
+                return this.rMMDeviceAuditMobileNumberField;
+            }
+            set {
+                this.rMMDeviceAuditMobileNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditMissingPatchCount {
+            get {
+                return this.rMMDeviceAuditMissingPatchCountField;
+            }
+            set {
+                this.rMMDeviceAuditMissingPatchCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMOpenAlertCount {
+            get {
+                return this.rMMOpenAlertCountField;
+            }
+            set {
+                this.rMMOpenAlertCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditLastUser {
+            get {
+                return this.rMMDeviceAuditLastUserField;
+            }
+            set {
+                this.rMMDeviceAuditLastUserField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoSerialNumber {
+            get {
+                return this.dattoSerialNumberField;
+            }
+            set {
+                this.dattoSerialNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoInternalIP {
+            get {
+                return this.dattoInternalIPField;
+            }
+            set {
+                this.dattoInternalIPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoRemoteIP {
+            get {
+                return this.dattoRemoteIPField;
+            }
+            set {
+                this.dattoRemoteIPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoHostname {
+            get {
+                return this.dattoHostnameField;
+            }
+            set {
+                this.dattoHostnameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoProtectedKilobytes {
+            get {
+                return this.dattoProtectedKilobytesField;
+            }
+            set {
+                this.dattoProtectedKilobytesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoUsedKilobytes {
+            get {
+                return this.dattoUsedKilobytesField;
+            }
+            set {
+                this.dattoUsedKilobytesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoAvailableKilobytes {
+            get {
+                return this.dattoAvailableKilobytesField;
+            }
+            set {
+                this.dattoAvailableKilobytesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoPercentageUsed {
+            get {
+                return this.dattoPercentageUsedField;
+            }
+            set {
+                this.dattoPercentageUsedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoOffsiteUsedBytes {
+            get {
+                return this.dattoOffsiteUsedBytesField;
+            }
+            set {
+                this.dattoOffsiteUsedBytesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoOSVersionID {
+            get {
+                return this.dattoOSVersionIDField;
+            }
+            set {
+                this.dattoOSVersionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoZFSVersionID {
+            get {
+                return this.dattoZFSVersionIDField;
+            }
+            set {
+                this.dattoZFSVersionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoKernelVersionID {
+            get {
+                return this.dattoKernelVersionIDField;
+            }
+            set {
+                this.dattoKernelVersionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoNICSpeedKilobitsPerSecond {
+            get {
+                return this.dattoNICSpeedKilobitsPerSecondField;
+            }
+            set {
+                this.dattoNICSpeedKilobitsPerSecondField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoDeviceMemoryMegabytes {
+            get {
+                return this.dattoDeviceMemoryMegabytesField;
+            }
+            set {
+                this.dattoDeviceMemoryMegabytesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoUptimeSeconds {
+            get {
+                return this.dattoUptimeSecondsField;
+            }
+            set {
+                this.dattoUptimeSecondsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoNumberOfAgents {
+            get {
+                return this.dattoNumberOfAgentsField;
+            }
+            set {
+                this.dattoNumberOfAgentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoNumberOfDrives {
+            get {
+                return this.dattoNumberOfDrivesField;
+            }
+            set {
+                this.dattoNumberOfDrivesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoDrivesErrors {
+            get {
+                return this.dattoDrivesErrorsField;
+            }
+            set {
+                this.dattoDrivesErrorsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoNumberOfVolumes {
+            get {
+                return this.dattoNumberOfVolumesField;
+            }
+            set {
+                this.dattoNumberOfVolumesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DattoLastCheckInDateTime {
+            get {
+                return this.dattoLastCheckInDateTimeField;
+            }
+            set {
+                this.dattoLastCheckInDateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditAntivirusStatusID {
+            get {
+                return this.rMMDeviceAuditAntivirusStatusIDField;
+            }
+            set {
+                this.rMMDeviceAuditAntivirusStatusIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditBackupStatusID {
+            get {
+                return this.rMMDeviceAuditBackupStatusIDField;
+            }
+            set {
+                this.rMMDeviceAuditBackupStatusIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditPatchStatusID {
+            get {
+                return this.rMMDeviceAuditPatchStatusIDField;
+            }
+            set {
+                this.rMMDeviceAuditPatchStatusIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RMMDeviceAuditSoftwareStatusID {
+            get {
+                return this.rMMDeviceAuditSoftwareStatusIDField;
+            }
+            set {
+                this.rMMDeviceAuditSoftwareStatusIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityPersonID {
+            get {
+                return this.lastActivityPersonIDField;
+            }
+            set {
+                this.lastActivityPersonIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityPersonType {
+            get {
+                return this.lastActivityPersonTypeField;
+            }
+            set {
+                this.lastActivityPersonTypeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ContractExclusionRole : Entity {
+        
+        private object contractIDField;
+        
+        private object roleIDField;
+        
+        /// <remarks/>
+        public object ContractID {
+            get {
+                return this.contractIDField;
+            }
+            set {
+                this.contractIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RoleID {
+            get {
+                return this.roleIDField;
+            }
+            set {
+                this.roleIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ContractExclusionAllocationCode : Entity {
+        
+        private object contractIDField;
+        
+        private object allocationCodeIDField;
+        
+        /// <remarks/>
+        public object ContractID {
+            get {
+                return this.contractIDField;
+            }
+            set {
+                this.contractIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AllocationCodeID {
+            get {
+                return this.allocationCodeIDField;
+            }
+            set {
+                this.allocationCodeIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Contract : Entity {
         
         private object accountIDField;
@@ -5642,6 +10300,8 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object billingPreferenceField;
         
         private object complianceField;
+        
+        private object contactIDField;
         
         private object contactNameField;
         
@@ -5687,6 +10347,20 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object setupFeeAllocationCodeIDField;
         
+        private object exclusionContractIDField;
+        
+        private object internalCurrencyOverageBillingRateField;
+        
+        private object internalCurrencySetupFeeField;
+        
+        private object businessDivisionSubdivisionIDField;
+        
+        private object billToAccountIDField;
+        
+        private object billToAccountContactIDField;
+        
+        private object contractExclusionSetIDField;
+        
         /// <remarks/>
         public object AccountID {
             get {
@@ -5714,6 +10388,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.complianceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContactID {
+            get {
+                return this.contactIDField;
+            }
+            set {
+                this.contactIDField = value;
             }
         }
         
@@ -5936,31 +10620,89 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.setupFeeAllocationCodeIDField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ExclusionContractID {
+            get {
+                return this.exclusionContractIDField;
+            }
+            set {
+                this.exclusionContractIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyOverageBillingRate {
+            get {
+                return this.internalCurrencyOverageBillingRateField;
+            }
+            set {
+                this.internalCurrencyOverageBillingRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencySetupFee {
+            get {
+                return this.internalCurrencySetupFeeField;
+            }
+            set {
+                this.internalCurrencySetupFeeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BillToAccountID {
+            get {
+                return this.billToAccountIDField;
+            }
+            set {
+                this.billToAccountIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BillToAccountContactID {
+            get {
+                return this.billToAccountContactIDField;
+            }
+            set {
+                this.billToAccountContactIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContractExclusionSetID {
+            get {
+                return this.contractExclusionSetIDField;
+            }
+            set {
+                this.contractExclusionSetIDField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class AccountTeam : Entity {
-        
-        private object idField;
         
         private object accountIDField;
         
         private object resourceIDField;
-        
-        /// <remarks/>
-        public object ID {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
         
         /// <remarks/>
         public object AccountID {
@@ -5984,11 +10726,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Account : Entity {
         
         private object address1Field;
@@ -6080,6 +10822,20 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object invoiceMethodField;
         
         private object invoiceNonContractItemsToParentAccountField;
+        
+        private object quoteTemplateIDField;
+        
+        private object quoteEmailMessageIDField;
+        
+        private object invoiceTemplateIDField;
+        
+        private object invoiceEmailMessageIDField;
+        
+        private object currencyIDField;
+        
+        private object billToAccountPhysicalLocationIDField;
+        
+        private object surveyAccountRatingField;
         
         /// <remarks/>
         public object Address1 {
@@ -6530,14 +11286,84 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.invoiceNonContractItemsToParentAccountField = value;
             }
         }
+        
+        /// <remarks/>
+        public object QuoteTemplateID {
+            get {
+                return this.quoteTemplateIDField;
+            }
+            set {
+                this.quoteTemplateIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object QuoteEmailMessageID {
+            get {
+                return this.quoteEmailMessageIDField;
+            }
+            set {
+                this.quoteEmailMessageIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InvoiceTemplateID {
+            get {
+                return this.invoiceTemplateIDField;
+            }
+            set {
+                this.invoiceTemplateIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InvoiceEmailMessageID {
+            get {
+                return this.invoiceEmailMessageIDField;
+            }
+            set {
+                this.invoiceEmailMessageIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyID {
+            get {
+                return this.currencyIDField;
+            }
+            set {
+                this.currencyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BillToAccountPhysicalLocationID {
+            get {
+                return this.billToAccountPhysicalLocationIDField;
+            }
+            set {
+                this.billToAccountPhysicalLocationIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SurveyAccountRating {
+            get {
+                return this.surveyAccountRatingField;
+            }
+            set {
+                this.surveyAccountRatingField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ActionType : Entity {
         
         private object nameField;
@@ -6590,11 +11416,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class AccountToDo : Entity {
         
         private object accountIDField;
@@ -6767,11 +11593,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class AccountNote : Entity {
         
         private object accountIDField;
@@ -6795,6 +11621,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object noteField;
         
         private object lastModifiedDateField;
+        
+        private object impersonatorCreatorResourceIDField;
+        
+        private object impersonatorUpdaterResourceIDField;
+        
+        private object createDateTimeField;
         
         /// <remarks/>
         public object AccountID {
@@ -6905,14 +11737,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.lastModifiedDateField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ImpersonatorCreatorResourceID {
+            get {
+                return this.impersonatorCreatorResourceIDField;
+            }
+            set {
+                this.impersonatorCreatorResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ImpersonatorUpdaterResourceID {
+            get {
+                return this.impersonatorUpdaterResourceIDField;
+            }
+            set {
+                this.impersonatorUpdaterResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreateDateTime {
+            get {
+                return this.createDateTimeField;
+            }
+            set {
+                this.createDateTimeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class TicketNote : Entity {
         
         private object creatorResourceIDField;
@@ -6928,6 +11790,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object ticketIDField;
         
         private object titleField;
+        
+        private object impersonatorCreatorResourceIDField;
+        
+        private object impersonatorUpdaterResourceIDField;
+        
+        private object createDateTimeField;
         
         /// <remarks/>
         public object CreatorResourceID {
@@ -6998,14 +11866,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.titleField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ImpersonatorCreatorResourceID {
+            get {
+                return this.impersonatorCreatorResourceIDField;
+            }
+            set {
+                this.impersonatorCreatorResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ImpersonatorUpdaterResourceID {
+            get {
+                return this.impersonatorUpdaterResourceIDField;
+            }
+            set {
+                this.impersonatorUpdaterResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreateDateTime {
+            get {
+                return this.createDateTimeField;
+            }
+            set {
+                this.createDateTimeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Contact : Entity {
         
         private object activeField;
@@ -7023,6 +11921,10 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object createDateField;
         
         private object eMailAddressField;
+        
+        private object eMailAddress2Field;
+        
+        private object eMailAddress3Field;
         
         private object extensionField;
         
@@ -7079,6 +11981,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object linkedInUrlField;
         
         private object primaryContactField;
+        
+        private object accountPhysicalLocationIDField;
+        
+        private object solicitationOptOutField;
+        
+        private object solicitationOptOutTimeField;
         
         /// <remarks/>
         public object Active {
@@ -7157,6 +12065,26 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.eMailAddressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object EMailAddress2 {
+            get {
+                return this.eMailAddress2Field;
+            }
+            set {
+                this.eMailAddress2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object EMailAddress3 {
+            get {
+                return this.eMailAddress3Field;
+            }
+            set {
+                this.eMailAddress3Field = value;
             }
         }
         
@@ -7439,14 +12367,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.primaryContactField = value;
             }
         }
+        
+        /// <remarks/>
+        public object AccountPhysicalLocationID {
+            get {
+                return this.accountPhysicalLocationIDField;
+            }
+            set {
+                this.accountPhysicalLocationIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SolicitationOptOut {
+            get {
+                return this.solicitationOptOutField;
+            }
+            set {
+                this.solicitationOptOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SolicitationOptOutTime {
+            get {
+                return this.solicitationOptOutTimeField;
+            }
+            set {
+                this.solicitationOptOutTimeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Ticket : Entity {
         
         private object accountIDField;
@@ -7542,6 +12500,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object contractServiceIDField;
         
         private object contractServiceBundleIDField;
+        
+        private object hoursToBeScheduledField;
+        
+        private object monitorTypeIDField;
+        
+        private object monitorIDField;
+        
+        private object aEMAlertIDField;
+        
+        private object ticketCategoryField;
+        
+        private object externalIDField;
+        
+        private object firstResponseInitiatingResourceIDField;
+        
+        private object firstResponseAssignedResourceIDField;
+        
+        private object projectIDField;
+        
+        private object businessDivisionSubdivisionIDField;
+        
+        private object creatorTypeField;
+        
+        private object completedByResourceIDField;
+        
+        private object accountPhysicalLocationIDField;
+        
+        private object lastActivityPersonTypeField;
+        
+        private object lastActivityResourceIDField;
+        
+        private object serviceLevelAgreementPausedNextEventHoursField;
+        
+        private object currentServiceThermometerRatingField;
+        
+        private object previousServiceThermometerRatingField;
+        
+        private object serviceThermometerTemperatureField;
         
         /// <remarks/>
         public object AccountID {
@@ -8012,14 +13008,204 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.contractServiceBundleIDField = value;
             }
         }
+        
+        /// <remarks/>
+        public object HoursToBeScheduled {
+            get {
+                return this.hoursToBeScheduledField;
+            }
+            set {
+                this.hoursToBeScheduledField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object MonitorTypeID {
+            get {
+                return this.monitorTypeIDField;
+            }
+            set {
+                this.monitorTypeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object MonitorID {
+            get {
+                return this.monitorIDField;
+            }
+            set {
+                this.monitorIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AEMAlertID {
+            get {
+                return this.aEMAlertIDField;
+            }
+            set {
+                this.aEMAlertIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TicketCategory {
+            get {
+                return this.ticketCategoryField;
+            }
+            set {
+                this.ticketCategoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ExternalID {
+            get {
+                return this.externalIDField;
+            }
+            set {
+                this.externalIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FirstResponseInitiatingResourceID {
+            get {
+                return this.firstResponseInitiatingResourceIDField;
+            }
+            set {
+                this.firstResponseInitiatingResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object FirstResponseAssignedResourceID {
+            get {
+                return this.firstResponseAssignedResourceIDField;
+            }
+            set {
+                this.firstResponseAssignedResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ProjectID {
+            get {
+                return this.projectIDField;
+            }
+            set {
+                this.projectIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreatorType {
+            get {
+                return this.creatorTypeField;
+            }
+            set {
+                this.creatorTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CompletedByResourceID {
+            get {
+                return this.completedByResourceIDField;
+            }
+            set {
+                this.completedByResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AccountPhysicalLocationID {
+            get {
+                return this.accountPhysicalLocationIDField;
+            }
+            set {
+                this.accountPhysicalLocationIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityPersonType {
+            get {
+                return this.lastActivityPersonTypeField;
+            }
+            set {
+                this.lastActivityPersonTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityResourceID {
+            get {
+                return this.lastActivityResourceIDField;
+            }
+            set {
+                this.lastActivityResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ServiceLevelAgreementPausedNextEventHours {
+            get {
+                return this.serviceLevelAgreementPausedNextEventHoursField;
+            }
+            set {
+                this.serviceLevelAgreementPausedNextEventHoursField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrentServiceThermometerRating {
+            get {
+                return this.currentServiceThermometerRatingField;
+            }
+            set {
+                this.currentServiceThermometerRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PreviousServiceThermometerRating {
+            get {
+                return this.previousServiceThermometerRatingField;
+            }
+            set {
+                this.previousServiceThermometerRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ServiceThermometerTemperature {
+            get {
+                return this.serviceThermometerTemperatureField;
+            }
+            set {
+                this.serviceThermometerTemperatureField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class AllocationCode : Entity {
         
         private object generalLedgerCodeField;
@@ -8049,6 +13235,8 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object taxCategoryIDField;
         
         private object markupRateField;
+        
+        private object isExcludedFromNewContractsField;
         
         /// <remarks/>
         public object GeneralLedgerCode {
@@ -8189,14 +13377,24 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.markupRateField = value;
             }
         }
+        
+        /// <remarks/>
+        public object IsExcludedFromNewContracts {
+            get {
+                return this.isExcludedFromNewContractsField;
+            }
+            set {
+                this.isExcludedFromNewContractsField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Invoice : Entity {
         
         private object accountIDField;
@@ -8213,7 +13411,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object invoiceTotalField;
         
-        private object taxGroupField;
+        private object totalTaxValueField;
         
         private object fromDateField;
         
@@ -8233,7 +13431,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object paidDateField;
         
-        private object totalTaxValueField;
+        private object taxGroupField;
         
         private object taxRegionNameField;
         
@@ -8314,12 +13512,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object TaxGroup {
+        public object TotalTaxValue {
             get {
-                return this.taxGroupField;
+                return this.totalTaxValueField;
             }
             set {
-                this.taxGroupField = value;
+                this.totalTaxValueField = value;
             }
         }
         
@@ -8414,12 +13612,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object TotalTaxValue {
+        public object TaxGroup {
             get {
-                return this.totalTaxValueField;
+                return this.taxGroupField;
             }
             set {
-                this.totalTaxValueField = value;
+                this.taxGroupField = value;
             }
         }
         
@@ -8465,26 +13663,30 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Role : Entity {
         
         private object nameField;
         
         private object descriptionField;
         
+        private object systemRoleField;
+        
         private object hourlyFactorField;
         
         private object hourlyRateField;
         
-        private object systemRoleField;
-        
         private object quoteItemDefaultTaxCategoryIdField;
         
         private object activeField;
+        
+        private object isExcludedFromNewContractsField;
+        
+        private object roleTypeField;
         
         /// <remarks/>
         public object Name {
@@ -8503,6 +13705,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SystemRole {
+            get {
+                return this.systemRoleField;
+            }
+            set {
+                this.systemRoleField = value;
             }
         }
         
@@ -8527,16 +13739,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object SystemRole {
-            get {
-                return this.systemRoleField;
-            }
-            set {
-                this.systemRoleField = value;
-            }
-        }
-        
-        /// <remarks/>
         public object QuoteItemDefaultTaxCategoryId {
             get {
                 return this.quoteItemDefaultTaxCategoryIdField;
@@ -8555,111 +13757,61 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.activeField = value;
             }
         }
+        
+        /// <remarks/>
+        public object IsExcludedFromNewContracts {
+            get {
+                return this.isExcludedFromNewContractsField;
+            }
+            set {
+                this.isExcludedFromNewContractsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RoleType {
+            get {
+                return this.roleTypeField;
+            }
+            set {
+                this.roleTypeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Phase : Entity {
-        
-        private object parentPhaseIDField;
-        
-        private object projectIDField;
-        
-        private object titleField;
-        
-        private object descriptionField;
-        
-        private object startDateField;
-        
-        private object dueDateField;
-        
-        private object scheduledField;
         
         private object createDateField;
         
         private object creatorResourceIDField;
         
-        private object estimatedHoursField;
+        private object descriptionField;
         
-        private object phaseNumberField;
+        private object dueDateField;
+        
+        private object estimatedHoursField;
         
         private object externalIDField;
         
         private object lastActivityDateTimeField;
         
-        /// <remarks/>
-        public object ParentPhaseID {
-            get {
-                return this.parentPhaseIDField;
-            }
-            set {
-                this.parentPhaseIDField = value;
-            }
-        }
+        private object parentPhaseIDField;
         
-        /// <remarks/>
-        public object ProjectID {
-            get {
-                return this.projectIDField;
-            }
-            set {
-                this.projectIDField = value;
-            }
-        }
+        private object phaseNumberField;
         
-        /// <remarks/>
-        public object Title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-            }
-        }
+        private object projectIDField;
         
-        /// <remarks/>
-        public object Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
+        private object scheduledField;
         
-        /// <remarks/>
-        public object StartDate {
-            get {
-                return this.startDateField;
-            }
-            set {
-                this.startDateField = value;
-            }
-        }
+        private object startDateField;
         
-        /// <remarks/>
-        public object DueDate {
-            get {
-                return this.dueDateField;
-            }
-            set {
-                this.dueDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Scheduled {
-            get {
-                return this.scheduledField;
-            }
-            set {
-                this.scheduledField = value;
-            }
-        }
+        private object titleField;
         
         /// <remarks/>
         public object CreateDate {
@@ -8682,22 +13834,32 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DueDate {
+            get {
+                return this.dueDateField;
+            }
+            set {
+                this.dueDateField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object EstimatedHours {
             get {
                 return this.estimatedHoursField;
             }
             set {
                 this.estimatedHoursField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object PhaseNumber {
-            get {
-                return this.phaseNumberField;
-            }
-            set {
-                this.phaseNumberField = value;
             }
         }
         
@@ -8720,14 +13882,74 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.lastActivityDateTimeField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ParentPhaseID {
+            get {
+                return this.parentPhaseIDField;
+            }
+            set {
+                this.parentPhaseIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PhaseNumber {
+            get {
+                return this.phaseNumberField;
+            }
+            set {
+                this.phaseNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ProjectID {
+            get {
+                return this.projectIDField;
+            }
+            set {
+                this.projectIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Scheduled {
+            get {
+                return this.scheduledField;
+            }
+            set {
+                this.scheduledField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object StartDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Project : Entity {
         
         private object projectNameField;
@@ -8803,6 +14025,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object lineOfBusinessField;
         
         private object purchaseOrderNumberField;
+        
+        private object businessDivisionSubdivisionIDField;
+        
+        private object lastActivityResourceIDField;
+        
+        private object lastActivityDateTimeField;
+        
+        private object lastActivityPersonTypeField;
         
         /// <remarks/>
         public object ProjectName {
@@ -9173,14 +14403,54 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.purchaseOrderNumberField = value;
             }
         }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityResourceID {
+            get {
+                return this.lastActivityResourceIDField;
+            }
+            set {
+                this.lastActivityResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityDateTime {
+            get {
+                return this.lastActivityDateTimeField;
+            }
+            set {
+                this.lastActivityDateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityPersonType {
+            get {
+                return this.lastActivityPersonTypeField;
+            }
+            set {
+                this.lastActivityPersonTypeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ProductVendor : Entity {
         
         private object productIDField;
@@ -9257,11 +14527,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Product : Entity {
         
         private object nameField;
@@ -9277,6 +14547,8 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object externalProductIDField;
         
         private object unitCostField;
+        
+        private object markupRateField;
         
         private object unitPriceField;
         
@@ -9301,8 +14573,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object costAllocationCodeIDField;
         
         private object doesNotRequireProcurementField;
-        
-        private object markupRateField;
         
         private object internalProductIDField;
         
@@ -9373,6 +14643,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.unitCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object MarkupRate {
+            get {
+                return this.markupRateField;
+            }
+            set {
+                this.markupRateField = value;
             }
         }
         
@@ -9497,16 +14777,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object MarkupRate {
-            get {
-                return this.markupRateField;
-            }
-            set {
-                this.markupRateField = value;
-            }
-        }
-        
-        /// <remarks/>
         public object InternalProductID {
             get {
                 return this.internalProductIDField;
@@ -9518,26 +14788,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Task : Entity {
-        
-        private object phaseIDField;
-        
-        private object projectIDField;
-        
-        private object titleField;
-        
-        private object descriptionField;
-        
-        private object startDateTimeField;
-        
-        private object endDateTimeField;
-        
-        private object departmentIDField;
         
         private object allocationCodeIDField;
         
@@ -9545,11 +14801,7 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object assignedResourceRoleIDField;
         
-        private object taskIsBillableField;
-        
-        private object taskTypeField;
-        
-        private object statusField;
+        private object canClientPortalUserCompleteTaskField;
         
         private object completedDateTimeField;
         
@@ -9557,93 +14809,55 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object creatorResourceIDField;
         
-        private object estimatedHoursField;
+        private object departmentIDField;
         
-        private object taskNumberField;
+        private object descriptionField;
+        
+        private object endDateTimeField;
+        
+        private object estimatedHoursField;
         
         private object externalIDField;
         
-        private object lastActivityDateTimeField;
-        
-        private object priorityField;
-        
-        private object purchaseOrderNumberField;
+        private object hoursToBeScheduledField;
         
         private object isVisibleInClientPortalField;
         
-        private object canClientPortalUserCompleteTaskField;
+        private object lastActivityDateTimeField;
+        
+        private object phaseIDField;
+        
+        private object priorityField;
+        
+        private object projectIDField;
+        
+        private object purchaseOrderNumberField;
         
         private object remainingHoursField;
         
-        /// <remarks/>
-        public object PhaseID {
-            get {
-                return this.phaseIDField;
-            }
-            set {
-                this.phaseIDField = value;
-            }
-        }
+        private object startDateTimeField;
         
-        /// <remarks/>
-        public object ProjectID {
-            get {
-                return this.projectIDField;
-            }
-            set {
-                this.projectIDField = value;
-            }
-        }
+        private object statusField;
         
-        /// <remarks/>
-        public object Title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-            }
-        }
+        private object taskIsBillableField;
         
-        /// <remarks/>
-        public object Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
+        private object taskNumberField;
         
-        /// <remarks/>
-        public object StartDateTime {
-            get {
-                return this.startDateTimeField;
-            }
-            set {
-                this.startDateTimeField = value;
-            }
-        }
+        private object taskTypeField;
         
-        /// <remarks/>
-        public object EndDateTime {
-            get {
-                return this.endDateTimeField;
-            }
-            set {
-                this.endDateTimeField = value;
-            }
-        }
+        private object titleField;
         
-        /// <remarks/>
-        public object DepartmentID {
-            get {
-                return this.departmentIDField;
-            }
-            set {
-                this.departmentIDField = value;
-            }
-        }
+        private object priorityLabelField;
+        
+        private object creatorTypeField;
+        
+        private object completedByResourceIDField;
+        
+        private object completedByTypeField;
+        
+        private object lastActivityResourceIDField;
+        
+        private object lastActivityPersonTypeField;
         
         /// <remarks/>
         public object AllocationCodeID {
@@ -9676,32 +14890,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object TaskIsBillable {
+        public object CanClientPortalUserCompleteTask {
             get {
-                return this.taskIsBillableField;
+                return this.canClientPortalUserCompleteTaskField;
             }
             set {
-                this.taskIsBillableField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object TaskType {
-            get {
-                return this.taskTypeField;
-            }
-            set {
-                this.taskTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
+                this.canClientPortalUserCompleteTaskField = value;
             }
         }
         
@@ -9736,22 +14930,42 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object DepartmentID {
+            get {
+                return this.departmentIDField;
+            }
+            set {
+                this.departmentIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object EndDateTime {
+            get {
+                return this.endDateTimeField;
+            }
+            set {
+                this.endDateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object EstimatedHours {
             get {
                 return this.estimatedHoursField;
             }
             set {
                 this.estimatedHoursField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object TaskNumber {
-            get {
-                return this.taskNumberField;
-            }
-            set {
-                this.taskNumberField = value;
             }
         }
         
@@ -9766,32 +14980,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object LastActivityDateTime {
+        public object HoursToBeScheduled {
             get {
-                return this.lastActivityDateTimeField;
+                return this.hoursToBeScheduledField;
             }
             set {
-                this.lastActivityDateTimeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Priority {
-            get {
-                return this.priorityField;
-            }
-            set {
-                this.priorityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object PurchaseOrderNumber {
-            get {
-                return this.purchaseOrderNumberField;
-            }
-            set {
-                this.purchaseOrderNumberField = value;
+                this.hoursToBeScheduledField = value;
             }
         }
         
@@ -9806,12 +15000,52 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object CanClientPortalUserCompleteTask {
+        public object LastActivityDateTime {
             get {
-                return this.canClientPortalUserCompleteTaskField;
+                return this.lastActivityDateTimeField;
             }
             set {
-                this.canClientPortalUserCompleteTaskField = value;
+                this.lastActivityDateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PhaseID {
+            get {
+                return this.phaseIDField;
+            }
+            set {
+                this.phaseIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Priority {
+            get {
+                return this.priorityField;
+            }
+            set {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ProjectID {
+            get {
+                return this.projectIDField;
+            }
+            set {
+                this.projectIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PurchaseOrderNumber {
+            get {
+                return this.purchaseOrderNumberField;
+            }
+            set {
+                this.purchaseOrderNumberField = value;
             }
         }
         
@@ -9824,14 +15058,134 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.remainingHoursField = value;
             }
         }
+        
+        /// <remarks/>
+        public object StartDateTime {
+            get {
+                return this.startDateTimeField;
+            }
+            set {
+                this.startDateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TaskIsBillable {
+            get {
+                return this.taskIsBillableField;
+            }
+            set {
+                this.taskIsBillableField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TaskNumber {
+            get {
+                return this.taskNumberField;
+            }
+            set {
+                this.taskNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TaskType {
+            get {
+                return this.taskTypeField;
+            }
+            set {
+                this.taskTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PriorityLabel {
+            get {
+                return this.priorityLabelField;
+            }
+            set {
+                this.priorityLabelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreatorType {
+            get {
+                return this.creatorTypeField;
+            }
+            set {
+                this.creatorTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CompletedByResourceID {
+            get {
+                return this.completedByResourceIDField;
+            }
+            set {
+                this.completedByResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CompletedByType {
+            get {
+                return this.completedByTypeField;
+            }
+            set {
+                this.completedByTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityResourceID {
+            get {
+                return this.lastActivityResourceIDField;
+            }
+            set {
+                this.lastActivityResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityPersonType {
+            get {
+                return this.lastActivityPersonTypeField;
+            }
+            set {
+                this.lastActivityPersonTypeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ServiceCallTicketResource : Entity {
         
         private object serviceCallTicketIDField;
@@ -9860,11 +15214,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ServiceCallTaskResource : Entity {
         
         private object serviceCallTaskIDField;
@@ -9893,11 +15247,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ServiceCall : Entity {
         
         private object accountIDField;
@@ -9915,6 +15269,18 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object createDateTimeField;
         
         private object lastModifiedDateTimeField;
+        
+        private object durationField;
+        
+        private object statusField;
+        
+        private object canceledByResourceField;
+        
+        private object canceledDateTimeField;
+        
+        private object cancelationNoticeHoursField;
+        
+        private object accountPhysicalLocationIDField;
         
         /// <remarks/>
         public object AccountID {
@@ -9995,14 +15361,74 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.lastModifiedDateTimeField = value;
             }
         }
+        
+        /// <remarks/>
+        public object Duration {
+            get {
+                return this.durationField;
+            }
+            set {
+                this.durationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CanceledByResource {
+            get {
+                return this.canceledByResourceField;
+            }
+            set {
+                this.canceledByResourceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CanceledDateTime {
+            get {
+                return this.canceledDateTimeField;
+            }
+            set {
+                this.canceledDateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CancelationNoticeHours {
+            get {
+                return this.cancelationNoticeHoursField;
+            }
+            set {
+                this.cancelationNoticeHoursField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AccountPhysicalLocationID {
+            get {
+                return this.accountPhysicalLocationIDField;
+            }
+            set {
+                this.accountPhysicalLocationIDField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ServiceCallTicket : Entity {
         
         private object serviceCallIDField;
@@ -10031,11 +15457,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ServiceCallTask : Entity {
         
         private object serviceCallIDField;
@@ -10064,11 +15490,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Appointment : Entity {
         
         private object resourceIDField;
@@ -10169,11 +15595,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class TimeEntry : Entity {
         
         private object taskIDField;
@@ -10229,6 +15655,10 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object contractServiceIDField;
         
         private object contractServiceBundleIDField;
+        
+        private object impersonatorCreatorResourceIDField;
+        
+        private object impersonatorUpdaterResourceIDField;
         
         /// <remarks/>
         public object TaskID {
@@ -10499,14 +15929,34 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.contractServiceBundleIDField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ImpersonatorCreatorResourceID {
+            get {
+                return this.impersonatorCreatorResourceIDField;
+            }
+            set {
+                this.impersonatorCreatorResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ImpersonatorUpdaterResourceID {
+            get {
+                return this.impersonatorUpdaterResourceIDField;
+            }
+            set {
+                this.impersonatorUpdaterResourceIDField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractService : Entity {
         
         private object contractIDField;
@@ -10520,6 +15970,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object invoiceDescriptionField;
         
         private object quoteItemIDField;
+        
+        private object internalCurrencyUnitPriceField;
+        
+        private object internalCurrencyAdjustedPriceField;
+        
+        private object internalDescriptionField;
+        
+        private object unitCostField;
         
         /// <remarks/>
         public object ContractID {
@@ -10580,14 +16038,54 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.quoteItemIDField = value;
             }
         }
+        
+        /// <remarks/>
+        public object InternalCurrencyUnitPrice {
+            get {
+                return this.internalCurrencyUnitPriceField;
+            }
+            set {
+                this.internalCurrencyUnitPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyAdjustedPrice {
+            get {
+                return this.internalCurrencyAdjustedPriceField;
+            }
+            set {
+                this.internalCurrencyAdjustedPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalDescription {
+            get {
+                return this.internalDescriptionField;
+            }
+            set {
+                this.internalDescriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UnitCost {
+            get {
+                return this.unitCostField;
+            }
+            set {
+                this.unitCostField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractServiceBundle : Entity {
         
         private object contractIDField;
@@ -10601,6 +16099,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object invoiceDescriptionField;
         
         private object quoteItemIDField;
+        
+        private object internalCurrencyUnitPriceField;
+        
+        private object internalCurrencyAdjustedPriceField;
+        
+        private object internalDescriptionField;
         
         /// <remarks/>
         public object ContractID {
@@ -10661,14 +16165,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.quoteItemIDField = value;
             }
         }
+        
+        /// <remarks/>
+        public object InternalCurrencyUnitPrice {
+            get {
+                return this.internalCurrencyUnitPriceField;
+            }
+            set {
+                this.internalCurrencyUnitPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyAdjustedPrice {
+            get {
+                return this.internalCurrencyAdjustedPriceField;
+            }
+            set {
+                this.internalCurrencyAdjustedPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalDescription {
+            get {
+                return this.internalDescriptionField;
+            }
+            set {
+                this.internalDescriptionField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractNote : Entity {
         
         private object contractIDField;
@@ -10680,6 +16214,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object titleField;
         
         private object descriptionField;
+        
+        private object impersonatorCreatorResourceIDField;
+        
+        private object impersonatorUpdaterResourceIDField;
+        
+        private object createDateTimeField;
         
         /// <remarks/>
         public object ContractID {
@@ -10730,14 +16270,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.descriptionField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ImpersonatorCreatorResourceID {
+            get {
+                return this.impersonatorCreatorResourceIDField;
+            }
+            set {
+                this.impersonatorCreatorResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ImpersonatorUpdaterResourceID {
+            get {
+                return this.impersonatorUpdaterResourceIDField;
+            }
+            set {
+                this.impersonatorUpdaterResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreateDateTime {
+            get {
+                return this.createDateTimeField;
+            }
+            set {
+                this.createDateTimeField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractMilestone : Entity {
         
         private object createDateField;
@@ -10759,6 +16329,10 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object isInitialPaymentField;
         
         private object allocationCodeIDField;
+        
+        private object internalCurrencyAmountField;
+        
+        private object businessDivisionSubdivisionIDField;
         
         /// <remarks/>
         public object CreateDate {
@@ -10859,14 +16433,91 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.allocationCodeIDField = value;
             }
         }
+        
+        /// <remarks/>
+        public object InternalCurrencyAmount {
+            get {
+                return this.internalCurrencyAmountField;
+            }
+            set {
+                this.internalCurrencyAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ContractRoleCost : Entity {
+        
+        private object contractIDField;
+        
+        private object resourceIDField;
+        
+        private object roleIDField;
+        
+        private object rateField;
+        
+        /// <remarks/>
+        public object ContractID {
+            get {
+                return this.contractIDField;
+            }
+            set {
+                this.contractIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ResourceID {
+            get {
+                return this.resourceIDField;
+            }
+            set {
+                this.resourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RoleID {
+            get {
+                return this.roleIDField;
+            }
+            set {
+                this.roleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Rate {
+            get {
+                return this.rateField;
+            }
+            set {
+                this.rateField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractRate : Entity {
         
         private object roleIDField;
@@ -10874,6 +16525,8 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object contractIDField;
         
         private object contractHourlyRateField;
+        
+        private object internalCurrencyContractHourlyRateField;
         
         /// <remarks/>
         public object RoleID {
@@ -10904,14 +16557,24 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.contractHourlyRateField = value;
             }
         }
+        
+        /// <remarks/>
+        public object InternalCurrencyContractHourlyRate {
+            get {
+                return this.internalCurrencyContractHourlyRateField;
+            }
+            set {
+                this.internalCurrencyContractHourlyRateField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractFactor : Entity {
         
         private object roleIDField;
@@ -10952,11 +16615,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractTicketPurchase : Entity {
         
         private object contractIDField;
@@ -10971,13 +16634,13 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object paymentNumberField;
         
-        private object paymentTypeField;
-        
-        private object perTicketRateField;
-        
         private object startDateField;
         
         private object statusField;
+        
+        private object paymentTypeField;
+        
+        private object perTicketRateField;
         
         private object ticketsPurchasedField;
         
@@ -11044,26 +16707,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object PaymentType {
-            get {
-                return this.paymentTypeField;
-            }
-            set {
-                this.paymentTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object PerTicketRate {
-            get {
-                return this.perTicketRateField;
-            }
-            set {
-                this.perTicketRateField = value;
-            }
-        }
-        
-        /// <remarks/>
         public object StartDate {
             get {
                 return this.startDateField;
@@ -11080,6 +16723,26 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PaymentType {
+            get {
+                return this.paymentTypeField;
+            }
+            set {
+                this.paymentTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PerTicketRate {
+            get {
+                return this.perTicketRateField;
+            }
+            set {
+                this.perTicketRateField = value;
             }
         }
         
@@ -11105,14 +16768,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractBlock : Entity {
         
         private object contractIDField;
+        
+        private object statusField;
         
         private object isPaidField;
         
@@ -11134,8 +16799,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object hoursApprovedField;
         
-        private object statusField;
-        
         /// <remarks/>
         public object ContractID {
             get {
@@ -11143,6 +16806,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.contractIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
             }
         }
         
@@ -11245,24 +16918,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.hoursApprovedField = value;
             }
         }
-        
-        /// <remarks/>
-        public object Status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-            }
-        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractRetainer : Entity {
         
         private object contractIDField;
@@ -11272,8 +16935,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object isPaidField;
         
         private object datePurchasedField;
-        
-        private object datePaidField;
         
         private object startDateField;
         
@@ -11290,6 +16951,10 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object overrideHourlyRateField;
         
         private object amountApprovedField;
+        
+        private object internalCurrencyAmountField;
+        
+        private object internalCurrencyAmountApprovedField;
         
         /// <remarks/>
         public object ContractID {
@@ -11328,16 +16993,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.datePurchasedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object DatePaid {
-            get {
-                return this.datePaidField;
-            }
-            set {
-                this.datePaidField = value;
             }
         }
         
@@ -11420,14 +17075,34 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.amountApprovedField = value;
             }
         }
+        
+        /// <remarks/>
+        public object InternalCurrencyAmount {
+            get {
+                return this.internalCurrencyAmountField;
+            }
+            set {
+                this.internalCurrencyAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyAmountApproved {
+            get {
+                return this.internalCurrencyAmountApprovedField;
+            }
+            set {
+                this.internalCurrencyAmountApprovedField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractServiceBundleAdjustment : Entity {
         
         private object contractIDField;
@@ -11441,6 +17116,10 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object adjustedUnitPriceField;
         
         private object quoteItemIDField;
+        
+        private object contractServiceBundleIDField;
+        
+        private object allowRepeatServiceBundleField;
         
         /// <remarks/>
         public object ContractID {
@@ -11501,14 +17180,34 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.quoteItemIDField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ContractServiceBundleID {
+            get {
+                return this.contractServiceBundleIDField;
+            }
+            set {
+                this.contractServiceBundleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AllowRepeatServiceBundle {
+            get {
+                return this.allowRepeatServiceBundleField;
+            }
+            set {
+                this.allowRepeatServiceBundleField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractServiceAdjustment : Entity {
         
         private object contractIDField;
@@ -11524,6 +17223,10 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object adjustedUnitCostField;
         
         private object quoteItemIDField;
+        
+        private object contractServiceIDField;
+        
+        private object allowRepeatServiceField;
         
         /// <remarks/>
         public object ContractID {
@@ -11594,14 +17297,34 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.quoteItemIDField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ContractServiceID {
+            get {
+                return this.contractServiceIDField;
+            }
+            set {
+                this.contractServiceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object AllowRepeatService {
+            get {
+                return this.allowRepeatServiceField;
+            }
+            set {
+                this.allowRepeatServiceField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractServiceUnit : Entity {
         
         private object contractIDField;
@@ -11621,6 +17344,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object vendorAccountIDField;
         
         private object approveAndPostDateField;
+        
+        private object contractServiceIDField;
+        
+        private object internalCurrencyPriceField;
+        
+        private object businessDivisionSubdivisionIDField;
         
         /// <remarks/>
         public object ContractID {
@@ -11711,14 +17440,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.approveAndPostDateField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ContractServiceID {
+            get {
+                return this.contractServiceIDField;
+            }
+            set {
+                this.contractServiceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyPrice {
+            get {
+                return this.internalCurrencyPriceField;
+            }
+            set {
+                this.internalCurrencyPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ContractServiceBundleUnit : Entity {
         
         private object contractIDField;
@@ -11736,6 +17495,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object costField;
         
         private object approveAndPostDateField;
+        
+        private object contractServiceBundleIDField;
+        
+        private object internalCurrencyPriceField;
+        
+        private object businessDivisionSubdivisionIDField;
         
         /// <remarks/>
         public object ContractID {
@@ -11816,14 +17581,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.approveAndPostDateField = value;
             }
         }
+        
+        /// <remarks/>
+        public object ContractServiceBundleID {
+            get {
+                return this.contractServiceBundleIDField;
+            }
+            set {
+                this.contractServiceBundleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyPrice {
+            get {
+                return this.internalCurrencyPriceField;
+            }
+            set {
+                this.internalCurrencyPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Opportunity : Entity {
         
         private object accountIDField;
@@ -11840,7 +17635,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object amountField;
         
+        private object assessmentScoreField;
+        
         private object barriersField;
+        
+        private object closedDateField;
         
         private object contactIDField;
         
@@ -11848,15 +17647,25 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object createDateField;
         
+        private object dateStampField;
+        
         private object helpNeededField;
         
+        private object lastActivityField;
+        
         private object leadReferralField;
+        
+        private object lossReasonField;
+        
+        private object lossReasonDetailField;
         
         private object marketField;
         
         private object nextStepField;
         
         private object ownerResourceIDField;
+        
+        private object primaryCompetitorField;
         
         private object probabilityField;
         
@@ -11868,35 +17677,57 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object promotionNameField;
         
+        private object ratingField;
+        
+        private object relationshipAssessmentScoreField;
+        
         private object revenueSpreadField;
         
         private object revenueSpreadUnitField;
+        
+        private object salesOrderIDField;
+        
+        private object salesProcessPercentCompleteField;
         
         private object stageField;
         
         private object statusField;
         
+        private object technicalAssessmentScoreField;
+        
         private object throughDateField;
         
         private object titleField;
         
-        private object useQuoteTotalsField;
-        
-        private object ratingField;
-        
         private object totalAmountMonthsField;
         
-        private object closedDateField;
+        private object useQuoteTotalsField;
         
-        private object salesOrderIDField;
+        private object winReasonField;
         
-        private object assessmentScoreField;
+        private object winReasonDetailField;
         
-        private object technicalAssessmentScoreField;
+        private object onetimeCostField;
         
-        private object relationshipAssessmentScoreField;
+        private object onetimeRevenueField;
         
-        private object salesProcessPercentCompleteField;
+        private object monthlyCostField;
+        
+        private object monthlyRevenueField;
+        
+        private object quarterlyCostField;
+        
+        private object quarterlyRevenueField;
+        
+        private object yearlyCostField;
+        
+        private object yearlyRevenueField;
+        
+        private object semiannualCostField;
+        
+        private object semiannualRevenueField;
+        
+        private object businessDivisionSubdivisionIDField;
         
         /// <remarks/>
         public object AccountID {
@@ -11969,12 +17800,32 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object AssessmentScore {
+            get {
+                return this.assessmentScoreField;
+            }
+            set {
+                this.assessmentScoreField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object Barriers {
             get {
                 return this.barriersField;
             }
             set {
                 this.barriersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ClosedDate {
+            get {
+                return this.closedDateField;
+            }
+            set {
+                this.closedDateField = value;
             }
         }
         
@@ -12009,6 +17860,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object DateStamp {
+            get {
+                return this.dateStampField;
+            }
+            set {
+                this.dateStampField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object HelpNeeded {
             get {
                 return this.helpNeededField;
@@ -12019,12 +17880,42 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object LastActivity {
+            get {
+                return this.lastActivityField;
+            }
+            set {
+                this.lastActivityField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object LeadReferral {
             get {
                 return this.leadReferralField;
             }
             set {
                 this.leadReferralField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LossReason {
+            get {
+                return this.lossReasonField;
+            }
+            set {
+                this.lossReasonField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LossReasonDetail {
+            get {
+                return this.lossReasonDetailField;
+            }
+            set {
+                this.lossReasonDetailField = value;
             }
         }
         
@@ -12055,6 +17946,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.ownerResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PrimaryCompetitor {
+            get {
+                return this.primaryCompetitorField;
+            }
+            set {
+                this.primaryCompetitorField = value;
             }
         }
         
@@ -12109,6 +18010,26 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object Rating {
+            get {
+                return this.ratingField;
+            }
+            set {
+                this.ratingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RelationshipAssessmentScore {
+            get {
+                return this.relationshipAssessmentScoreField;
+            }
+            set {
+                this.relationshipAssessmentScoreField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object RevenueSpread {
             get {
                 return this.revenueSpreadField;
@@ -12125,6 +18046,26 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
             }
             set {
                 this.revenueSpreadUnitField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SalesOrderID {
+            get {
+                return this.salesOrderIDField;
+            }
+            set {
+                this.salesOrderIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SalesProcessPercentComplete {
+            get {
+                return this.salesProcessPercentCompleteField;
+            }
+            set {
+                this.salesProcessPercentCompleteField = value;
             }
         }
         
@@ -12149,6 +18090,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object TechnicalAssessmentScore {
+            get {
+                return this.technicalAssessmentScoreField;
+            }
+            set {
+                this.technicalAssessmentScoreField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object ThroughDate {
             get {
                 return this.throughDateField;
@@ -12169,26 +18120,6 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object UseQuoteTotals {
-            get {
-                return this.useQuoteTotalsField;
-            }
-            set {
-                this.useQuoteTotalsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Rating {
-            get {
-                return this.ratingField;
-            }
-            set {
-                this.ratingField = value;
-            }
-        }
-        
-        /// <remarks/>
         public object TotalAmountMonths {
             get {
                 return this.totalAmountMonthsField;
@@ -12199,72 +18130,152 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object ClosedDate {
+        public object UseQuoteTotals {
             get {
-                return this.closedDateField;
+                return this.useQuoteTotalsField;
             }
             set {
-                this.closedDateField = value;
+                this.useQuoteTotalsField = value;
             }
         }
         
         /// <remarks/>
-        public object SalesOrderID {
+        public object WinReason {
             get {
-                return this.salesOrderIDField;
+                return this.winReasonField;
             }
             set {
-                this.salesOrderIDField = value;
+                this.winReasonField = value;
             }
         }
         
         /// <remarks/>
-        public object AssessmentScore {
+        public object WinReasonDetail {
             get {
-                return this.assessmentScoreField;
+                return this.winReasonDetailField;
             }
             set {
-                this.assessmentScoreField = value;
+                this.winReasonDetailField = value;
             }
         }
         
         /// <remarks/>
-        public object TechnicalAssessmentScore {
+        public object OnetimeCost {
             get {
-                return this.technicalAssessmentScoreField;
+                return this.onetimeCostField;
             }
             set {
-                this.technicalAssessmentScoreField = value;
+                this.onetimeCostField = value;
             }
         }
         
         /// <remarks/>
-        public object RelationshipAssessmentScore {
+        public object OnetimeRevenue {
             get {
-                return this.relationshipAssessmentScoreField;
+                return this.onetimeRevenueField;
             }
             set {
-                this.relationshipAssessmentScoreField = value;
+                this.onetimeRevenueField = value;
             }
         }
         
         /// <remarks/>
-        public object SalesProcessPercentComplete {
+        public object MonthlyCost {
             get {
-                return this.salesProcessPercentCompleteField;
+                return this.monthlyCostField;
             }
             set {
-                this.salesProcessPercentCompleteField = value;
+                this.monthlyCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object MonthlyRevenue {
+            get {
+                return this.monthlyRevenueField;
+            }
+            set {
+                this.monthlyRevenueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object QuarterlyCost {
+            get {
+                return this.quarterlyCostField;
+            }
+            set {
+                this.quarterlyCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object QuarterlyRevenue {
+            get {
+                return this.quarterlyRevenueField;
+            }
+            set {
+                this.quarterlyRevenueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object YearlyCost {
+            get {
+                return this.yearlyCostField;
+            }
+            set {
+                this.yearlyCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object YearlyRevenue {
+            get {
+                return this.yearlyRevenueField;
+            }
+            set {
+                this.yearlyRevenueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SemiannualCost {
+            get {
+                return this.semiannualCostField;
+            }
+            set {
+                this.semiannualCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object SemiannualRevenue {
+            get {
+                return this.semiannualRevenueField;
+            }
+            set {
+                this.semiannualRevenueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BusinessDivisionSubdivisionID {
+            get {
+                return this.businessDivisionSubdivisionIDField;
+            }
+            set {
+                this.businessDivisionSubdivisionIDField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class InventoryLocation : Entity {
         
         private object locationNameField;
@@ -12317,11 +18328,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class InventoryItem : Entity {
         
         private object productIDField;
@@ -12458,11 +18469,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class InventoryItemSerialNumber : Entity {
         
         private object inventoryItemIDField;
@@ -12491,11 +18502,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class InventoryTransfer : Entity {
         
         private object productIDField;
@@ -12513,6 +18524,8 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object notesField;
         
         private object serialNumberField;
+        
+        private object updateNoteField;
         
         /// <remarks/>
         public object ProductID {
@@ -12593,14 +18606,24 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.serialNumberField = value;
             }
         }
+        
+        /// <remarks/>
+        public object UpdateNote {
+            get {
+                return this.updateNoteField;
+            }
+            set {
+                this.updateNoteField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class PurchaseOrderReceive : Entity {
         
         private object purchaseOrderItemIDField;
@@ -12689,11 +18712,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class PurchaseOrder : Entity {
         
         private object vendorIDField;
@@ -12745,6 +18768,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object showTaxCategoryField;
         
         private object showEachTaxInGroupField;
+        
+        private object latestEstimatedArrivalDateField;
+        
+        private object useItemDescriptionsFromField;
+        
+        private object internalCurrencyFreightField;
         
         /// <remarks/>
         public object VendorID {
@@ -12995,14 +19024,44 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.showEachTaxInGroupField = value;
             }
         }
+        
+        /// <remarks/>
+        public object LatestEstimatedArrivalDate {
+            get {
+                return this.latestEstimatedArrivalDateField;
+            }
+            set {
+                this.latestEstimatedArrivalDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UseItemDescriptionsFrom {
+            get {
+                return this.useItemDescriptionsFromField;
+            }
+            set {
+                this.useItemDescriptionsFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyFreight {
+            get {
+                return this.internalCurrencyFreightField;
+            }
+            set {
+                this.internalCurrencyFreightField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class PurchaseOrderItem : Entity {
         
         private object orderIDField;
@@ -13018,6 +19077,18 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         private object unitCostField;
         
         private object salesOrderIDField;
+        
+        private object estimatedArrivalDateField;
+        
+        private object costIDField;
+        
+        private object contractIDField;
+        
+        private object projectIDField;
+        
+        private object ticketIDField;
+        
+        private object internalCurrencyUnitCostField;
         
         /// <remarks/>
         public object OrderID {
@@ -13088,93 +19159,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.salesOrderIDField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
-    public partial class QuoteItem : Entity {
-        
-        private object quoteIDField;
-        
-        private object typeField;
-        
-        private object productIDField;
-        
-        private object costIDField;
-        
-        private object laborIDField;
-        
-        private object expenseIDField;
-        
-        private object shippingIDField;
-        
-        private object serviceIDField;
-        
-        private object serviceBundleIDField;
-        
-        private object nameField;
-        
-        private object unitPriceField;
-        
-        private object unitCostField;
-        
-        private object markupRateField;
-        
-        private object quantityField;
-        
-        private object isTaxableField;
-        
-        private object isOptionalField;
-        
-        private object periodTypeField;
-        
-        private object descriptionField;
-        
-        private object unitDiscountField;
-        
-        private object percentageDiscountField;
-        
-        private object lineDiscountField;
-        
-        private object averageCostField;
-        
-        private object highestCostField;
-        
-        private object taxCategoryIDField;
-        
-        private object totalEffectiveTaxField;
         
         /// <remarks/>
-        public object QuoteID {
+        public object EstimatedArrivalDate {
             get {
-                return this.quoteIDField;
+                return this.estimatedArrivalDateField;
             }
             set {
-                this.quoteIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ProductID {
-            get {
-                return this.productIDField;
-            }
-            set {
-                this.productIDField = value;
+                this.estimatedArrivalDateField = value;
             }
         }
         
@@ -13189,12 +19181,137 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object LaborID {
+        public object ContractID {
             get {
-                return this.laborIDField;
+                return this.contractIDField;
             }
             set {
-                this.laborIDField = value;
+                this.contractIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ProjectID {
+            get {
+                return this.projectIDField;
+            }
+            set {
+                this.projectIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object TicketID {
+            get {
+                return this.ticketIDField;
+            }
+            set {
+                this.ticketIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyUnitCost {
+            get {
+                return this.internalCurrencyUnitCostField;
+            }
+            set {
+                this.internalCurrencyUnitCostField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class QuoteItem : Entity {
+        
+        private object averageCostField;
+        
+        private object costIDField;
+        
+        private object descriptionField;
+        
+        private object expenseIDField;
+        
+        private object highestCostField;
+        
+        private object isTaxableField;
+        
+        private object isOptionalField;
+        
+        private object laborIDField;
+        
+        private object lineDiscountField;
+        
+        private object markupRateField;
+        
+        private object nameField;
+        
+        private object percentageDiscountField;
+        
+        private object periodTypeField;
+        
+        private object productIDField;
+        
+        private object quantityField;
+        
+        private object quoteIDField;
+        
+        private object serviceIDField;
+        
+        private object serviceBundleIDField;
+        
+        private object shippingIDField;
+        
+        private object taxCategoryIDField;
+        
+        private object totalEffectiveTaxField;
+        
+        private object typeField;
+        
+        private object unitCostField;
+        
+        private object unitDiscountField;
+        
+        private object unitPriceField;
+        
+        private object internalCurrencyUnitPriceField;
+        
+        private object internalCurrencyUnitDiscountField;
+        
+        private object internalCurrencyLineDiscountField;
+        
+        /// <remarks/>
+        public object AverageCost {
+            get {
+                return this.averageCostField;
+            }
+            set {
+                this.averageCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CostID {
+            get {
+                return this.costIDField;
+            }
+            set {
+                this.costIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
             }
         }
         
@@ -13209,82 +19326,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object ShippingID {
+        public object HighestCost {
             get {
-                return this.shippingIDField;
+                return this.highestCostField;
             }
             set {
-                this.shippingIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ServiceID {
-            get {
-                return this.serviceIDField;
-            }
-            set {
-                this.serviceIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ServiceBundleID {
-            get {
-                return this.serviceBundleIDField;
-            }
-            set {
-                this.serviceBundleIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object UnitPrice {
-            get {
-                return this.unitPriceField;
-            }
-            set {
-                this.unitPriceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object UnitCost {
-            get {
-                return this.unitCostField;
-            }
-            set {
-                this.unitCostField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object MarkupRate {
-            get {
-                return this.markupRateField;
-            }
-            set {
-                this.markupRateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Quantity {
-            get {
-                return this.quantityField;
-            }
-            set {
-                this.quantityField = value;
+                this.highestCostField = value;
             }
         }
         
@@ -13309,42 +19356,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object PeriodType {
+        public object LaborID {
             get {
-                return this.periodTypeField;
+                return this.laborIDField;
             }
             set {
-                this.periodTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object UnitDiscount {
-            get {
-                return this.unitDiscountField;
-            }
-            set {
-                this.unitDiscountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object PercentageDiscount {
-            get {
-                return this.percentageDiscountField;
-            }
-            set {
-                this.percentageDiscountField = value;
+                this.laborIDField = value;
             }
         }
         
@@ -13359,22 +19376,102 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object AverageCost {
+        public object MarkupRate {
             get {
-                return this.averageCostField;
+                return this.markupRateField;
             }
             set {
-                this.averageCostField = value;
+                this.markupRateField = value;
             }
         }
         
         /// <remarks/>
-        public object HighestCost {
+        public object Name {
             get {
-                return this.highestCostField;
+                return this.nameField;
             }
             set {
-                this.highestCostField = value;
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PercentageDiscount {
+            get {
+                return this.percentageDiscountField;
+            }
+            set {
+                this.percentageDiscountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PeriodType {
+            get {
+                return this.periodTypeField;
+            }
+            set {
+                this.periodTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ProductID {
+            get {
+                return this.productIDField;
+            }
+            set {
+                this.productIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                this.quantityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object QuoteID {
+            get {
+                return this.quoteIDField;
+            }
+            set {
+                this.quoteIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ServiceID {
+            get {
+                return this.serviceIDField;
+            }
+            set {
+                this.serviceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ServiceBundleID {
+            get {
+                return this.serviceBundleIDField;
+            }
+            set {
+                this.serviceBundleIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ShippingID {
+            get {
+                return this.shippingIDField;
+            }
+            set {
+                this.shippingIDField = value;
             }
         }
         
@@ -13397,55 +19494,109 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.totalEffectiveTaxField = value;
             }
         }
+        
+        /// <remarks/>
+        public object Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UnitCost {
+            get {
+                return this.unitCostField;
+            }
+            set {
+                this.unitCostField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UnitDiscount {
+            get {
+                return this.unitDiscountField;
+            }
+            set {
+                this.unitDiscountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UnitPrice {
+            get {
+                return this.unitPriceField;
+            }
+            set {
+                this.unitPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyUnitPrice {
+            get {
+                return this.internalCurrencyUnitPriceField;
+            }
+            set {
+                this.internalCurrencyUnitPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyUnitDiscount {
+            get {
+                return this.internalCurrencyUnitDiscountField;
+            }
+            set {
+                this.internalCurrencyUnitDiscountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InternalCurrencyLineDiscount {
+            get {
+                return this.internalCurrencyLineDiscountField;
+            }
+            set {
+                this.internalCurrencyLineDiscountField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Country : Entity {
-        
-        private object countryCodeField;
-        
-        private object nameField;
-        
-        private object displayNameField;
-        
-        private object activeField;
-        
-        private object isDefaultCountryField;
         
         private object addressFormatIDField;
         
-        /// <remarks/>
-        public object CountryCode {
-            get {
-                return this.countryCodeField;
-            }
-            set {
-                this.countryCodeField = value;
-            }
-        }
+        private object activeField;
+        
+        private object countryCodeField;
+        
+        private object displayNameField;
+        
+        private object invoiceTemplateIDField;
+        
+        private object isDefaultCountryField;
+        
+        private object nameField;
+        
+        private object quoteTemplateIDField;
         
         /// <remarks/>
-        public object Name {
+        public object AddressFormatID {
             get {
-                return this.nameField;
+                return this.addressFormatIDField;
             }
             set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object DisplayName {
-            get {
-                return this.displayNameField;
-            }
-            set {
-                this.displayNameField = value;
+                this.addressFormatIDField = value;
             }
         }
         
@@ -13460,6 +19611,36 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object CountryCode {
+            get {
+                return this.countryCodeField;
+            }
+            set {
+                this.countryCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DisplayName {
+            get {
+                return this.displayNameField;
+            }
+            set {
+                this.displayNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object InvoiceTemplateID {
+            get {
+                return this.invoiceTemplateIDField;
+            }
+            set {
+                this.invoiceTemplateIDField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object IsDefaultCountry {
             get {
                 return this.isDefaultCountryField;
@@ -13470,22 +19651,32 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object AddressFormatID {
+        public object Name {
             get {
-                return this.addressFormatIDField;
+                return this.nameField;
             }
             set {
-                this.addressFormatIDField = value;
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object QuoteTemplateID {
+            get {
+                return this.quoteTemplateIDField;
+            }
+            set {
+                this.quoteTemplateIDField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class SalesOrder : Entity {
         
         private object accountIDField;
@@ -13532,9 +19723,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object additionalShipToAddressInformationField;
         
+        private object shipToCountryIDField;
+        
         private object billToCountryIDField;
         
-        private object shipToCountryIDField;
+        private object businessDivisionSubdivisionIDField;
         
         /// <remarks/>
         public object AccountID {
@@ -13757,6 +19950,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object ShipToCountryID {
+            get {
+                return this.shipToCountryIDField;
+            }
+            set {
+                this.shipToCountryIDField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object BillToCountryID {
             get {
                 return this.billToCountryIDField;
@@ -13767,83 +19970,161 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object ShipToCountryID {
+        public object BusinessDivisionSubdivisionID {
             get {
-                return this.shipToCountryIDField;
+                return this.businessDivisionSubdivisionIDField;
             }
             set {
-                this.shipToCountryIDField = value;
+                this.businessDivisionSubdivisionIDField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
-    public partial class Quote : Entity {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class QuoteTemplate : Entity {
         
-        private object opportunityIDField;
-        
-        private object nameField;
-        
-        private object eQuoteActiveField;
-        
-        private object effectiveDateField;
-        
-        private object expirationDateField;
-        
-        private object createDateField;
-        
-        private object creatorResourceIDField;
-        
-        private object contactIDField;
-        
-        private object taxGroupField;
-        
-        private object proposalProjectIDField;
-        
-        private object billToLocationIDField;
-        
-        private object shipToLocationIDField;
-        
-        private object soldToLocationIDField;
-        
-        private object shippingTypeField;
-        
-        private object paymentTypeField;
-        
-        private object paymentTermField;
-        
-        private object externalQuoteNumberField;
-        
-        private object purchaseOrderNumberField;
-        
-        private object commentField;
-        
-        private object descriptionField;
-        
-        private object accountIDField;
+        private object activeField;
         
         private object calculateTaxSeparatelyField;
         
-        private object groupByProductCategoryField;
+        private object createdByField;
+        
+        private object createDateField;
+        
+        private object dateFormatField;
+        
+        private object descriptionField;
+        
+        private object displayCurrencySymbolField;
+        
+        private object displayTaxCategorySuperscriptsField;
+        
+        private object lastActivityDateField;
+        
+        private object lastActivityByField;
+        
+        private object nameField;
+        
+        private object numberFormatField;
+        
+        private object pageLayoutField;
+        
+        private object pageNumberFormatField;
         
         private object showEachTaxInGroupField;
         
+        private object showGridHeaderField;
+        
         private object showTaxCategoryField;
         
-        private object primaryQuoteField;
+        private object showVerticalGridLinesField;
+        
+        private object currencyPositiveFormatField;
+        
+        private object currencyNegativeFormatField;
         
         /// <remarks/>
-        public object OpportunityID {
+        public object Active {
             get {
-                return this.opportunityIDField;
+                return this.activeField;
             }
             set {
-                this.opportunityIDField = value;
+                this.activeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CalculateTaxSeparately {
+            get {
+                return this.calculateTaxSeparatelyField;
+            }
+            set {
+                this.calculateTaxSeparatelyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreatedBy {
+            get {
+                return this.createdByField;
+            }
+            set {
+                this.createdByField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreateDate {
+            get {
+                return this.createDateField;
+            }
+            set {
+                this.createDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DateFormat {
+            get {
+                return this.dateFormatField;
+            }
+            set {
+                this.dateFormatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DisplayCurrencySymbol {
+            get {
+                return this.displayCurrencySymbolField;
+            }
+            set {
+                this.displayCurrencySymbolField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object DisplayTaxCategorySuperscripts {
+            get {
+                return this.displayTaxCategorySuperscriptsField;
+            }
+            set {
+                this.displayTaxCategorySuperscriptsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityDate {
+            get {
+                return this.lastActivityDateField;
+            }
+            set {
+                this.lastActivityDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityBy {
+            get {
+                return this.lastActivityByField;
+            }
+            set {
+                this.lastActivityByField = value;
             }
         }
         
@@ -13858,32 +20139,203 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object eQuoteActive {
+        public object NumberFormat {
             get {
-                return this.eQuoteActiveField;
+                return this.numberFormatField;
             }
             set {
-                this.eQuoteActiveField = value;
+                this.numberFormatField = value;
             }
         }
         
         /// <remarks/>
-        public object EffectiveDate {
+        public object PageLayout {
             get {
-                return this.effectiveDateField;
+                return this.pageLayoutField;
             }
             set {
-                this.effectiveDateField = value;
+                this.pageLayoutField = value;
             }
         }
         
         /// <remarks/>
-        public object ExpirationDate {
+        public object PageNumberFormat {
             get {
-                return this.expirationDateField;
+                return this.pageNumberFormatField;
             }
             set {
-                this.expirationDateField = value;
+                this.pageNumberFormatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ShowEachTaxInGroup {
+            get {
+                return this.showEachTaxInGroupField;
+            }
+            set {
+                this.showEachTaxInGroupField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ShowGridHeader {
+            get {
+                return this.showGridHeaderField;
+            }
+            set {
+                this.showGridHeaderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ShowTaxCategory {
+            get {
+                return this.showTaxCategoryField;
+            }
+            set {
+                this.showTaxCategoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ShowVerticalGridLines {
+            get {
+                return this.showVerticalGridLinesField;
+            }
+            set {
+                this.showVerticalGridLinesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyPositiveFormat {
+            get {
+                return this.currencyPositiveFormatField;
+            }
+            set {
+                this.currencyPositiveFormatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CurrencyNegativeFormat {
+            get {
+                return this.currencyNegativeFormatField;
+            }
+            set {
+                this.currencyNegativeFormatField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class Quote : Entity {
+        
+        private object accountIDField;
+        
+        private object billToLocationIDField;
+        
+        private object commentField;
+        
+        private object contactIDField;
+        
+        private object createDateField;
+        
+        private object creatorResourceIDField;
+        
+        private object descriptionField;
+        
+        private object effectiveDateField;
+        
+        private object eQuoteActiveField;
+        
+        private object expirationDateField;
+        
+        private object externalQuoteNumberField;
+        
+        private object groupByIDField;
+        
+        private object lastActivityDateField;
+        
+        private object lastModifiedByField;
+        
+        private object nameField;
+        
+        private object opportunityIDField;
+        
+        private object paymentTermField;
+        
+        private object paymentTypeField;
+        
+        private object primaryQuoteField;
+        
+        private object proposalProjectIDField;
+        
+        private object purchaseOrderNumberField;
+        
+        private object quoteTemplateIDField;
+        
+        private object shippingTypeField;
+        
+        private object shipToLocationIDField;
+        
+        private object soldToLocationIDField;
+        
+        private object taxGroupField;
+        
+        private object quoteNumberField;
+        
+        private object showEachTaxInGroupField;
+        
+        private object showTaxCategoryField;
+        
+        private object calculateTaxSeparatelyField;
+        
+        private object groupByProductCategoryField;
+        
+        /// <remarks/>
+        public object AccountID {
+            get {
+                return this.accountIDField;
+            }
+            set {
+                this.accountIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object BillToLocationID {
+            get {
+                return this.billToLocationIDField;
+            }
+            set {
+                this.billToLocationIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Comment {
+            get {
+                return this.commentField;
+            }
+            set {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ContactID {
+            get {
+                return this.contactIDField;
+            }
+            set {
+                this.contactIDField = value;
             }
         }
         
@@ -13908,22 +20360,132 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object ContactID {
+        public object Description {
             get {
-                return this.contactIDField;
+                return this.descriptionField;
             }
             set {
-                this.contactIDField = value;
+                this.descriptionField = value;
             }
         }
         
         /// <remarks/>
-        public object TaxGroup {
+        public object EffectiveDate {
             get {
-                return this.taxGroupField;
+                return this.effectiveDateField;
             }
             set {
-                this.taxGroupField = value;
+                this.effectiveDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object eQuoteActive {
+            get {
+                return this.eQuoteActiveField;
+            }
+            set {
+                this.eQuoteActiveField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ExpirationDate {
+            get {
+                return this.expirationDateField;
+            }
+            set {
+                this.expirationDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ExternalQuoteNumber {
+            get {
+                return this.externalQuoteNumberField;
+            }
+            set {
+                this.externalQuoteNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object GroupByID {
+            get {
+                return this.groupByIDField;
+            }
+            set {
+                this.groupByIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastActivityDate {
+            get {
+                return this.lastActivityDateField;
+            }
+            set {
+                this.lastActivityDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object LastModifiedBy {
+            get {
+                return this.lastModifiedByField;
+            }
+            set {
+                this.lastModifiedByField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object OpportunityID {
+            get {
+                return this.opportunityIDField;
+            }
+            set {
+                this.opportunityIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PaymentTerm {
+            get {
+                return this.paymentTermField;
+            }
+            set {
+                this.paymentTermField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PaymentType {
+            get {
+                return this.paymentTypeField;
+            }
+            set {
+                this.paymentTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object PrimaryQuote {
+            get {
+                return this.primaryQuoteField;
+            }
+            set {
+                this.primaryQuoteField = value;
             }
         }
         
@@ -13938,12 +20500,32 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object BillToLocationID {
+        public object PurchaseOrderNumber {
             get {
-                return this.billToLocationIDField;
+                return this.purchaseOrderNumberField;
             }
             set {
-                this.billToLocationIDField = value;
+                this.purchaseOrderNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object QuoteTemplateID {
+            get {
+                return this.quoteTemplateIDField;
+            }
+            set {
+                this.quoteTemplateIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object ShippingType {
+            get {
+                return this.shippingTypeField;
+            }
+            set {
+                this.shippingTypeField = value;
             }
         }
         
@@ -13968,102 +20550,22 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object ShippingType {
+        public object TaxGroup {
             get {
-                return this.shippingTypeField;
+                return this.taxGroupField;
             }
             set {
-                this.shippingTypeField = value;
+                this.taxGroupField = value;
             }
         }
         
         /// <remarks/>
-        public object PaymentType {
+        public object QuoteNumber {
             get {
-                return this.paymentTypeField;
+                return this.quoteNumberField;
             }
             set {
-                this.paymentTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object PaymentTerm {
-            get {
-                return this.paymentTermField;
-            }
-            set {
-                this.paymentTermField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object ExternalQuoteNumber {
-            get {
-                return this.externalQuoteNumberField;
-            }
-            set {
-                this.externalQuoteNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object PurchaseOrderNumber {
-            get {
-                return this.purchaseOrderNumberField;
-            }
-            set {
-                this.purchaseOrderNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Comment {
-            get {
-                return this.commentField;
-            }
-            set {
-                this.commentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object AccountID {
-            get {
-                return this.accountIDField;
-            }
-            set {
-                this.accountIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object CalculateTaxSeparately {
-            get {
-                return this.calculateTaxSeparatelyField;
-            }
-            set {
-                this.calculateTaxSeparatelyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object GroupByProductCategory {
-            get {
-                return this.groupByProductCategoryField;
-            }
-            set {
-                this.groupByProductCategoryField = value;
+                this.quoteNumberField = value;
             }
         }
         
@@ -14088,22 +20590,32 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object PrimaryQuote {
+        public object CalculateTaxSeparately {
             get {
-                return this.primaryQuoteField;
+                return this.calculateTaxSeparatelyField;
             }
             set {
-                this.primaryQuoteField = value;
+                this.calculateTaxSeparatelyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object GroupByProductCategory {
+            get {
+                return this.groupByProductCategoryField;
+            }
+            set {
+                this.groupByProductCategoryField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Skill : Entity {
         
         private object activeField;
@@ -14156,11 +20668,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ShippingType : Entity {
         
         private object nameField;
@@ -14213,52 +20725,72 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ServiceBundle : Entity {
         
-        private object nameField;
+        private object allocationCodeIDField;
+        
+        private object createDateField;
+        
+        private object creatorResourceIDField;
         
         private object descriptionField;
         
-        private object old_selected_service_sumField;
+        private object invoiceDescriptionField;
         
-        private object unitPriceField;
+        private object isActiveField;
         
-        private object unitDiscountField;
+        private object lastModifiedDateField;
+        
+        private object nameField;
         
         private object percentageDiscountField;
         
         private object periodTypeField;
         
-        private object allocationCodeIDField;
-        
-        private object isActiveField;
-        
-        private object creatorResourceIDField;
-        
-        private object updateResourceIDField;
-        
-        private object createDateField;
-        
-        private object lastModifiedDateField;
+        private object serviceLevelAgreementIDField;
         
         private object unitCostField;
         
-        private object invoiceDescriptionField;
+        private object unitDiscountField;
         
-        private object serviceLevelAgreementIDField;
+        private object unitPriceField;
+        
+        private object updateResourceIDField;
+        
+        private object old_selected_service_sumField;
         
         /// <remarks/>
-        public object Name {
+        public object AllocationCodeID {
             get {
-                return this.nameField;
+                return this.allocationCodeIDField;
             }
             set {
-                this.nameField = value;
+                this.allocationCodeIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreateDate {
+            get {
+                return this.createDateField;
+            }
+            set {
+                this.createDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object CreatorResourceID {
+            get {
+                return this.creatorResourceIDField;
+            }
+            set {
+                this.creatorResourceIDField = value;
             }
         }
         
@@ -14273,32 +20805,42 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object old_selected_service_sum {
+        public object InvoiceDescription {
             get {
-                return this.old_selected_service_sumField;
+                return this.invoiceDescriptionField;
             }
             set {
-                this.old_selected_service_sumField = value;
+                this.invoiceDescriptionField = value;
             }
         }
         
         /// <remarks/>
-        public object UnitPrice {
+        public object IsActive {
             get {
-                return this.unitPriceField;
+                return this.isActiveField;
             }
             set {
-                this.unitPriceField = value;
+                this.isActiveField = value;
             }
         }
         
         /// <remarks/>
-        public object UnitDiscount {
+        public object LastModifiedDate {
             get {
-                return this.unitDiscountField;
+                return this.lastModifiedDateField;
             }
             set {
-                this.unitDiscountField = value;
+                this.lastModifiedDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
             }
         }
         
@@ -14323,62 +20865,12 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object AllocationCodeID {
+        public object ServiceLevelAgreementID {
             get {
-                return this.allocationCodeIDField;
+                return this.serviceLevelAgreementIDField;
             }
             set {
-                this.allocationCodeIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object IsActive {
-            get {
-                return this.isActiveField;
-            }
-            set {
-                this.isActiveField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object CreatorResourceID {
-            get {
-                return this.creatorResourceIDField;
-            }
-            set {
-                this.creatorResourceIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object UpdateResourceID {
-            get {
-                return this.updateResourceIDField;
-            }
-            set {
-                this.updateResourceIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object CreateDate {
-            get {
-                return this.createDateField;
-            }
-            set {
-                this.createDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public object LastModifiedDate {
-            get {
-                return this.lastModifiedDateField;
-            }
-            set {
-                this.lastModifiedDateField = value;
+                this.serviceLevelAgreementIDField = value;
             }
         }
         
@@ -14393,32 +20885,52 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
-        public object InvoiceDescription {
+        public object UnitDiscount {
             get {
-                return this.invoiceDescriptionField;
+                return this.unitDiscountField;
             }
             set {
-                this.invoiceDescriptionField = value;
+                this.unitDiscountField = value;
             }
         }
         
         /// <remarks/>
-        public object ServiceLevelAgreementID {
+        public object UnitPrice {
             get {
-                return this.serviceLevelAgreementIDField;
+                return this.unitPriceField;
             }
             set {
-                this.serviceLevelAgreementIDField = value;
+                this.unitPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object UpdateResourceID {
+            get {
+                return this.updateResourceIDField;
+            }
+            set {
+                this.updateResourceIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object old_selected_service_sum {
+            get {
+                return this.old_selected_service_sumField;
+            }
+            set {
+                this.old_selected_service_sumField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Service : Entity {
         
         private object nameField;
@@ -14445,11 +20957,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         
         private object unitCostField;
         
+        private object markupRateField;
+        
         private object invoiceDescriptionField;
         
         private object serviceLevelAgreementIDField;
-        
-        private object markupRateField;
         
         /// <remarks/>
         public object Name {
@@ -14572,6 +21084,16 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
         }
         
         /// <remarks/>
+        public object MarkupRate {
+            get {
+                return this.markupRateField;
+            }
+            set {
+                this.markupRateField = value;
+            }
+        }
+        
+        /// <remarks/>
         public object InvoiceDescription {
             get {
                 return this.invoiceDescriptionField;
@@ -14590,24 +21112,14 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
                 this.serviceLevelAgreementIDField = value;
             }
         }
-        
-        /// <remarks/>
-        public object MarkupRate {
-            get {
-                return this.markupRateField;
-            }
-            set {
-                this.markupRateField = value;
-            }
-        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class ResourceSkill : Entity {
         
         private object resourceIDField;
@@ -14660,11 +21172,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class AccountLocation : Entity {
         
         private object locationNameField;
@@ -14693,11 +21205,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class TaxRegion : Entity {
         
         private object nameField;
@@ -14726,11 +21238,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class TaxCategory : Entity {
         
         private object nameField;
@@ -14771,11 +21283,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Tax : Entity {
         
         private object taxRegionIDField;
@@ -14840,11 +21352,80 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
+    public partial class ClassificationIcon : Entity {
+        
+        private object activeField;
+        
+        private object descriptionField;
+        
+        private object nameField;
+        
+        private object relativeUrlField;
+        
+        private object systemField;
+        
+        /// <remarks/>
+        public object Active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object RelativeUrl {
+            get {
+                return this.relativeUrlField;
+            }
+            set {
+                this.relativeUrlField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public object System {
+            get {
+                return this.systemField;
+            }
+            set {
+                this.systemField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class QuoteLocation : Entity {
         
         private object address1Field;
@@ -14909,11 +21490,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class AttachmentInfo : Entity {
         
         private object parentIDField;
@@ -15062,11 +21643,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class EntityInfo {
         
         private string nameField;
@@ -15143,11 +21724,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_5/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://autotask.net/ATWS/v1_6/")]
     public partial class Attachment {
         
         private byte[] dataField;
@@ -15177,11 +21758,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GetAttachmentCompletedEventHandler(object sender, GetAttachmentCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetAttachmentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15203,11 +21784,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void CreateAttachmentCompletedEventHandler(object sender, CreateAttachmentCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class CreateAttachmentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15229,11 +21810,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void DeleteAttachmentCompletedEventHandler(object sender, DeleteAttachmentCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DeleteAttachmentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15255,11 +21836,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void getEntityInfoCompletedEventHandler(object sender, getEntityInfoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getEntityInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15281,11 +21862,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GetFieldInfoCompletedEventHandler(object sender, GetFieldInfoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetFieldInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15307,11 +21888,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void getUDFInfoCompletedEventHandler(object sender, getUDFInfoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getUDFInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15333,11 +21914,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void queryCompletedEventHandler(object sender, queryCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class queryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15359,11 +21940,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void createCompletedEventHandler(object sender, createCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class createCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15385,11 +21966,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void updateCompletedEventHandler(object sender, updateCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class updateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15411,11 +21992,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void deleteCompletedEventHandler(object sender, deleteCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class deleteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15437,11 +22018,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void getZoneInfoCompletedEventHandler(object sender, getZoneInfoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getZoneInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15463,11 +22044,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void getThresholdAndUsageInfoCompletedEventHandler(object sender, getThresholdAndUsageInfoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getThresholdAndUsageInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15489,11 +22070,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GetWsdlVersionCompletedEventHandler(object sender, GetWsdlVersionCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetWsdlVersionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -15515,11 +22096,11 @@ namespace SampleAutotaskAPI.Autotask.Net.Webservices {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void GetInvoiceMarkupCompletedEventHandler(object sender, GetInvoiceMarkupCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetInvoiceMarkupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

@@ -15,3 +15,6 @@
 /Upload Attachment Example/Upload Attachment Example/obj/Debug
 /Emoticon Survey Example/EmoticonWebProject/EmoticonWebProject/obj/Release
 /Emoticon Survey Example/EmoticonWebProject/EmoticonWebProject/obj/Debug
+/.vs
+/API Documentation Samples/C# Example/SampleAutotaskAPI/bin/Debug
+*.user

@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="Attachment" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>SampleAutotaskAPI.Autotask.Net.Webservices.Attachment, Web References.Autotask.Net.Webservices.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>SampleAutotaskAPI.Autotask.Net.Webservices.Attachment</TypeInfo>
 </GenericObjectDataSource>

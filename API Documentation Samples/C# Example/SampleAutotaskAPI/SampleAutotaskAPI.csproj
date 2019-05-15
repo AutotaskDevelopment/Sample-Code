@@ -84,38 +84,25 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="https://webservices.autotask.net/atservices/1.5/atws.wsdl">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\Autotask.Net.Webservices\</RelPath>
-      <UpdateFromURL>https://webservices.autotask.net/atservices/1.5/atws.wsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>SampleAutotaskAPI_Autotask_Net_Webservices_ATWS</CachedSettingsPropName>
-    </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\Autotask.Net.Webservices\Attachment.datasource">
+    <None Include="Web References\Autotask.Net.Webservices\Attachment1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\Autotask.Net.Webservices\atws.wsdl" />
-    <None Include="Web References\Autotask.Net.Webservices\ATWSResponse.datasource">
+    <None Include="Web References\Autotask.Net.Webservices\ATWSResponse1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\Autotask.Net.Webservices\ATWSZoneInfo.datasource">
+    <None Include="Web References\Autotask.Net.Webservices\ATWSZoneInfo1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\Autotask.Net.Webservices\EntityInfo.datasource">
+    <None Include="Web References\Autotask.Net.Webservices\EntityInfo1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\Autotask.Net.Webservices\Field.datasource">
+    <None Include="Web References\Autotask.Net.Webservices\Field1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\Autotask.Net.Webservices\Reference.map">
@@ -134,6 +121,19 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://webservices.autotask.net/ATServices/1.6/atws.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Autotask.Net.Webservices\</RelPath>
+      <UpdateFromURL>https://webservices.autotask.net/ATServices/1.6/atws.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SampleAutotaskAPI_Autotask_Net_webservices_ATWS</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
