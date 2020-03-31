@@ -15,7 +15,7 @@ a the resource id of the resource you want to impersonate for the call.
   <?xml version="1.0" encoding="utf-8"?>
   <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:x-si="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <soap:Header>
-	  <AutotaskIntegrations xmlns="http:autotask.net/ATWS/v1.6/">
+	  <AutotaskIntegrations xmlns="http://autotask.net/ATWS/v1_6/">
 	    <IntegrationCode>[Substitute Tracking Identifier Here]</IntegrationCode>
 		<ImpersonateAsResourceID>[Substitue ID of Resource to Impersonate Here]</ImpersonateAsResourceID>
 	  </AutotaskIntegrations>
